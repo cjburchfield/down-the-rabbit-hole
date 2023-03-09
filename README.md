@@ -21,6 +21,8 @@ In addition, this project will include:
 - A production **README**
 
 ## Wireframes
+![Screen Shot 2023-03-09 at 5 12 18 PM](https://user-images.githubusercontent.com/121882445/224172253-03e64ccc-0d89-4c0c-a126-f7032311fd71.png)
+*Bonus content could be implemented by scrolling down the page*
 
 ## Technologies, Libraries, APIs
 
