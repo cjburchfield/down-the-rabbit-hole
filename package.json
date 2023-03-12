@@ -4,7 +4,7 @@
   "description": "**Down the Rabbit Hole** is a data visualization project exploring the words - and worlds - of Lewis Carroll’s *Alice in Wonderland*.",
   "main": "index.js",
   "browserslist": [
-      "defaults"
+    "defaults"
   ],
   "scripts": {
     "watch": "webpack --watch --mode=development",
@@ -29,9 +29,11 @@
     "css-loader": "^6.7.3",
     "mini-css-extract-plugin": "^2.7.3",
     "regenerator-runtime": "^0.13.11",
-    "sass": "^1.58.3",
+    "sass": "^1.59.2",
     "sass-loader": "^13.2.0",
-    "webpack": "^5.76.0",
+    "webpack": "^5.76.1"
+  },
+  "devDependencies": {
     "webpack-cli": "^5.0.1"
   }
 }
