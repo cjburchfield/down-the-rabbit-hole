@@ -31,48 +31,24 @@ export const combineChapters = (chapters) => {
       const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]);
       const filteredBook = sortedBook.filter(([word, count]) => word.length > 6)
 
-      const sortedBookObj = {};
-        for (const [word, count] of sortedBook) {
-          sortedBookObj[word] = count;
-        }
+    //   const sortedBookObj = {};
+    //     for (const [word, count] of sortedBook) {
+    //       sortedBookObj[word] = count;
+    //     }
 
 
       const topWords = filteredBook.slice(0, 10);
       const numPairs = filteredBook.length;
       
-      return { topWords, numPairs }
-    };
+    //   return { topWords, numPairs }
+    // };
 
-// export function combineChapters(chapters) {
-//     const wordsCount = new Map();
-//     const chaptersCount = new Map();
+    const topWordsList = document.createElement("ul");
+    for (const [word, count] of topWords) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${word}: ${count}`;
+      topWordsList.appendChild(listItem);
+    }
   
-//     for (const chapter of chapters) {
-//       const chapterWords = new Set();
-//       for (const definition of chapter.definitions) {
-//         for (const word of definition.words) {
-//           chapterWords.add(word.toLowerCase());
-//         }
-//       }
-  
-//       for (const word of chapterWords) {
-//         const count = wordsCount.get(word) || 0;
-//         wordsCount.set(word, count + 1);
-//       }
-  
-//       chaptersCount.set(chapter.chapterTitle, chapterWords.size);
-//     }
-  
-//     const topWords = [...wordsCount.entries()]
-//       .sort((a, b) => b[1] - a[1])
-//       .slice(0, 10);
-  
-//     const topChapters = [...chaptersCount.entries()]
-//       .sort((a, b) => b[1] - a[1])
-//       .slice(0, 3);
-  
-//     return {
-//       topWords,
-//       topChapters,
-//     };
-//   }
+    return topWordsList;
+  };

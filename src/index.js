@@ -20,12 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
 const chapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9, chapter10, chapter11, chapter12 ];
 const combinedData = combineChapters(chapters);
 
+// const combinedChaptersContainer = document.getElementById("combined-chapters-container");
+// const topWordsList = document.createElement("ul");
+// combinedChaptersContainer.appendChild(topWordsList);
+// for (const [word, count] of combinedData.topWords) {
+//   const listItem = document.createElement("li");
+//   listItem.textContent = `${word}: ${count}`;
+//   topWordsList.appendChild(listItem);
+// }
+
 const combinedChaptersContainer = document.getElementById("combined-chapters-container");
-const topWordsList = document.createElement("ul");
-combinedChaptersContainer.appendChild(topWordsList);
-for (const [word, count] of combinedData.topWords) {
-  const listItem = document.createElement("li");
-  listItem.textContent = `${word}: ${count}`;
-  topWordsList.appendChild(listItem);
-}
+combinedChaptersContainer.appendChild(combinedData);
 });

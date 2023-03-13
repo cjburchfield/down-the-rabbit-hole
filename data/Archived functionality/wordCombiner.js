@@ -1,15 +1,15 @@
-import { chapter1 } from "../src/chapter-objects/chapterOne";
-import { chapter2 } from "../src/chapter-objects/chapterTwo";
-import { chapter3 } from "../src/chapter-objects/chapterThree";
-import { chapter4 } from "../src/chapter-objects/chapterFour";
-import { chapter5 } from "../src/chapter-objects/chapterFive";
-import { chapter6 } from "../src/chapter-objects/chapterSix";
-import { chapter7 } from "../src/chapter-objects/chapterSeven";
-import { chapter8 } from "../src/chapter-objects/chapterEight";
-import { chapter9 } from "../src/chapter-objects/chapterNine";
-import { chapter10 } from "../src/chapter-objects/chapterTen";
-import { chapter11 } from "../src/chapter-objects/chapterEleven";
-import { chapter12 } from "../src/chapter-objects/chapterTwelve";
+import { chapter1 } from "../../src/chapter-objects/chapterOne";
+import { chapter2 } from "../../src/chapter-objects/chapterTwo";
+import { chapter3 } from "../../src/chapter-objects/chapterThree";
+import { chapter4 } from "../../src/chapter-objects/chapterFour";
+import { chapter5 } from "../../src/chapter-objects/chapterFive";
+import { chapter6 } from "../../src/chapter-objects/chapterSix";
+import { chapter7 } from "../../src/chapter-objects/chapterSeven";
+import { chapter8 } from "../../src/chapter-objects/chapterEight";
+import { chapter9 } from "../../src/chapter-objects/chapterNine";
+import { chapter10 } from "../../src/chapter-objects/chapterTen";
+import { chapter11 } from "../../src/chapter-objects/chapterEleven";
+import { chapter12 } from "../../src/chapter-objects/chapterTwelve";
 
 
 
