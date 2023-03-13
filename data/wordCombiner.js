@@ -13,22 +13,39 @@ import { chapter12 } from "./chapter-objects/chapterTwelve";
 
 
 
-const chapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, 
-    chapter7, chapter8, chapter9, chapter10, chapter11, chapter12];
+const chapters2 = ([chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, 
+    chapter7, chapter8, chapter9, chapter10, chapter11, chapter12]);
 
-    function mergeChapters(...chapters) {
-        const mergedChapter = Object.assign({}, ...chapters);
-      
-        const sortedWords = Object.entries(mergedChapter)
-          .filter(([word, count]) => word.length > 3)
-          .sort((a, b) => b[1] - a[1]);
-      
-        const topWords = sortedWords.slice(0, 3);
-        const numPairs = sortedWords.length;
-        const longestKey = Object.keys(mergedChapter).reduce((a, b) => a.length > b.length ? a : b);
-      
-        return { topWords, numPairs, longestKey };
+    function combineChapters(chapters) {
+      const combinedBook = {};
+      for (const chapter of chapters) {
+        for (const [word, count] of Object.entries(chapter)) {
+          if (combinedBook.hasOwnProperty(word)) {
+            combinedBook[word] += count;
+          } else {
+            combinedBook[word] = count;
+          }
+        }
       }
+      
+      const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]);
+      // const filteredBook = sortedBook.filter(([word, count]) => word.length > 6)
+      const filteredBook = sortedBook.filter(([word, count]) => word.endsWith('ly'));
+
+      const sortedBookObj = {};
+        for (const [word, count] of sortedBook) {
+          sortedBookObj[word] = count;
+        }
+
+
+      const topWords = filteredBook.slice(0, 30);
+      const numPairs = filteredBook.length;
+      
+      return { topWords, numPairs }
+    }
+
+
+
 
 
           // const adverbs = Object.entries(mergedChapter)
@@ -36,7 +53,7 @@ const chapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6,
                 // console.log(util.inspect(adverbs, {showHidden: false, depth: null}));
 
       
-      adverbs = Object.entries(result).filter(([word, count]) => word.endsWith('ly'));
+      // adverbs = Object.entries(result).filter(([word, count]) => word.endsWith('ly'));
 
-      console.log(JSON.stringify(adverbs, null, 2));
+      // console.log(JSON.stringify(adverbs, null, 2));
 
