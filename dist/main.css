@@ -32,6 +32,25 @@
   color: orange;
 }
 
+li[title] {
+  position: relative;
+  cursor: help;
+}
+
+li[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  padding: 5px;
+  background: yellow;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
 @font-face {
   font-family: "Alice";
   src: url("/assets/Aliciawonderland-ZoM8.ttf");

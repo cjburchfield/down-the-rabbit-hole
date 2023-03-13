@@ -14,3 +14,5 @@ Grouped bar chart by chapter, focus on top adverbs, color coded by mood, hover o
 
 canvas elemenst of the cards moving
 styles reset
+
+Clean code for consistency and readability and understability
