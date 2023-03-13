@@ -1,4 +1,5 @@
-let objSeven = {a: 48,
+export const chapter7 = {
+    a: 48,
     about: 5,
     above: 1,
     accounts: 1,
@@ -553,4 +554,5 @@ let objSeven = {a: 48,
     you: 49,
     young: 1,
     your: 4,
-    yourself: 1}
+    yourself: 1
+};

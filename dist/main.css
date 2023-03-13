@@ -1,11 +1,36 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-#main > h1 {
-  border: 4px solid blue;
-  padding: 20px;
+.word-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Alice";
+}
+
+.word {
+  border: 4px solid red;
+  margin: 0 10px;
+  background-color: white;
+}
+
+body {
+  background-image: url("/assets/background3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "Alice";
+  src: url("/assets/Aliciawonderland-ZoM8.ttf");
+}
+body {
+  font-family: "Alice";
+  display: flex;
+  justify-content: center;
 }
 
 #main {
-  color: blue;
+  color: red;
 }

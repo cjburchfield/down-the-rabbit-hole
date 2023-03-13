@@ -1,4 +1,5 @@
-let objElevent = {a: 35,
+export const chapter11 = {
+    a: 35,
     about: 5,
     above: 1,
     accusation: 1,
@@ -411,7 +412,7 @@ let objElevent = {a: 35,
     teanot: 1,
     tell: 1,
     that: 21,
-    thatonly: 1,
+    // thatonly: 1,
     the: 182,
     their: 6,
     them: 8,
@@ -497,4 +498,5 @@ let objElevent = {a: 35,
     yes: 1,
     yet: 4,
     you: 18,
-    your: 9};
+    your: 9
+};

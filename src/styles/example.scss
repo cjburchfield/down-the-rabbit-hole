@@ -1,6 +1,37 @@
-$color: blue; // Define a SCSS variable
+$color: red; // Define a SCSS variable
 
-#main>h1 {
-    border: 4px solid $color; // Use the variable we defined
-    padding: 20px;
+// #main>h1 {
+//     border: 4px solid $color; // Use the variable we defined
+//     padding: 20px;
+// }
+
+.word-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  font-family: "Alice";
+}
+  
+.word {
+    border: 4px solid red;
+    margin: 0 10px;
+    background-color: white;
+  }
+
+body {
+  background-image: url("/assets/background3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+};
+
+@font-face {
+  font-family: "Alice";
+  src: url("/assets/Aliciawonderland-ZoM8.ttf");
+}
+
+body {
+  font-family: "Alice";
+  display: flex;
+  justify-content: center;
 }
