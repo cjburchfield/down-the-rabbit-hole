@@ -1,15 +1,15 @@
-import { chapter1 } from "./chapter-objects/chapterOne";
-import { chapter2 } from "./chapter-objects/chapterTwo";
-import { chapter3 } from "./chapter-objects/chapterThree";
-import { chapter4 } from "./chapter-objects/chapterFour";
-import { chapter5 } from "./chapter-objects/chapterFive";
-import { chapter6 } from "./chapter-objects/chapterSix";
-import { chapter7 } from "./chapter-objects/chapterSeven";
-import { chapter8 } from "./chapter-objects/chapterEight";
-import { chapter9 } from "./chapter-objects/chapterNine";
-import { chapter10 } from "./chapter-objects/chapterTen";
-import { chapter11 } from "./chapter-objects/chapterEleven";
-import { chapter12 } from "./chapter-objects/chapterTwelve";
+import { chapter1 } from "../src/chapter-objects/chapterOne";
+import { chapter2 } from "../src/chapter-objects/chapterTwo";
+import { chapter3 } from "../src/chapter-objects/chapterThree";
+import { chapter4 } from "../src/chapter-objects/chapterFour";
+import { chapter5 } from "../src/chapter-objects/chapterFive";
+import { chapter6 } from "../src/chapter-objects/chapterSix";
+import { chapter7 } from "../src/chapter-objects/chapterSeven";
+import { chapter8 } from "../src/chapter-objects/chapterEight";
+import { chapter9 } from "../src/chapter-objects/chapterNine";
+import { chapter10 } from "../src/chapter-objects/chapterTen";
+import { chapter11 } from "../src/chapter-objects/chapterEleven";
+import { chapter12 } from "../src/chapter-objects/chapterTwelve";
 
 
 
@@ -29,8 +29,7 @@ const chapters2 = ([chapter1, chapter2, chapter3, chapter4, chapter5, chapter6,
       }
       
       const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]);
-      // const filteredBook = sortedBook.filter(([word, count]) => word.length > 6)
-      const filteredBook = sortedBook.filter(([word, count]) => word.endsWith('ly'));
+      const filteredBook = sortedBook.filter(([word, count]) => word.length > 6)
 
       const sortedBookObj = {};
         for (const [word, count] of sortedBook) {
@@ -38,12 +37,13 @@ const chapters2 = ([chapter1, chapter2, chapter3, chapter4, chapter5, chapter6,
         }
 
 
-      const topWords = filteredBook.slice(0, 30);
+      const topWords = filteredBook.slice(0, 10);
       const numPairs = filteredBook.length;
       
       return { topWords, numPairs }
     }
 
+      // const filteredBook = sortedBook.filter(([word, count]) => word.endsWith('ly'));
 
 
 

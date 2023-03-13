@@ -9,13 +9,6 @@ class Word {
         <div class="word"><h1>${this.words[2]}</h1></div>
       </div>
     `;
-//     this.ele.innerHTML = `
-//       <div class="word-box">
-//         <div class="word"><h1 class="header">${this.words[0]}</h1></div>
-//         <div class="word"><h1 class="header">${this.words[1]}</h1></div>
-//         <div class="word"><h1 class="header">${this.words[2]}</h1></div>
-//    </div>
-// `;
     this.wordBoxes = Array.from(this.ele.querySelectorAll(".word > h1"));
 
     this.handleClick = this.handleClick.bind(this);

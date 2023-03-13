@@ -11,3 +11,6 @@ Top adverbs
 Filter by word type - show the chart that way
 
 Grouped bar chart by chapter, focus on top adverbs, color coded by mood, hover over for definiition
+
+canvas elemenst of the cards moving
+styles reset

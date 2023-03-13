@@ -27,20 +27,3 @@ $color: orange; // Define a SCSS variable
     position: relative;
     text-align: center;
   }
-
-body {
-  background-image: url("/assets/background3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-};
-
-@font-face {
-  font-family: "Alice";
-  src: url("/assets/Aliciawonderland-ZoM8.ttf");
-}
-
-body {
-  font-family: "Alice";
-  display: flex;
-  justify-content: center;
-}

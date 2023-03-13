@@ -1,7 +1,20 @@
 @import "./styles/example.scss";
+@import "./styles/header.scss";
 
 
 
-#main {
-    color: $color;
+// #main {
+//     color: $color;
+// }
+
+@font-face {
+    font-family: "Alice";
+    src: url("/assets/Aliciawonderland-ZoM8.ttf");
+  }
+
+body {
+    // background-color: black;
+    background-image: url("/assets/background3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

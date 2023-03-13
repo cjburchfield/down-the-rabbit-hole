@@ -22,10 +22,14 @@
   text-align: center;
 }
 
-body {
-  background-image: url("/assets/background3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+#app-title {
+  display: flex;
+  justify-content: center;
+  font-size: 50;
+  padding: 20px 0px 20px 0px;
+  font-family: "Alice";
+  font-weight: 400;
+  color: orange;
 }
 
 @font-face {
@@ -33,11 +37,7 @@ body {
   src: url("/assets/Aliciawonderland-ZoM8.ttf");
 }
 body {
-  font-family: "Alice";
-  display: flex;
-  justify-content: center;
-}
-
-#main {
-  color: orange;
+  background-image: url("/assets/background3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
