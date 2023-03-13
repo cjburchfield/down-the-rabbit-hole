@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: "Alice";
 }
 
@@ -25,16 +24,33 @@
 #app-title {
   display: flex;
   justify-content: center;
-  font-size: 50;
-  padding: 20px 0px 20px 0px;
+  font-size: 100px;
+  padding: 15px 0px 15px 0px;
   font-family: "Alice";
   font-weight: 400;
   color: orange;
+  text-shadow: 2px 4px 4px black;
+}
+
+#introduction {
+  display: inline-block;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  color: orange;
+  font-size: 20px;
+  text-shadow: 0.5px 1px 1px black;
+}
+
+#introduction h4 {
+  color: orange;
+  font-size: 30px;
 }
 
 li[title] {
   position: relative;
-  cursor: help;
+  cursor: pointer;
 }
 
 li[title]:hover:after {
@@ -46,7 +62,7 @@ li[title]:hover:after {
   transform: translate(-50%, 0);
   white-space: nowrap;
   padding: 5px;
-  background: yellow;
+  background: white;
   font-weight: bold;
   font-size: 0.9em;
 }
@@ -55,8 +71,12 @@ li[title]:hover:after {
   font-family: "Alice";
   src: url("/assets/Aliciawonderland-ZoM8.ttf");
 }
+@font-face {
+  font-family: "Burton";
+  src: url("/assets/BurtonsDreamsPro-R1rE.ttf");
+}
 body {
+  background-color: black;
   background-image: url("/assets/background3.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
 }

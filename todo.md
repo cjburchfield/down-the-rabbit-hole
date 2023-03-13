@@ -16,3 +16,4 @@ canvas elemenst of the cards moving
 styles reset
 
 Clean code for consistency and readability and understability
+add in words invented by him: https://theweek.com/articles/468355/10-whimsical-words-coined-by-lewis-carroll

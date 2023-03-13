@@ -1,9 +1,26 @@
 #app-title {
     display: flex;
     justify-content: center;
-    font-size: 50;
-    padding: 20px 0px 20px 0px;
+    font-size: 100px;
+    padding: 15px 0px 15px 0px;
     font-family: "Alice";
     font-weight: 400;
     color: orange;
+    text-shadow: 2px 4px 4px black;
+}
+
+#introduction {
+    display: inline-block;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-family: "Burton";
+    color: orange;
+    font-size: 20px;
+    text-shadow: .5px 1px 1px black;
+}
+
+#introduction h4 {
+    color: orange;
+    font-size: 30px;
 }

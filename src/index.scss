@@ -14,9 +14,14 @@
     src: url("/assets/Aliciawonderland-ZoM8.ttf");
   }
 
+@font-face {
+  font-family: "Burton";
+  src: url("/assets/BurtonsDreamsPro-R1rE.ttf");
+}
+
 body {
-    // background-color: black;
+    background-color: black;
     background-image: url("/assets/background3.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    // background-size: cover;
 }

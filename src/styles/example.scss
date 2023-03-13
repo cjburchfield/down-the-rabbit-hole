@@ -9,7 +9,7 @@ $color: orange; // Define a SCSS variable
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  // height: 100vh; 
   font-family: "Alice";
 }
   
@@ -26,4 +26,5 @@ $color: orange; // Define a SCSS variable
     transform-style: preserve-3d;
     position: relative;
     text-align: center;
+    // transition: transform 1s;
   }
