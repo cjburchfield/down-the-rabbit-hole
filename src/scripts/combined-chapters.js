@@ -50,7 +50,7 @@ export const createTopWordsList = (topWords) => {  //https://developer.mozilla.o
     topWordsList.appendChild(listItem); //https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
   }
   
-      topWordsList.addEventListener("mouseover", async (event) => {
+      topWordsList.addEventListener("click", async (event) => {
         const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
         const word = event.target.getAttribute("data-word");
 

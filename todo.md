@@ -1,5 +1,9 @@
-ask peter
-about using the mouse scroller for instructions
+Notes to self:
+// When four values are specified, the margins apply to the top, right, bottom, and left in that order (clockwise)
+
+
+number ticker for the high level metrics
+add commans to nmbers
 
 To add in:
 dd in the top adverbs, sort by length and then definitions - or colorcode by mood
@@ -8,7 +12,7 @@ Longest word graphic -   <h4>contemptuously: 2; disappointment: 1; multiplicatio
 Break down of number of words, unique words, and longer words
 add definitions for the 4 longest words
 pesudo code all of src and index.html
-
+https://csshint.com/html-css-scroll-down-arrow-examples/
 
 To clean up:
 Being able to flip back from definition in invented words
@@ -20,6 +24,7 @@ Consistent punctuation
 tStyle the frequented favorites better - sohw the number in a different color
 Clean up styling files
 
+css spinning guy; https://css-tricks.com/books/greatest-css-tricks/scroll-animation/
 Styling:
 Background image - potentailly make it dynamic
 pFollow the white rabbit cursor https://www.y outube.com/watch?v=Dwek1jNX71Q
@@ -69,3 +74,8 @@ Production README
 ☐ No .DS_Store files / debuggers / console.logs.
 
 ☐ Organized file structure, with /src and /dist directories.
+
+
+
+Styling
+Italicize book title in header

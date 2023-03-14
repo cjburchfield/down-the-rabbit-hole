@@ -1,62 +1,15 @@
-#app-title {
+header h1 {
     display: flex;
     justify-content: center;
-    font-size: 100px;
-    padding: 30px 0px 10px 0px;
+    font-size: 120px;
     font-family: "Alice";
-    font-weight: 400;
+    font-weight: 500;
     color: orangered;
     text-shadow: 2px 4px 4px black;
-    height: 100vh;
-    width: auto;
-    // margin: -150px 0 0 -150px;
-    top: 50%;
-    left: 50%;
-    margin: 50vh auto 0;
-    // position: absolute;
-
+    margin: 35vh auto 0 auto;
 }
 
-// #app-title {
-//   display: flex;
-//   justify-content: center; 
-//   font-size: 100px;
-//   font-family: "Alice";
-//   font-weight: 400;
-//   color: orangered;
-//   text-shadow: 2px 4px 4px black;
-// //   height: 100%;
-// //   width: auto;
-// //   position: fixed;
-// //   top: 50%;
-// //   left: 50%;
-// //   transform: translate(-50%, -50%);
-//     height: 100vh;
-//     width: auto;
-//     margin: -150px 0 0 -150px;
-//     top: 50%;
-//     left: 50%;
-//     position: fixed;
-// }
-
-// #app-title {
-//     display: flex;
-//     justify-content: center;
-//     font-size: 100px;
-//     font-family: "Alice";
-//     font-weight: 400;
-//     color: orangered;
-//     text-shadow: 2px 4px 4px black;
-//     height: 100vh;
-//     width: auto;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     z-index: 999; /* add this to ensure the #app-title appears on top of other elements */
-//   }
-
-#introduction {
+header h3 {
     display: flex;
     width: auto;
     justify-content: center;
@@ -65,33 +18,37 @@
     color: orangered;
     font-weight: 500;
     font-size: 35px;
-    text-shadow: .75px 1px 1px black;
-    padding: 30px 100px 30px 100px;
-    // background-color: rgba(255, 255, 255, 0.379)
-
+    text-shadow: 2px 4px 4px black;
+    margin: 10px 60px 10px 60px;
 }
 
 #rabbit-hole {
     color: orangered;
     font-size: 40px;
-    text-shadow: 1px 2px 2px black;
-    padding: 10px 30px 30px 30px;
-    animation: 10s linear 0s rabbit-hole;
-    animation-iteration-count: 1;
+    font-weight: 500;
+    text-shadow: 2px 4px 4px black;
+    // animation: 4s linear 0s infinite rabbit-hole; //Add alternate if I want it to go back and forth
+    animation: rabbit-hole 10s infinite;
     display: flex;
     width: auto;
     justify-content: center;
     text-align: center;
     font-family: "Burton";
-    overflow: hidden;
-    // height: 100vh;
+    // overflow: hidden;
+    height: 100vh;
 }
-  
+
+//Guide: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 //   @keyframes rabbit-hole {
 //     from {
 //         transform: translateY(0);
 //     }
 //     to {
-//         transform: translateY(10vh);
+//         transform: translateY(40vh);
 //     }
 //   }
+
+//Guide: https://www.w3schools.com/cssref/tryit.php?filename=trycss_anim_transform
+@keyframes rabbit-hole {
+    50% {transform: rotate(100deg);}
+}
