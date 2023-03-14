@@ -1,6 +1,8 @@
 @import "./styles/example.scss";
 @import "./styles/header.scss";
 @import "./styles/combined-chapters.scss";
+@import "./styles/reset.scss";
+@import "./styles/stats.scss";
 
 
 
@@ -21,7 +23,11 @@
 
 body {
     background-color: black;
-    background-image: url("/assets/background3.jpg");
+    background-image: url("/assets/tunnel.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    // cursor: url(images/square.png), auto;
+    // opacity: .5;
     // background-size: cover;
 }

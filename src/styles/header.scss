@@ -2,25 +2,49 @@
     display: flex;
     justify-content: center;
     font-size: 100px;
-    padding: 15px 0px 15px 0px;
+    padding: 30px 0px 10px 0px;
     font-family: "Alice";
     font-weight: 400;
-    color: orange;
+    color: orangered;
     text-shadow: 2px 4px 4px black;
 }
 
 #introduction {
-    display: inline-block;
+    display: flex;
     width: auto;
     justify-content: center;
     text-align: center;
     font-family: "Burton";
-    color: orange;
-    font-size: 20px;
-    text-shadow: .5px 1px 1px black;
+    color: orangered;
+    font-weight: 500;
+    font-size: 35px;
+    text-shadow: .75px 1px 1px black;
+    padding: 30px 100px 30px 100px;
+    // background-color: rgba(255, 255, 255, 0.379)
+
 }
 
-#introduction h4 {
-    color: orange;
-    font-size: 30px;
+#rabbit-hole {
+    color: orangered;
+    font-size: 40px;
+    text-shadow: 1px 2px 2px black;
+    padding: 10px 30px 30px 30px;
+    animation: 10s linear 0s rabbit-hole;
+    animation-iteration-count: 1;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-family: "Burton";
+    overflow: hidden;
+    // height: 100vh;
 }
+  
+  @keyframes rabbit-hole {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10vh);
+    }
+  }

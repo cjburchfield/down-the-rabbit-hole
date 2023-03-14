@@ -12,7 +12,7 @@ export const combineChapters = (chapters) => {
     }
   
     const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]);
-    const filteredBook = sortedBook.filter(([word, count]) => word.length > 13);
+    const filteredBook = sortedBook.filter(([word, count]) => word.length > 5);
   
     const topWords = filteredBook.slice(0, 10);
     const numPairs = filteredBook.length;
