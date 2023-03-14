@@ -11,7 +11,7 @@ import { chapter9 } from "./chapter-objects/chapterNine";
 import { chapter10 } from "./chapter-objects/chapterTen";
 import { chapter11 } from "./chapter-objects/chapterEleven";
 import { chapter12 } from "./chapter-objects/chapterTwelve";
-import { combineChapters, createTopWordsList, createLongestWordsList } from "./scripts/combined-chapters";
+import { combineChapters, createTopWordsList, createLongestWordsList, createAdverbList } from "./scripts/combined-chapters";
  
 document.addEventListener("DOMContentLoaded", () => {
   const definitions = document.getElementById("definitions");
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   combinedChaptersContainer.appendChild(topWordsList.topWordsList);
 
   const numPairsElement = document.getElementById("num-pairs");
-  const longestWordElement = document.getElementById("longest-word");
   const totalWordsElement = document.getElementById("total-words");
   const tenElement = document.getElementById("ten-words");
   const sixElement = document.getElementById("six-words");
@@ -37,7 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
   totalWordsElement.textContent = combinedData.totalWords;
   numPairsElement.textContent = combinedData.numPairs;
 
+  const longestWordElement = document.getElementById("longest-word");
   const longestWordsList = createLongestWordsList(combinedData.longestWords);
   longestWordElement.appendChild(longestWordsList.longestWordsList);
+
+  const adverbsElement = document.getElementById("adverbs");
+  const adverbsList = createAdverbList(combinedData.adverbs);
+  adverbsElement.appendChild(adverbsList.adverbsList);
 });
 

@@ -7,7 +7,54 @@
     font-weight: 400;
     color: orangered;
     text-shadow: 2px 4px 4px black;
+    height: 100vh;
+    width: auto;
+    // margin: -150px 0 0 -150px;
+    top: 50%;
+    left: 50%;
+    margin: 50vh auto 0;
+    // position: absolute;
+
 }
+
+// #app-title {
+//   display: flex;
+//   justify-content: center; 
+//   font-size: 100px;
+//   font-family: "Alice";
+//   font-weight: 400;
+//   color: orangered;
+//   text-shadow: 2px 4px 4px black;
+// //   height: 100%;
+// //   width: auto;
+// //   position: fixed;
+// //   top: 50%;
+// //   left: 50%;
+// //   transform: translate(-50%, -50%);
+//     height: 100vh;
+//     width: auto;
+//     margin: -150px 0 0 -150px;
+//     top: 50%;
+//     left: 50%;
+//     position: fixed;
+// }
+
+// #app-title {
+//     display: flex;
+//     justify-content: center;
+//     font-size: 100px;
+//     font-family: "Alice";
+//     font-weight: 400;
+//     color: orangered;
+//     text-shadow: 2px 4px 4px black;
+//     height: 100vh;
+//     width: auto;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     z-index: 999; /* add this to ensure the #app-title appears on top of other elements */
+//   }
 
 #introduction {
     display: flex;
@@ -40,11 +87,11 @@
     // height: 100vh;
 }
   
-  @keyframes rabbit-hole {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(10vh);
-    }
-  }
+//   @keyframes rabbit-hole {
+//     from {
+//         transform: translateY(0);
+//     }
+//     to {
+//         transform: translateY(10vh);
+//     }
+//   }

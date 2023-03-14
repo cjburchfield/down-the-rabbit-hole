@@ -1,9 +1,14 @@
+ask peter
+about using the mouse scroller for instructions
+
 To add in:
 dd in the top adverbs, sort by length and then definitions - or colorcode by mood
 Words he invented down in the dictionary
 Longest word graphic -   <h4>contemptuously: 2; disappointment: 1; multiplication: 1; affectionately: 1</h4> https://codepen.io/abhiishek-10/pen/XWPXKjB
 Break down of number of words, unique words, and longer words
 add definitions for the 4 longest words
+pesudo code all of src and index.html
+
 
 To clean up:
 Being able to flip back from definition in invented words
@@ -21,13 +26,22 @@ pFollow the white rabbit cursor https://www.y outube.com/watch?v=Dwek1jNX71Q
  https://freefrontend.com/css-lists/ credit
 
 
+scrol indicator: https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
+
 If time:
 portmonteau creater
 chart of adverbs by chapter - color coded by mood
 
+user instructions: landign page with scroll
+https://www.w3schools.com/howto/howto_css_parallax.asp
+https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-chevron-down
+https://codepen.io/nxworld/pen/OyRrGy
 
 ffuture functionality:
 api bot limited by number of queries a day, analzye by type of word(adverb vs adjetive etc)
+do the cleaning of words within the website - i did it seperately so i could identify irregularies (like contractions, whihc i removed) - pul lin logic - be able to incorporate posessive, proper nouns
+i pulled hte text in from projec tgutneberg, add in to its 
+adverb functionality vs ly words
 
 
     Live Project
