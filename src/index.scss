@@ -3,6 +3,7 @@
 @import "./styles/combined-chapters.scss";
 @import "./styles/reset.scss";
 @import "./styles/stats.scss";
+@import "./styles/invented.scss";
 
 
 
@@ -24,6 +25,7 @@
 body {
     background-color: black;
     background-image: url("/assets/tunnel.jpg");
+    // background-image: url("/assets/background3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

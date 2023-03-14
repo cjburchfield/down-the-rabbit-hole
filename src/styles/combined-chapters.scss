@@ -150,7 +150,7 @@ li[data-word]{
     position: sticky;
 }
 
-@for $counter from 1 through 12 {
+@for $counter from 1 through 10 {
     li[data-word]:nth-child(#{$counter}) {
         top: #{($counter - 1) * 7.5vh};
         height: #{100vh - ($counter - 1) * 7.5vh};

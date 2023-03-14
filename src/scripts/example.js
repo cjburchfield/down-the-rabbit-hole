@@ -1,7 +1,7 @@
 class Word {
   constructor(ele) {
     this.ele = ele;
-    this.words = ["tap", "each", "word"];
+    this.words = ["galumph", "snark", "jabberwocky"];
     this.ele.innerHTML = `
       <div class="word-box">
         <div class="word"><h1>${this.words[0]}</h1></div>
@@ -19,6 +19,7 @@ class Word {
         wordBox.innerText = this.words[this.wordBoxes.indexOf(wordBox)];
       });
     });
+    
   }
 
   async handleClick(event) {

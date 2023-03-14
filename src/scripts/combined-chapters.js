@@ -14,9 +14,17 @@ export const combineChapters = (chapters) => {
     const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]);
     const filteredBook = sortedBook.filter(([word, count]) => word.length > 5);
   
+    let longestWord = '';
+    for (const [word, count] of sortedBook) {
+      if (word.length > longestWord.length) {
+        longestWord = word;
+      }
+    }
+
+
     const topWords = filteredBook.slice(0, 10);
     const numPairs = filteredBook.length;
-    return { topWords, numPairs };
+    return { topWords, numPairs, longestWord };
 
 }
     export const createTopWordsList = (topWords) => {
@@ -44,5 +52,3 @@ export const combineChapters = (chapters) => {
   
       return { topWordsList };
     };
-    // const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`)
-    // .catch(error => console.error(error));

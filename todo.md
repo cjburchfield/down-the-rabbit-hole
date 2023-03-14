@@ -1,37 +1,54 @@
+To add in:
+Words he invented down in the dictionary
+Longest word graphic -   <h4>contemptuously: 2; disappointment: 1; multiplication: 1; affectionately: 1</h4>
+Break down of number of words, unique words, and longer words
 
-Update the word boxes so you can click out of the definition
-Words are currently hardcoded, make them dynamic or choose more thoughtfully
-Clean up the data folder
-Change it from example.js ot word.js
-Error message if not a word
-Figure out why I have to do npm run watch - think I downloaded webpack globally
+To clean up:
+Being able to flip back from definition in invented words
+Clean up data folder
+Make code consistent, readable, understadable
+example.js to word.js
+Erro rmessage ifnot aword/dictionary
+Consistent punctuation
+tStyle the frequented favorites better - sohw the number in a different color
+Clean up styling files
 
-Peter re: what graphic
-Top adverbs
-Filter by word type - show the chart that way
+Styling:
+Background image - potentailly make it dynamic
+pFollow the white rabbit cursor https://www.y outube.com/watch?v=Dwek1jNX71Q
+ https://freefrontend.com/css-lists/ credit
 
-Grouped bar chart by chapter, focus on top adverbs, color coded by mood, hover over for definiition
 
-canvas elemenst of the cards moving
+If time:
+portmonteau creater
+chart of adverbs by chapter - color coded by mood
 
-Clean code for consistency and readability and understability
-add in words invented by him: https://theweek.com/articles/468355/10-whimsical-words-coined-by-lewis-carroll
 
-how to change opacity of just background
-fix backgorudn image scroll
 
-cursor work: https://www.youtube.com/watch?v=Dwek1jNX71Q
 
-rabbit hole naimation
 
-    <div>
-      <h1>Data to incorporate</h1>
-      <h2>Longest words (tied for 13 characters)</h2>
-      <h4>contemptuously: 2; disappointment: 1; multiplication: 1; affectionately: 1</h4>
-      <h2>Total number of unique words: x </h2>
-      <h2>Total number of words: x </h2>
-    </div>
+    Live Project
+☐ Includes links to your portfolio website, Github, and LinkedIn.
 
-    https://freefrontend.com/css-lists/
+☐ Landing page/modal with obvious, clear instructions.
 
-    follow the white rabbit cursor
+☐ Interactivity of some kind.
+
+☐ Well styled, clean frontend.
+
+☐ If it has music, the option to mute or stop it.
+
+Production README
+☐ Link to live version.
+
+☐ Instructions on how to play/interact with the project.
+
+☐ List of technologies / libraries / APIs used.
+
+☐ Technical implementation details with (good-looking) code snippets.
+
+☐ To-dos / future features.
+
+☐ No .DS_Store files / debuggers / console.logs.
+
+☐ Organized file structure, with /src and /dist directories.

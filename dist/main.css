@@ -13,6 +13,7 @@
   border-radius: 25px;
   padding: 20px;
   margin: 0 10px;
+  font-size: 25px;
   background-color: white;
   box-shadow: 5px 5px;
   cursor: pointer;
@@ -193,16 +194,6 @@ li[data-word]:nth-child(10) {
   height: 32.5vh;
 }
 
-li[data-word]:nth-child(11) {
-  top: 75vh;
-  height: 25vh;
-}
-
-li[data-word]:nth-child(12) {
-  top: 82.5vh;
-  height: 17.5vh;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -339,16 +330,42 @@ table {
 }
 
 #stats-intro {
-  color: aquamarine;
+  color: orangered;
   display: flex;
   width: auto;
   justify-content: center;
   text-align: center;
   font-family: "Burton";
   font-weight: 500;
-  font-size: 20px;
+  font-size: 30px;
   text-shadow: 0.75px 1px 1px black;
   padding: 30px 30px 30px 30px;
+}
+
+#invented h1 {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  color: orangered;
+  font-weight: 500;
+  font-size: 50px;
+  text-shadow: 0.75px 1px 1px black;
+  padding: 30px 100px 30px 100px;
+}
+
+#invented h2 {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  color: orangered;
+  font-weight: 500;
+  font-size: 35px;
+  text-shadow: 0.75px 1px 1px black;
+  padding: 30px 100px 30px 100px;
 }
 
 @font-face {
