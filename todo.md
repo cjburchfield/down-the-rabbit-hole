@@ -1,6 +1,6 @@
 To add in:
 Words he invented down in the dictionary
-Longest word graphic -   <h4>contemptuously: 2; disappointment: 1; multiplication: 1; affectionately: 1</h4>
+Longest word graphic -   <h4>contemptuously: 2; disappointment: 1; multiplication: 1; affectionately: 1</h4> https://codepen.io/abhiishek-10/pen/XWPXKjB
 Break down of number of words, unique words, and longer words
 
 To clean up:
@@ -24,7 +24,8 @@ portmonteau creater
 chart of adverbs by chapter - color coded by mood
 
 
-
+ffuture functionality:
+api bot limited by number of queries a day, analzye by type of word(adverb vs adjetive etc)
 
 
     Live Project

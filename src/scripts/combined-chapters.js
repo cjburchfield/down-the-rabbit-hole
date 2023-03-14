@@ -1,8 +1,10 @@
 export const combineChapters = (chapters) => {  
     const combinedBook = {};
+    let totalWords = 0;
 
     for (const chapter of chapters) {
       for (const [word, count] of Object.entries(chapter)) {
+          totalWords += count;
         if (combinedBook.hasOwnProperty(word)) {
           combinedBook[word] += count;
         } else {
@@ -13,18 +15,32 @@ export const combineChapters = (chapters) => {
   
     const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]);
     const filteredBook = sortedBook.filter(([word, count]) => word.length > 5);
+    const sixWords = sortedBook.filter(([word, count]) => word.length > 5).length;
+    const tenWords = sortedBook.filter(([word, count]) => word.length > 9).length;
   
-    let longestWord = '';
+    // let longestWord = '';
+    // for (const [word, count] of sortedBook) {
+    //   if (word.length > longestWord.length) {
+    //     longestWord = word;
+    //   }
+    // }
+
+    let longestWord = ''
+    let longestWords = [];
     for (const [word, count] of sortedBook) {
       if (word.length > longestWord.length) {
-        longestWord = word;
-      }
+            longestWord = word;
+        longestWords = [word];
+      } else if (word.length === longestWord.length) {
+        longestWords.push(word)
+    }
     }
 
 
+
     const topWords = filteredBook.slice(0, 10);
-    const numPairs = filteredBook.length;
-    return { topWords, numPairs, longestWord };
+    const numPairs = sortedBook.length;
+    return { topWords, numPairs, longestWords, totalWords, tenWords, sixWords };
 
 }
     export const createTopWordsList = (topWords) => {
@@ -52,3 +68,14 @@ export const combineChapters = (chapters) => {
   
       return { topWordsList };
     };
+
+    export const createLongestWordsList = (longestWords) => {
+      const longestWordsList = document.createElement("ul");
+      for (const word of longestWords) {
+        const listItem = document.createElement("li");
+        listItem.textContent = word;
+        longestWordsList.appendChild(listItem);
+      }
+      return { longestWordsList };
+    };
+
