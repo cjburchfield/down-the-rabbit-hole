@@ -17,6 +17,7 @@ export const combineChapters = (chapters) => {
     const filteredBook = sortedBook.filter(([word, count]) => word.length > 5);
     const sixWords = sortedBook.filter(([word, count]) => word.length > 5).length;
     const tenWords = sortedBook.filter(([word, count]) => word.length > 9).length;
+    const lyWords = sortedBook.filter(([word, count]) => word.endsWith("ly")).length;
   
     // let longestWord = '';
     // for (const [word, count] of sortedBook) {
@@ -40,7 +41,7 @@ export const combineChapters = (chapters) => {
 
     const topWords = filteredBook.slice(0, 10);
     const numPairs = sortedBook.length;
-    return { topWords, numPairs, longestWords, totalWords, tenWords, sixWords };
+    return { topWords, numPairs, longestWords, totalWords, tenWords, sixWords, lyWords };
 
 }
     export const createTopWordsList = (topWords) => {

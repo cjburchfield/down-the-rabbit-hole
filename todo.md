@@ -1,7 +1,9 @@
 To add in:
+dd in the top adverbs, sort by length and then definitions - or colorcode by mood
 Words he invented down in the dictionary
 Longest word graphic -   <h4>contemptuously: 2; disappointment: 1; multiplication: 1; affectionately: 1</h4> https://codepen.io/abhiishek-10/pen/XWPXKjB
 Break down of number of words, unique words, and longer words
+add definitions for the 4 longest words
 
 To clean up:
 Being able to flip back from definition in invented words

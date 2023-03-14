@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalWordsElement = document.getElementById("total-words");
   const tenElement = document.getElementById("ten-words");
   const sixElement = document.getElementById("six-words");
+  const adverbElement = document.getElementById("ly-words");
 
+  adverbElement.textContent = combinedData.lyWords;
   sixElement.textContent = combinedData.sixWords;
   tenElement.textContent = combinedData.tenWords;
   totalWordsElement.textContent = combinedData.totalWords;
