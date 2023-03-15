@@ -6,7 +6,7 @@ header h1 {
     font-weight: 600;
     color: orangered;
     text-shadow: 2px 4px 4px black;
-    // margin: 35vh auto 0 auto;
+    margin: 30vh auto 0 auto;
     // position: sticky;
     z-index: 999;
     top: 0;
@@ -17,12 +17,16 @@ header h3 {
     width: auto;
     justify-content: center;
     text-align: center;
-    font-family: "Roboto";
-    color: orangered;
-    font-size: 25px;
+    font-family: "Burton";
+    color: white;
+    font-size: 35px;
     font-weight: 600;
     text-shadow: 2px 4px 4px black;
     margin: 10px 150px 10px 150px;
+}
+
+header h2 {
+    color: blue;
 }
 
 #rabbit-hole {
@@ -57,8 +61,8 @@ header h3 {
 }
 
 header h4 {
-    color:white;
-    font-style: italic;
+    color:orangered;
+    // font-style: italic;
     font-family: "Burton";
     font-size: 45px;
     display: flex;

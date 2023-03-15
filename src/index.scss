@@ -34,28 +34,61 @@ body {
   src: url("/assets/Roboto-Regular.ttf");
 }
 
-.word-definition-box {
-  // display: block;
+@font-face {
+  font-family: "Pacifico";
+  src: url("/assets/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Merry";
+  src: url("/assets/Merriweather-Regular.ttf")
+}
+
+.boxes-container {
+  display: flex;
+  justify-content: space-between;
+  position: fixed; /* set to fixed position */
+  bottom: 10px; /* set to bottom */
+  left: 10px; /* add left margin */
+}
+
+
+.spare-box {
   display: flex;
   align-items: center;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  // border: 1px solid black;
+  padding: 10px;
+  font-family: "Burton";
+  font-size: 20px;
+  color: red;
+  background: url("/assets/bunny-scroll.png");
+  // background-color: rgba(255, 255, 255, 0.7); /* transparent white */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  z-index: 1;
+  border-radius: 15px; /* 10px rounded corners */
+  // box-shadow: 3px 5px 5px black;
+  margin-left: 20px; /* add margin to separate from the first box */
+}
+
+#word-definition-box {
   width: 350px;
   height: 150px;
   background-color: white;
   border: 1px solid black;
   padding: 10px;
   font-family: "Burton";
-  font-size: 20px;
+  font-size: 25px;
   color: red;
-  background: url("/assets/bunny-none.png");
   background-color: rgba(255, 255, 255, 0.7); /* transparent white */
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right center;
+  background-position: left center;
   z-index: 1;
-  float: right;
   border-radius: 15px; /* 10px rounded corners */
   box-shadow: 3px 5px 5px black;
 }
@@ -64,9 +97,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: calc(100% - 150px); /* width of box minus width of image plus padding */
-  // height: 100%;
+  align-items: center; /* center text horizontally and vertically */
+  width: calc(100% - 150px);
   box-sizing: border-box;
   padding: 10px;
   font-family: Arial, sans-serif;

@@ -62,38 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
   frequentWords.appendChild(topWordsList.topWordsList);
 
 
-  
-  // const topWordsListItems = document.querySelectorAll("#frequent-words li");
-
-  // topWordsListItems.forEach((topWords) => {
-  //   const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-  
-  //   topWords.addEventListener("click", async () => {
-  //     if (selectedFrequent) {
-  //       selectedFrequent.classList.remove("selected-topword");
-  //     }
-  //     selectedFrequent = topWords;
-  //     selectedFrequent.classList.add("selected-topword");
-  //     const topWordText = selectedFrequent.textContent;
-  
-  //     try {
-  //       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${topWordText}?key=${API_KEY}`);
-  //       const data = await response.json();
-            
-  //       if (data.length > 0 && data[0].shortdef.length > 0) {
-  //         const definition = data[0].shortdef[0];
-  //         wordDefinitionBox.textContent = `${topWordText}: ${definition}`;
-  //       }
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   });
-  // });
-  
-
-
-
-  //////
 const longestWordsListItems = document.querySelectorAll("#longest-word li");
 
 
@@ -175,3 +143,36 @@ const adverbsListItems = document.querySelectorAll("#adverbs li");
     });
   });
 });
+
+ 
+  // const topWordsListItems = document.querySelectorAll("#frequent-words li");
+
+  // topWordsListItems.forEach((topWords) => {
+  //   const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+  
+  //   topWords.addEventListener("click", async () => {
+  //     if (selectedFrequent) {
+  //       selectedFrequent.classList.remove("selected-topword");
+  //     }
+  //     selectedFrequent = topWords;
+  //     selectedFrequent.classList.add("selected-topword");
+  //     const topWordText = selectedFrequent.textContent;
+  
+  //     try {
+  //       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${topWordText}?key=${API_KEY}`);
+  //       const data = await response.json();
+            
+  //       if (data.length > 0 && data[0].shortdef.length > 0) {
+  //         const definition = data[0].shortdef[0];
+  //         wordDefinitionBox.textContent = `${topWordText}: ${definition}`;
+  //       }
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   });
+  // });
+  
+
+
+
+  //////
