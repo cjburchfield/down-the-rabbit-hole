@@ -1,3 +1,10 @@
+
+README	About (Links)	Favicon	No Console Errors	No Extraneous Content 	Successful Hosting
+
+
+
+
+
 Notes to self:
 // When four values are specified, the margins apply to the top, right, bottom, and left in that order (clockwise)
 

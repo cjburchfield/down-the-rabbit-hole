@@ -1,7 +1,7 @@
 #metrics h1 {
     color: orangered;
     font-size: 75px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
@@ -13,7 +13,7 @@
 #metrics h2 {
     color: orangered;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
@@ -22,15 +22,18 @@
     font-family: "Burton";
 }
 
-#metrics h3{
-    height: 100vh
+#metrics h3 {
+    height: 100vh;
 }
 
 #total-words {
-    color: white
+    color: white;
 }
 
 #num-pairs {
-    color: white
+    color: white;
 }
 
+#emphasis {
+    color: white;
+}

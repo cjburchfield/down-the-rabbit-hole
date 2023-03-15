@@ -1,38 +1,42 @@
 #invented h1  {
     color: orangered;
     font-size: 75px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
     justify-content: center;
     text-align: center;
     font-family: "Alice";
+    // margin: 10px 150px 10px 150px;
 }
 
 #invented h2{
     color: orangered;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
     justify-content: center;
     text-align: center;
     font-family: "Burton";
+    margin: 0px 100px 0px 100px;
+
 }
 
+//This is just the container that the three bubbles are in
 .word-box {
     display: flex;
     justify-content: center;
     align-items: center;
     // height: 100vh;
-    font-family: "Burton";
+    // font-family: "Burton";
     margin: 100px 100px 100px 100px;//need to fix
   }
     
   .word {
-    border: 2px solid orangered;
+    border: 4px solid orangered;
     border-radius: 25px;
     padding: 20px;
     margin: 0 10px;
@@ -48,6 +52,7 @@
   
   .word:hover {
     background-color: orangered;
+    border: 4px solid white;
     color: white;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   }
@@ -60,4 +65,43 @@
   
   #invented h3 {
     height: 100vh
+}
+
+.word:hover:after {
+  background-color: orangered;
+  border: 4px solid white;
+  color: white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+
+//this is the text in the word;
+#invented h4{
+  color: orangered;
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: .5px 1px 1px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Alice";
+}
+
+//this is the definition side
+.definition {
+  color: orangered;
+  // background-color: orangered;
+}
+
+#invented h4:hover{
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: .5px 1px 1px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Alice";
 }

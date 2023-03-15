@@ -7,19 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <title>The Words of Wonderland</title>
   </head>
 
   <body>
     <header>
+      <section id="links-container">
+        <a href="https://github.com/cjburchfield/down-the-rabbit-hole"><img src="./assets/github.png" class="social-link"></a>
+        <a href="https://www.linkedin.com/in/jamieburchfield"><img src="./assets/linkedin.png" class="social-link"></a>
+      </section>
       <h1>The Words of Wonderland</h1>
       <br>
       <h3>Lewis Carroll, a mathematics professor at Oxford University, penned Alice's Adventures in Wonderland in 1865,
-          filling the pages with linguistic play, puns, and parodies. The Words of Wonderland
-          scratches the surface of the riddles, patterns, and puzzles of Carroll's canonical text.</h3>
+          filling the pages with linguistic play, puns, and parodies </h3>
       <br>
-      <h2 id="rabbit-hole"> Scroll down the rabbit hole...</h2>
+      <br>
+      <h4>"I shall eludicate..." </h4>
+      <br>
+      <!-- <h3>The Words of Wonderland scratches the surface of the riddles, patterns, and puzzles of Carroll's canonical text</h3> -->
+
+      <h3>
+        <span id="emphasis"> Scroll&nbsp;</span>to discover some fantastical findings</h3>
+        <br>
+        <h3><span id="emphasis"> Click&nbsp;</span> on any bubble to reveal the word's definition</h3>
+        <!-- <div class="bubbles">
+          <div class="bubble"><h1>Click</h1></div>
+        </div> -->
+      <h2 id="rabbit-hole"> Follow the white rabbit down the rabbit hole... </h2>
     </header>
+
+    <div id="word-definition-box">
+      <div id="word-definition"></div>
+      
+    </div>
 
     <section id="metrics">
       <div>
@@ -27,9 +48,9 @@
       <h2>Known for his fanciful phrases, Carroll reinvented the literary nonsense genre</h2>
       <br>
       <br>
-      <h2>Number of words in Alice:<span id="total-words"></span></h2>
+      <h2>Number of words in Alice:&nbsp; <span id="total-words"></span></h2>
       <br>
-      <h2>Number of unique words in Alice: <span id="num-pairs"></span></h2>
+      <h2>Number of unique words in Alice:&nbsp; <span id="num-pairs"></span></h2>
       <h3></h3>
       <br>
       </div>
@@ -52,7 +73,7 @@
       <h2>Carroll's playful prose did not shy away from longer words</h2>
       <br>
       <br>
-      <h2>Number of words over 10 characters: <span id="ten-words"></span></h2>
+      <h2>Number of words over 10 characters:&nbsp; <span id="ten-words"></span></h2>
       <br>
       <h2>Longest words: <span id="longest-word"></span></h2>
       <h3></h3>
@@ -65,9 +86,10 @@
       <h2>Carroll leaned on adverbs to capture the constant adventures of Alice</h2>
       <br>
       <br>
-      <h2>Number of adverbs: <span id="ly-words"></span></h2>
+      <h2>Number of adverbs:&nbsp; <span id="ly-words"></span></h2>
       <br>
       <h2>Most frequently used adverbs: <span id="adverbs"></span></h2>
+      <span id="adverb"></span>
       <h3></h3>
     </div>
   </section>
@@ -77,15 +99,20 @@
       <h1>Coined by Carroll</h1>
       <br>
       <br>
-      <h2>When existing words wouldn't do, Carroll invented his own, some that are now in the dictionary.</h2>
+      <h2>When existing words wouldn't do, Carroll invented his own</h2>
       <span id="definitions"></span>
       <h3></h3>
     </div>
   </section>
 
+  <span id="new-adverbs"></span>
+
   <footer>
     <h1>Placeholder Footer</h1>
-    <div class="numbers">
+    <!-- <h1><span id="bubbles"></span></h1>
+
+
+    <!-- <div class="numbers">
       <span class="numbers__window">
           <span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">2</span>
       </span>
@@ -101,11 +128,12 @@
     <span class="numbers__window">
       <span class="numbers__window__digit numbers__window__digit--3" data-fake="8395216407">3</span>
   </span>
-  </div>
+  </div> -->
     <h3></h3>
   </footer>
 
   </body>
+
 </html>
 
 

@@ -39,7 +39,7 @@ export const combineChapters = (chapters) => {
   return { topWords, numPairs, longestWords, totalWords, tenWords, sixWords, lyWords, adverbs };
 }
 
-//Preparing data and definitions for most frequent words
+// Preparing data and definitions for most frequent words this is working one
 // export const createTopWordsList = (topWords) => {  //https://developer.mozilla.org/en-US/docs/Web/API/Node
 //   const topWordsList = document.createElement("ul");
   
@@ -67,43 +67,35 @@ export const combineChapters = (chapters) => {
 //       return { topWordsList };
 //     };
 
+
 export const createTopWordsList = (topWords) => {
   const topWordsList = document.createElement("ul");
-  
+
   for (const [word, count] of topWords) {
     const listItem = document.createElement("li");
     listItem.textContent = `${word}: ${count}`;
-    listItem.setAttribute("data-word", word);
+    listItem.setAttribute("data-word", word)
     topWordsList.appendChild(listItem);
   }
-  
+
   topWordsList.addEventListener("click", async (event) => {
     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-    const word = event.target.getAttribute("data-word");
-  
+    selectedWord = event.target.getAttribute("data-word");
+
     if (event.target.tagName === "LI") {
-      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedWord}?key=${API_KEY}`);
       const data = await response.json();
       if (data.length > 0 && data[0].shortdef.length > 0) {
         const definition = data[0].shortdef[0];
-        const listItem = event.target;
-        const isActive = listItem.classList.contains("active");
-        
-        if (isActive) {
-          listItem.classList.remove("active");
-          listItem.removeAttribute("title");
-          listItem.removeAttribute("data-definition");
-        } else {
-          listItem.classList.add("active");
-          listItem.setAttribute("title", definition);
-          listItem.setAttribute("data-definition", definition);
-        }
+        document.getElementById("word-definition").textContent = definition;
       }
     }
   });
-  
+
   return { topWordsList };
 };
+
+
 
     //Preparing data for "adverbs"
     export const createLongestWordsList = (longestWords) => {
@@ -116,13 +108,193 @@ export const createTopWordsList = (topWords) => {
       return { longestWordsList };
     };
 
+    //BELOW IS WORKING
+    // export const createAdverbList = (adverbs) => {
+    //   const adverbsList = document.createElement("ul");
+    //   const adverbWords = adverbs.map(([word, count]) => word);
+    //   for (const word of adverbWords) {
+    //     const listItem = document.createElement("li");
+    //     listItem.textContent = word;
+    //     // listItem.setAttribute("data-word", word); // Add the data-word attribute
+    //     adverbsList.appendChild(listItem);
+    //   }
+    //   return { adverbsList };
+    // };
+
     export const createAdverbList = (adverbs) => {
       const adverbsList = document.createElement("ul");
       const adverbWords = adverbs.map(([word, count]) => word);
       for (const word of adverbWords) {
         const listItem = document.createElement("li");
         listItem.textContent = word;
+        listItem.setAttribute("data-word", word);
         adverbsList.appendChild(listItem);
       }
+    
+      adverbsList.addEventListener("click", async (event) => {
+        const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+        let selectedAdverb = event.target.getAttribute("data-word");
+    
+        const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedAdverb}?key=${API_KEY}`);
+        const data = await response.json();
+        if (data.length > 0 && data[0].shortdef.length > 0) {
+          const definition = data[0].shortdef[0];
+          document.getElementById("word-definition").textContent = definition;
+        }
+      });
+    
       return { adverbsList };
     };
+    
+    // export const createAdverbList = (adverbs) => {
+
+
+
+    // export const createTopWordsList = (topWords) => {
+//   const topWordsList = document.createElement("ul");
+  
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = `${word}: ${count}`;
+//     listItem.setAttribute("data-word", word);
+//     topWordsList.appendChild(listItem);
+//   }
+  
+//   topWordsList.addEventListener("click", async (event) => {
+//     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//     const word = event.target.getAttribute("data-word");
+  
+//     if (event.target.tagName === "LI") {
+//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//       const data = await response.json();
+//       if (data.length > 0 && data[0].shortdef.length > 0) {
+//         const definition = data[0].shortdef[0];
+//         const listItem = event.target;
+//         const isActive = listItem.classList.contains("active");
+        
+//         if (isActive) {
+//           listItem.classList.remove("active");
+//           listItem.removeAttribute("title");
+//           listItem.removeAttribute("data-definition");
+//         } else {
+//           listItem.classList.add("active");
+//           listItem.setAttribute("title", definition);
+//           listItem.setAttribute("data-definition", definition);
+//         }
+//       }
+//     }
+//   });
+  
+//   return { topWordsList };
+// };
+// export const createTopWordsList = (topWords) => {
+//   const topWordsList = document.createElement("ul");
+  
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = `${word}: ${count}`;
+//     listItem.setAttribute("data-word", word);
+//     topWordsList.appendChild(listItem);
+//   }
+  
+//   topWordsList.addEventListener("click", async (event) => {
+//     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//     const word = event.target.getAttribute("data-word");
+  
+//     if (event.target.tagName === "LI") {
+//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//       const data = await response.json();
+//       if (data.length > 0 && data[0].shortdef.length > 0) {
+//         const definition = data[0].shortdef[0];
+//         const listItem = event.target.closest("li");
+//         const isActive = listItem.classList.contains("active");
+        
+//         if (isActive) {
+//           listItem.classList.remove("active");
+//           listItem.removeChild(listItem.lastChild);
+//         } else {
+//           const definitionText = document.createElement("span");
+//           definitionText.textContent = definition;
+//           listItem.classList.add("active");
+//           listItem.appendChild(definitionText);
+//         }
+//       }
+//     }
+//   });
+  
+//   return { topWordsList };
+// };
+
+// export const createTopWordsList = (topWords) => {
+//   const topWordsList = document.createElement("ul");
+
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = `${word}: ${count}`;
+//     listItem.setAttribute("data-word", word);
+//     topWordsList.appendChild(listItem);
+//   }
+
+//   topWordsList.addEventListener("click", async (event) => {
+//     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//     const word = event.target.getAttribute("data-word");
+
+//     if (event.target.tagName === "LI") {
+//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//       const data = await response.json();
+//       if (data.length > 0 && data[0].shortdef.length > 0) {
+//         const definition = data[0].shortdef[0];
+//         const listItem = event.target.closest("li");
+//         const isActive = listItem.classList.contains("active");
+
+//         if (isActive) {
+//           listItem.classList.remove("active");
+//           listItem.removeChild(listItem.lastChild);
+//         } else {
+//           const definitionText = document.createElement("span");
+//           definitionText.textContent = definition;
+//           listItem.classList.add("active");
+//           listItem.appendChild(definitionText);
+//         }
+//       }
+//     }
+//   });
+//   return { topWordsList};
+// };
+
+    //   const adverbsList = document.createElement("adverbs-list");
+    //   const adverbWords = adverbs.map(([word, count]) => word);
+    //   for (const word of adverbWords) {
+    //     const listItem = document.createElement("adverb");
+    //     listItem.textContent = word;
+    //     listItem.setAttribute("data-word", word); // Add the data-word attribute
+    //     adverbsList.appendChild(listItem);
+    //   }
+    
+    //   adverbsList.addEventListener("click", async (event) => {
+    //     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+    //     const word = event.target.getAttribute("data-word");
+    
+    //     if (event.target.tagName === "adverb") {
+    //       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+    //       const data = await response.json();
+    //       if (data.length > 0 && data[0].shortdef.length > 0) {
+    //         const definition = data[0].shortdef[0];
+    //         const listItem = event.target.closest("adverb");
+    //         const isActive = listItem.classList.contains("active");
+    
+    //         if (isActive) {
+    //           listItem.classList.remove("active");
+    //           listItem.removeChild(listItem.lastChild);
+    //         } else {
+    //           const definitionText = document.createElement("span");
+    //           definitionText.textContent = definition;
+    //           listItem.classList.add("active");
+    //           listItem.appendChild(definitionText);
+    //         }
+    //       }
+    //     }
+    //   });
+    
+    //   return { adverbsList };
+    // };

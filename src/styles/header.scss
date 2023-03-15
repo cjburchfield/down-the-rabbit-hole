@@ -3,10 +3,13 @@ header h1 {
     justify-content: center;
     font-size: 120px;
     font-family: "Alice";
-    font-weight: 500;
+    font-weight: 600;
     color: orangered;
     text-shadow: 2px 4px 4px black;
     margin: 35vh auto 0 auto;
+    // position: sticky;
+    z-index: 999;
+    top: 0;
 }
 
 header h3 {
@@ -16,16 +19,16 @@ header h3 {
     text-align: center;
     font-family: "Burton";
     color: orangered;
-    font-weight: 500;
-    font-size: 35px;
+    font-size: 40px;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
-    margin: 10px 60px 10px 60px;
+    margin: 10px 150px 10px 150px;
 }
 
 #rabbit-hole {
     color: orangered;
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 45px;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     // animation: 4s linear 0s infinite rabbit-hole; //Add alternate if I want it to go back and forth
     animation: rabbit-hole 30s infinite;
@@ -52,3 +55,54 @@ header h3 {
 @keyframes rabbit-hole {
     50% {transform: rotate(360deg);}
 }
+
+header h4 {
+    color:white;
+    font-style: italic;
+    font-family: "Burton";
+    font-size: 45px;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+}
+
+header h5 {
+    color: white;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-family: "Burton";
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+    font-size: 40px;
+}
+
+
+#links-container {
+    margin: 5px;
+    justify-content: right;
+    display: flex;
+    width: auto;
+    // position: sticky;
+    top: 0;
+    z-index: 999;
+
+  }
+  
+  .social-link {
+    height: 50px;
+    width: auto;
+    margin: 10px;
+    justify-content: right;
+    display: flex;
+    // position: sticky;
+    top: 0;
+    z-index: 999;
+    width: auto;
+        box-shadow: 2px 2px 2px 2px white;
+
+  }

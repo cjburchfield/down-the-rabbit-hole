@@ -1,7 +1,7 @@
 #frequent-words h1 {
     color: orangered;
     font-size: 75px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
@@ -13,7 +13,7 @@
 #frequent-words h2 {
     color: orangered;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
@@ -46,12 +46,16 @@ li[title] {
   }
 
   li[title].active:after {
+//   li.active:after {
     content: attr(data-definition);
     position: absolute;
-    z-index: 1;
-    top: -120%;
-    left: 50%;
-    transform: translate(-50%, 0);
+    // z-index: 1;
+    // top: -120%;
+    // left: 50%;
+    top: 0;
+    left: 100%;
+    // transform: translate(-50%, 0);
+    transform: translate(10px, 0);
     white-space: nowrap;
     padding: 5px;
     background: white;
@@ -64,6 +68,7 @@ li[title] {
     box-sizing: border-box;
     min-height: 100vh;
     color: hsl(0, 0%, 100%);
+    // color: blue;
     font-family: "Burton";
     background-size: 120px, 100%;
     display: flex;
@@ -85,7 +90,9 @@ li[data-word] {
     text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
     z-index: 5;
 }
-li[data-word]:before {
+
+//These are the numbers 1-10
+li[data-word]:before { 
     content: counter(num-counter);
     z-index: -5;
     position: absolute;
@@ -94,6 +101,7 @@ li[data-word]:before {
     font-family: "Burton";
     transform: translate(-50%, 0%);
 }
+
 li[data-word]::selection {
     color: hsl(0, 0%, 100%);
     background: hsl(22, 93%, 39%);
@@ -117,3 +125,103 @@ li[data-word]{
     }
 }
 
+
+
+// #frequent-words h1 {
+//     color: orangered;
+//     font-size: 75px;
+//     font-weight: 600;
+//     text-shadow: 2px 4px 4px black;
+//     display: flex;
+//     width: auto;
+//     justify-content: center;
+//     text-align: center;
+//     font-family: "Alice";
+//   }
+  
+//   #frequent-words h2 {
+//     color: orangered;
+//     font-size: 40px;
+//     font-weight: 600;
+//     text-shadow: 2px 4px 4px black;
+//     display: flex;
+//     width: auto;
+//     justify-content: center;
+//     text-align: center;
+//     font-family: "Burton";
+//   }
+  
+//   #frequent-words h3 {
+//     height: 100vh;
+//   }
+  
+//   li[title] {
+//     position: relative;
+//   }
+  
+//   li[title]:hover:after {
+//     content: attr(title);
+//     position: fixed;
+//     z-index: 1;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//     white-space: nowrap;
+//     padding: 5px;
+//     background: white;
+//     font-weight: bold;
+//     font-size: 0.9em;
+//     color: red;
+//   }
+  
+//   li.active:after {
+//     content: attr(data-definition);
+//     position: absolute;
+//     top: 0;
+//     left: 100%;
+//     transform: translate(10px, 0);
+//     white-space: nowrap;
+//     padding: 5px;
+//     background: white;
+//     font-weight: bold;
+//     font-size: 0.9em;
+//     color: red;
+//   }
+  
+//   #frequent-words {
+//     box-sizing: border-box;
+//     min-height: 100vh;
+//     color: hsl(0, 0%, 100%);
+//     font-family: "Burton";
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: center;
+//     align-items: center;
+//     padding: 50px;
+//         list-style: none;
+//     counter-reset: num-counter;
+//     font-size: 2rem;
+//     position: relative;
+//   }
+
+//   // #frequent-words {
+// //     box-sizing: border-box;
+// //     min-height: 100vh;
+// //     color: hsl(0, 0%, 100%);
+// //     // color: blue;
+// //     font-family: "Burton";
+// //     background-size: 120px, 100%;
+// //     display: flex;
+// //     flex-direction: column;
+// //     align-items: center;
+// //     list-style: none;
+// //     counter-reset: num-counter;
+// //     font-size: 2rem;
+// //     position: relative;
+// // }
+  
+//   .word {
+//     font-size: 5rem;
+//     font-weight: bold;
+//     margin: 20px 0;
+//   }

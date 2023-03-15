@@ -6,6 +6,7 @@
 @import "./styles/reset.scss";
 @import "./styles/stats.scss";
 @import "./styles/footer.scss";
+@import "./styles/bubbles.scss";
 
 @font-face {
     font-family: "Alice";
@@ -23,4 +24,39 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+// body {
+//   cursor: url("/assets/rabbit.png"), auto;
+// }
+
+
+.word-definition-box {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+.word-definition {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: black;
 }

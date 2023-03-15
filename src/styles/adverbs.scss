@@ -33,3 +33,102 @@
 #adverbs {
     color: white;
 }
+
+// #adverb[title] {
+//     position: relative;
+//   }
+  
+//   #adverb[title]:hover:after {
+//     content: attr(title);
+//     position: fixed;
+//     z-index: 1;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//     white-space: nowrap;
+//     padding: 5px;
+//     background: white;
+//     font-weight: bold;
+//     font-size: 0.9em;
+//     color: red;
+//   }
+
+// //   li[title].active:after
+// #adverb.active:after {
+//     content: attr(data-definition);
+//     position: absolute;
+//     // z-index: 1;
+//     // top: -120%;
+//     // left: 50%;
+//     top: 0;
+//     left: 100%;
+//     // transform: translate(-50%, 0);
+//     transform: translate(10px, 0);
+//     white-space: nowrap;
+//     padding: 5px;
+//     background: white;
+//     font-weight: bold;
+//     font-size: 0.9em;
+//     color: red;
+//   }
+
+// #adverb-list {
+//     box-sizing: border-box;
+//     min-height: 100vh;
+//     color: hsl(0, 0%, 100%);
+//     // color: blue;
+//     font-family: "Burton";
+//     background-size: 120px, 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     list-style: none;
+//     counter-reset: num-counter;
+//     font-size: 2rem;
+//     position: relative;
+// }
+
+// #adverb[data-word] {
+//     counter-increment: num-counter;
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: center;
+//     text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
+//     z-index: 5;
+// }
+
+// // //These are the numbers 1-10
+// // #adverb[data-word]:before { 
+// //     content: counter(num-counter);
+// //     z-index: -5;
+// //     position: absolute;
+// //     opacity: 0.5;
+// //     font-size: 15vh;
+// //     font-family: "Burton";
+// //     transform: translate(-50%, 0%);
+// // }
+
+// // #adverb[data-word]::selection {
+// //     color: hsl(0, 0%, 100%);
+// //     background: hsl(22, 93%, 39%);
+// // }
+
+// // #adverb[data-word]:nth-child(odd):before {
+// //     left: 0%;
+// // }
+// // #adverb[data-word]:nth-child(even):before {
+// //     left: 100%;
+// // }
+
+// // #adverb[data-word]{
+// //     position: sticky;
+// // }
+
+// // @for $counter from 1 through 10 {
+// //     li[data-word]:nth-child(#{$counter}) {
+// //         top: #{($counter - 1) * 7.5vh};
+// //         height: #{100vh - ($counter - 1) * 7.5vh};
+// //     }
+// // }
