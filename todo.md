@@ -1,3 +1,36 @@
+FINAL TO DO LIST
+Fix scrolling list - only have that in the the one place 
+Get rid of console logs everywhere
+Dry up code - notably around the words
+Pay attention to the comments I made to myself
+Be able to explain every line of code - notably around the classlist in index.js
+Style the definition box
+Snap title and social to the top
+Body text - chose a font easier to read
+Fix the coloring - not red everywhere
+Play with heirachy of text - notably the size 
+Fix the spacing gaps
+Add a header for the top words seciton so people know what htey are looking at
+Fix the stylign of the coined by Carroll - turn off the box for those.
+Delete pre-box work file
+Fix error handling in index.js
+Add a hover over words that can be defined
+Move box code out of the index.js and into comvbined-chaptres
+
+IF TIME
+Add the rabbit to the definition box
+
+
+
+
+
+THURSDAY
+Delete To Do List
+
+
+
+
+
 
 README	About (Links)	Favicon	No Console Errors	No Extraneous Content 	Successful Hosting
 

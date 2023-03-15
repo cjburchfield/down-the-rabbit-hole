@@ -1,0 +1,325 @@
+// Preparing data and definitions for most frequent words this is working one
+// export const createTopWordsList = (topWords) => {  //https://developer.mozilla.org/en-US/docs/Web/API/Node
+//   const topWordsList = document.createElement("ul");
+  
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li"); // https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+//     listItem.textContent = `${word}: ${count}`; // https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent 
+//     listItem.setAttribute("data-word", word) // https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+//     topWordsList.appendChild(listItem); //https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+//   }
+  
+//       topWordsList.addEventListener("click", async (event) => {
+//         const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//         const word = event.target.getAttribute("data-word");
+
+//         if (event.target.tagName === "LI") {
+//           const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//           const data = await response.json();
+//           if (data.length > 0 && data[0].shortdef.length > 0) {
+//             const definition = data[0].shortdef[0];
+//             event.target.title = definition;
+//           }
+//         }
+//       });
+  
+//       return { topWordsList };
+//     };
+
+// export const createAdverbList = (adverbs) => {
+
+
+
+    // export const createTopWordsList = (topWords) => {
+//   const topWordsList = document.createElement("ul");
+  
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = `${word}: ${count}`;
+//     listItem.setAttribute("data-word", word);
+//     topWordsList.appendChild(listItem);
+//   }
+  
+//   topWordsList.addEventListener("click", async (event) => {
+//     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//     const word = event.target.getAttribute("data-word");
+  
+//     if (event.target.tagName === "LI") {
+//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//       const data = await response.json();
+//       if (data.length > 0 && data[0].shortdef.length > 0) {
+//         const definition = data[0].shortdef[0];
+//         const listItem = event.target;
+//         const isActive = listItem.classList.contains("active");
+        
+//         if (isActive) {
+//           listItem.classList.remove("active");
+//           listItem.removeAttribute("title");
+//           listItem.removeAttribute("data-definition");
+//         } else {
+//           listItem.classList.add("active");
+//           listItem.setAttribute("title", definition);
+//           listItem.setAttribute("data-definition", definition);
+//         }
+//       }
+//     }
+//   });
+  
+//   return { topWordsList };
+// };
+// export const createTopWordsList = (topWords) => {
+//   const topWordsList = document.createElement("ul");
+  
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = `${word}: ${count}`;
+//     listItem.setAttribute("data-word", word);
+//     topWordsList.appendChild(listItem);
+//   }
+  
+//   topWordsList.addEventListener("click", async (event) => {
+//     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//     const word = event.target.getAttribute("data-word");
+  
+//     if (event.target.tagName === "LI") {
+//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//       const data = await response.json();
+//       if (data.length > 0 && data[0].shortdef.length > 0) {
+//         const definition = data[0].shortdef[0];
+//         const listItem = event.target.closest("li");
+//         const isActive = listItem.classList.contains("active");
+        
+//         if (isActive) {
+//           listItem.classList.remove("active");
+//           listItem.removeChild(listItem.lastChild);
+//         } else {
+//           const definitionText = document.createElement("span");
+//           definitionText.textContent = definition;
+//           listItem.classList.add("active");
+//           listItem.appendChild(definitionText);
+//         }
+//       }
+//     }
+//   });
+  
+//   return { topWordsList };
+// };
+
+// export const createTopWordsList = (topWords) => {
+//   const topWordsList = document.createElement("ul");
+
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = `${word}: ${count}`;
+//     listItem.setAttribute("data-word", word);
+//     topWordsList.appendChild(listItem);
+//   }
+
+//   topWordsList.addEventListener("click", async (event) => {
+//     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//     const word = event.target.getAttribute("data-word");
+
+//     if (event.target.tagName === "LI") {
+//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//       const data = await response.json();
+//       if (data.length > 0 && data[0].shortdef.length > 0) {
+//         const definition = data[0].shortdef[0];
+//         const listItem = event.target.closest("li");
+//         const isActive = listItem.classList.contains("active");
+
+//         if (isActive) {
+//           listItem.classList.remove("active");
+//           listItem.removeChild(listItem.lastChild);
+//         } else {
+//           const definitionText = document.createElement("span");
+//           definitionText.textContent = definition;
+//           listItem.classList.add("active");
+//           listItem.appendChild(definitionText);
+//         }
+//       }
+//     }
+//   });
+//   return { topWordsList};
+// };
+
+    //   const adverbsList = document.createElement("adverbs-list");
+    //   const adverbWords = adverbs.map(([word, count]) => word);
+    //   for (const word of adverbWords) {
+    //     const listItem = document.createElement("adverb");
+    //     listItem.textContent = word;
+    //     listItem.setAttribute("data-word", word); // Add the data-word attribute
+    //     adverbsList.appendChild(listItem);
+    //   }
+    
+    //   adverbsList.addEventListener("click", async (event) => {
+    //     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+    //     const word = event.target.getAttribute("data-word");
+    
+    //     if (event.target.tagName === "adverb") {
+    //       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+    //       const data = await response.json();
+    //       if (data.length > 0 && data[0].shortdef.length > 0) {
+    //         const definition = data[0].shortdef[0];
+    //         const listItem = event.target.closest("adverb");
+    //         const isActive = listItem.classList.contains("active");
+    
+    //         if (isActive) {
+    //           listItem.classList.remove("active");
+    //           listItem.removeChild(listItem.lastChild);
+    //         } else {
+    //           const definitionText = document.createElement("span");
+    //           definitionText.textContent = definition;
+    //           listItem.classList.add("active");
+    //           listItem.appendChild(definitionText);
+    //         }
+    //       }
+    //     }
+    //   });
+    
+    //   return { adverbsList };
+    // };
+
+
+
+        //BELOW IS WORKING
+    // export const createAdverbList = (adverbs) => {
+    //   const adverbsList = document.createElement("ul");
+    //   const adverbWords = adverbs.map(([word, count]) => word);
+    //   for (const word of adverbWords) {
+    //     const listItem = document.createElement("li");
+    //     listItem.textContent = word;
+    //     // listItem.setAttribute("data-word", word); // Add the data-word attribute
+    //     adverbsList.appendChild(listItem);
+    //   }
+    //   return { adverbsList };
+    // };
+
+        // export const createLongestWordsList = (longestWords) => {
+    //   const longestWordsList = document.createElement("ul");
+    //   for (const word of longestWords) {
+    //     const listItem = document.createElement("li");
+    //     listItem.textContent = word;
+    //     longestWordsList.appendChild(listItem);
+    //   }
+    //   return { longestWordsList };
+    // };
+
+    // #frequent-words h1 {
+//     color: orangered;
+//     font-size: 75px;
+//     font-weight: 600;
+//     text-shadow: 2px 4px 4px black;
+//     display: flex;
+//     width: auto;
+//     justify-content: center;
+//     text-align: center;
+//     font-family: "Alice";
+//   }
+  
+//   #frequent-words h2 {
+//     color: orangered;
+//     font-size: 40px;
+//     font-weight: 600;
+//     text-shadow: 2px 4px 4px black;
+//     display: flex;
+//     width: auto;
+//     justify-content: center;
+//     text-align: center;
+//     font-family: "Burton";
+//   }
+  
+//   #frequent-words h3 {
+//     height: 100vh;
+//   }
+  
+//   li[title] {
+//     position: relative;
+//   }
+  
+//   li[title]:hover:after {
+//     content: attr(title);
+//     position: fixed;
+//     z-index: 1;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//     white-space: nowrap;
+//     padding: 5px;
+//     background: white;
+//     font-weight: bold;
+//     font-size: 0.9em;
+//     color: red;
+//   }
+  
+//   li.active:after {
+//     content: attr(data-definition);
+//     position: absolute;
+//     top: 0;
+//     left: 100%;
+//     transform: translate(10px, 0);
+//     white-space: nowrap;
+//     padding: 5px;
+//     background: white;
+//     font-weight: bold;
+//     font-size: 0.9em;
+//     color: red;
+//   }
+  
+//   #frequent-words {
+//     box-sizing: border-box;
+//     min-height: 100vh;
+//     color: hsl(0, 0%, 100%);
+//     font-family: "Burton";
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: center;
+//     align-items: center;
+//     padding: 50px;
+//         list-style: none;
+//     counter-reset: num-counter;
+//     font-size: 2rem;
+//     position: relative;
+//   }
+
+//   // #frequent-words {
+// //     box-sizing: border-box;
+// //     min-height: 100vh;
+// //     color: hsl(0, 0%, 100%);
+// //     // color: blue;
+// //     font-family: "Burton";
+// //     background-size: 120px, 100%;
+// //     display: flex;
+// //     flex-direction: column;
+// //     align-items: center;
+// //     list-style: none;
+// //     counter-reset: num-counter;
+// //     font-size: 2rem;
+// //     position: relative;
+// // }
+  
+//   .word {
+//     font-size: 5rem;
+//     font-weight: bold;
+//     margin: 20px 0;
+//   }
+
+// longestWordsListItems.forEach((longestWords) => {
+//   longestWords.addEventListener("click", () => {
+//     if (selectedLongWord) {
+//       selectedLongWord.classList.remove("selected-longword");
+//     }
+//     selectedLongWord = longestWords;
+//     selectedLongWord.classList.add("selected-longword");
+//     const longWordText = selectedLongWord.textContent;
+
+//     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${longWordText}`)
+//     .then(response => response.json())
+//     .then(data => {
+//       const definition = data[0].meanings[0].definitions[0].definition;
+//       wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
+//     })
+//     .catch(error => {
+//       wordDefinitionBox.textContent = `Error: ${error.message}`;
+//     });
+//   });
+// });
