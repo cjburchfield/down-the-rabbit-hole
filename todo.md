@@ -5,6 +5,8 @@ Notes to self:
 number ticker for the high level metrics
 add commans to nmbers
 
+fix frequent words so theres a little space on top of the ist
+
 To add in:
 dd in the top adverbs, sort by length and then definitions - or colorcode by mood
 Words he invented down in the dictionary

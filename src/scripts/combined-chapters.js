@@ -40,32 +40,70 @@ export const combineChapters = (chapters) => {
 }
 
 //Preparing data and definitions for most frequent words
-export const createTopWordsList = (topWords) => {  //https://developer.mozilla.org/en-US/docs/Web/API/Node
+// export const createTopWordsList = (topWords) => {  //https://developer.mozilla.org/en-US/docs/Web/API/Node
+//   const topWordsList = document.createElement("ul");
+  
+//   for (const [word, count] of topWords) {
+//     const listItem = document.createElement("li"); // https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+//     listItem.textContent = `${word}: ${count}`; // https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent 
+//     listItem.setAttribute("data-word", word) // https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+//     topWordsList.appendChild(listItem); //https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+//   }
+  
+//       topWordsList.addEventListener("click", async (event) => {
+//         const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//         const word = event.target.getAttribute("data-word");
+
+//         if (event.target.tagName === "LI") {
+//           const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+//           const data = await response.json();
+//           if (data.length > 0 && data[0].shortdef.length > 0) {
+//             const definition = data[0].shortdef[0];
+//             event.target.title = definition;
+//           }
+//         }
+//       });
+  
+//       return { topWordsList };
+//     };
+
+export const createTopWordsList = (topWords) => {
   const topWordsList = document.createElement("ul");
   
   for (const [word, count] of topWords) {
-    const listItem = document.createElement("li"); // https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-    listItem.textContent = `${word}: ${count}`; // https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent 
-    listItem.setAttribute("data-word", word) // https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
-    topWordsList.appendChild(listItem); //https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+    const listItem = document.createElement("li");
+    listItem.textContent = `${word}: ${count}`;
+    listItem.setAttribute("data-word", word);
+    topWordsList.appendChild(listItem);
   }
   
-      topWordsList.addEventListener("click", async (event) => {
-        const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-        const word = event.target.getAttribute("data-word");
-
-        if (event.target.tagName === "LI") {
-          const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
-          const data = await response.json();
-          if (data.length > 0 && data[0].shortdef.length > 0) {
-            const definition = data[0].shortdef[0];
-            event.target.title = definition;
-          }
-        }
-      });
+  topWordsList.addEventListener("click", async (event) => {
+    const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+    const word = event.target.getAttribute("data-word");
   
-      return { topWordsList };
-    };
+    if (event.target.tagName === "LI") {
+      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${API_KEY}`);
+      const data = await response.json();
+      if (data.length > 0 && data[0].shortdef.length > 0) {
+        const definition = data[0].shortdef[0];
+        const listItem = event.target;
+        const isActive = listItem.classList.contains("active");
+        
+        if (isActive) {
+          listItem.classList.remove("active");
+          listItem.removeAttribute("title");
+          listItem.removeAttribute("data-definition");
+        } else {
+          listItem.classList.add("active");
+          listItem.setAttribute("title", definition);
+          listItem.setAttribute("data-definition", definition);
+        }
+      }
+    }
+  });
+  
+  return { topWordsList };
+};
 
     //Preparing data for "adverbs"
     export const createLongestWordsList = (longestWords) => {

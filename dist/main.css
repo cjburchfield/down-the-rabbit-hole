@@ -1,73 +1,72 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-.word-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Alice";
-}
-
-.word {
-  border: 2px solid orange;
-  border-radius: 25px;
-  padding: 20px;
-  margin: 0 10px;
-  font-size: 25px;
-  background-color: white;
-  box-shadow: 5px 5px;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  position: relative;
-  text-align: center;
-}
-
-header h1 {
-  display: flex;
-  justify-content: center;
-  font-size: 120px;
-  font-family: "Alice";
-  font-weight: 500;
+#adverbs-section h1 {
   color: orangered;
+  font-size: 75px;
+  font-weight: 500;
   text-shadow: 2px 4px 4px black;
-  margin: 35vh auto 0 auto;
-}
-
-header h3 {
   display: flex;
   width: auto;
   justify-content: center;
   text-align: center;
-  font-family: "Burton";
-  color: orangered;
-  font-weight: 500;
-  font-size: 35px;
-  text-shadow: 2px 4px 4px black;
-  margin: 10px 60px 10px 60px;
+  font-family: "Alice";
 }
 
-#rabbit-hole {
+#adverbs-section h2 {
   color: orangered;
   font-size: 40px;
   font-weight: 500;
   text-shadow: 2px 4px 4px black;
-  animation: rabbit-hole 10s infinite;
   display: flex;
   width: auto;
   justify-content: center;
   text-align: center;
   font-family: "Burton";
+}
+
+#adverbs-section h3 {
   height: 100vh;
 }
 
-@keyframes rabbit-hole {
-  50% {
-    transform: rotate(100deg);
-  }
+#ly-words {
+  color: white;
 }
+
+#adverbs {
+  color: white;
+}
+
+#frequent-words h1 {
+  color: orangered;
+  font-size: 75px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Alice";
+}
+
+#frequent-words h2 {
+  color: orangered;
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+}
+
+#frequent-words h3 {
+  height: 100vh;
+}
+
 li[title] {
   position: relative;
-  cursor: pointer;
 }
 
 li[title]:hover:after {
@@ -85,10 +84,23 @@ li[title]:hover:after {
   color: red;
 }
 
-#combined-chapters-container {
+li[title].active:after {
+  content: attr(data-definition);
+  position: absolute;
+  z-index: 1;
+  top: -120%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  padding: 5px;
+  background: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: red;
+}
+
+#frequent-words {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   min-height: 100vh;
   color: hsl(0, 0%, 100%);
   font-family: "Burton";
@@ -188,6 +200,148 @@ li[data-word]:nth-child(9) {
 li[data-word]:nth-child(10) {
   top: 67.5vh;
   height: 32.5vh;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 120px;
+  font-family: "Alice";
+  font-weight: 500;
+  color: orangered;
+  text-shadow: 2px 4px 4px black;
+  margin: 35vh auto 0 auto;
+}
+
+header h3 {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  color: orangered;
+  font-weight: 500;
+  font-size: 35px;
+  text-shadow: 2px 4px 4px black;
+  margin: 10px 60px 10px 60px;
+}
+
+#rabbit-hole {
+  color: orangered;
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
+  animation: rabbit-hole 30s infinite;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  height: 100vh;
+}
+
+@keyframes rabbit-hole {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+#invented h1 {
+  color: orangered;
+  font-size: 75px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Alice";
+}
+
+#invented h2 {
+  color: orangered;
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+}
+
+.word-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Burton";
+  margin: 100px 100px 100px 100px;
+}
+
+.word {
+  border: 2px solid orangered;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 0 10px;
+  font-size: 25px;
+  background-color: white;
+  box-shadow: 5px 5px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.word:hover {
+  background-color: orangered;
+  color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.word.active {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#invented h3 {
+  height: 100vh;
+}
+
+#long-ones h1 {
+  color: orangered;
+  font-size: 75px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Alice";
+}
+
+#long-ones h2 {
+  color: orangered;
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+}
+
+#long-ones h3 {
+  height: 100vh;
+}
+
+#ten-words {
+  color: white;
+}
+
+#longest-word {
+  color: white;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -349,6 +503,10 @@ table {
   font-family: "Burton";
 }
 
+#metrics h3 {
+  height: 100vh;
+}
+
 #total-words {
   color: white;
 }
@@ -357,116 +515,79 @@ table {
   color: white;
 }
 
-#stats-intro {
+footer h1 {
   color: orangered;
+  font-size: 75px;
+  font-weight: 500;
+  text-shadow: 2px 4px 4px black;
   display: flex;
   width: auto;
   justify-content: center;
   text-align: center;
-  font-family: "Burton";
-  font-weight: 500;
-  font-size: 30px;
-  text-shadow: 0.75px 1px 1px black;
-  padding: 30px 30px 30px 30px;
+  font-family: "Alice";
 }
 
-#stats-intro h2 {
-  font-size: 50px;
-  justify-content: center;
+footer h3 {
+  height: 10vh;
+}
+
+.numbers {
+  font-family: "Alice";
+  font-size: 75px;
+  line-height: 1em;
   text-align: center;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.numbers__window {
+  display: inline-block;
+  overflow: hidden;
+  width: 0.5em;
+  height: 1em;
+}
+
+.numbers__window__digit {
+  font: inherit;
+  word-break: break-all;
   display: block;
-  width: auto;
-  background-color: yellow;
+  width: 0;
+  padding: 0 0.52em 0 0;
+  margin: 0 auto;
+  overflow: inherit;
+  animation: counting 0.4s steps(10) forwards infinite;
 }
 
-#stats-intro h3 {
-  font-size: 30px;
-  justify-content: center;
-  text-align: center;
-  display: block;
-  width: auto;
-  color: pink;
+.numbers__window__digit::before {
+  content: attr(data-fake);
+  display: inline-block;
+  width: 100%;
+  height: auto;
 }
 
-#frequents h2 {
-  font-size: 50px;
-  justify-content: center;
-  text-align: center;
-  display: block;
-  width: auto;
-  background-color: yellow;
+@keyframes counting {
+  100% {
+    transform: translate3d(0, -10em, 0);
+  }
+}
+.numbers__window__digit--1 {
+  animation-iteration-count: 7;
 }
 
-#frequents h3 {
-  font-size: 30px;
-  justify-content: center;
-  text-align: center;
-  display: block;
-  width: auto;
-  color: pink;
+.numbers__window__digit--2 {
+  animation-iteration-count: 8;
 }
 
-#long-ones h2 {
-  font-size: 50px;
-  justify-content: center;
-  text-align: center;
-  display: block;
-  width: auto;
-  background-color: yellow;
+.numbers__window__digit--3 {
+  animation-iteration-count: 9;
 }
 
-#long-ones h3 {
-  font-size: 30px;
-  justify-content: center;
-  text-align: center;
-  display: block;
-  width: auto;
-  color: pink;
+.numbers__window__digit--4 {
+  animation-iteration-count: 10;
 }
 
-#adverbs h2 {
-  font-size: 50px;
-  justify-content: center;
-  text-align: center;
-  display: block;
-  width: auto;
-  background-color: yellow;
-}
-
-#adverbs h3 {
-  font-size: 30px;
-  justify-content: center;
-  text-align: center;
-  display: block;
-  width: auto;
-  color: pink;
-}
-
-#invented h1 {
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Burton";
-  color: orangered;
-  font-weight: 500;
-  font-size: 50px;
-  text-shadow: 0.75px 1px 1px black;
-  padding: 30px 100px 30px 100px;
-  background-color: yellow;
-}
-
-#invented h2 {
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Burton";
-  color: orangered;
-  font-weight: 500;
-  font-size: 35px;
-  text-shadow: 0.75px 1px 1px black;
-  padding: 30px 100px 30px 100px;
+.numbers__window__digit--5 {
+  animation-iteration-count: 11;
 }
 
 @font-face {

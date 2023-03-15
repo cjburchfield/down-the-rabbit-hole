@@ -1,16 +1,11 @@
-@import "./styles/example.scss";
+@import "./styles/adverbs.scss";
+@import "./styles/frequent-words.scss";
 @import "./styles/header.scss";
-@import "./styles/combined-chapters.scss";
+@import "./styles/invented.scss";
+@import "./styles/long-words.scss";
 @import "./styles/reset.scss";
 @import "./styles/stats.scss";
-@import "./styles/invented.scss";
-
-
-
-
-// #main {
-//     color: $color;
-// }
+@import "./styles/footer.scss";
 
 @font-face {
     font-family: "Alice";
@@ -25,11 +20,7 @@
 body {
     background-color: black;
     background-image: url("/assets/tunnel.jpg");
-    // background-image: url("/assets/background3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    // cursor: url(images/square.png), auto;
-    // opacity: .5;
-    // background-size: cover;
 }

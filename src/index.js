@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const chapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9, chapter10, chapter11, chapter12];
   const combinedData = combineChapters(chapters);
 
-  const combinedChaptersContainer = document.getElementById("combined-chapters-container");
+  const frequentWords = document.getElementById("frequent-words");
   const topWordsList = createTopWordsList(combinedData.topWords);
-  combinedChaptersContainer.appendChild(topWordsList.topWordsList);
+  frequentWords.appendChild(topWordsList.topWordsList);
 
   const numPairsElement = document.getElementById("num-pairs");
   const totalWordsElement = document.getElementById("total-words");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const adverbElement = document.getElementById("ly-words");
 
   adverbElement.textContent = combinedData.lyWords;
-  sixElement.textContent = combinedData.sixWords;
+  // sixElement.textContent = combinedData.sixWords;
   tenElement.textContent = combinedData.tenWords;
   totalWordsElement.textContent = combinedData.totalWords;
   numPairsElement.textContent = combinedData.numPairs;
