@@ -9,47 +9,28 @@
 
 @font-face {
     font-family: "Alice";
-    src: url("./assets/Aliciawonderland-ZoM8.ttf");
+    src: url("../assets/Aliciawonderland-ZoM8.ttf");
   }
 
 @font-face {
   font-family: "Burton";
-  src: url("./assets/BurtonsDreamsPro-R1rE.ttf");
+  src: url("../assets/BurtonsDreamsPro-R1rE.ttf");
 }
 
-@font-face {
-  font-family: "Penny";
-  src: url("./assets/HennyPenny-Regular.ttf");
-}
 body {
     background-color: black;
-    background-image: url("./assets/tunnel.jpg");
+    background-image: url("../assets/tunnel.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/Roboto-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Pacifico";
-  src: url("./assets/Pacifico-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Merry";
-  src: url("./assets/Merriweather-Regular.ttf")
-}
-
 .boxes-container {
   display: flex;
   justify-content: space-between;
-  position: fixed; /* set to fixed position */
-  bottom: 10px; /* set to bottom */
-  left: 10px; /* add left margin */
+  position: fixed; 
+  bottom: 10px; 
+  left: 10px; 
 }
 
 
@@ -63,13 +44,13 @@ body {
   font-family: "Burton";
   font-size: 20px;
   color: blue;
-  background: url("./assets/bunny-scroll.png");
+  background: url("../assets/bunny-scroll.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
   z-index: 1;
   border-radius: 15px; 
-  margin-left: 20px; /* add margin to separate from the first box */
+  margin-left: 20px; 
 }
 
 #word-definition-box {
@@ -81,15 +62,15 @@ body {
   font-family: "Burton";
   font-size: 25px;
   color: orangered;
-  background-color: rgba(255, 255, 255, 0.7); /* transparent white */
+  background-color: rgba(255, 255, 255, 0.7); 
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
   z-index: 1;
-  border-radius: 15px; /* 10px rounded corners */
+  border-radius: 15px; 
   box-shadow: 3px 5px 5px black;
-  align-items: center; /* center text horizontally and vertically */
-  height: 100%; /* set height to 100% */
+  align-items: center; 
+  height: 100%; 
 
 }
 
@@ -97,16 +78,16 @@ body {
   display: flex;
   // flex-direction: column;
   // justify-content: center;
-  // align-items: center; /* center text horizontally and vertically */
+  // align-items: center; 
   // // width: calc(100% - 150px);
-  // height: 100%; /* set height to 100% */
+  // height: 100%; 
   // box-sizing: border-box;
   // padding: 10px;
   // font-family: Arial, sans-serif;
   // font-size: 14px;
   // color: pink;
   // overflow: auto;
-  // background-color: rgba(255, 255, 255, 0.7); /* transparent white */
+  // background-color: rgba(255, 255, 255, 0.7); 
   // background-clip: content-box;
 }
 
