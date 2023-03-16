@@ -139,7 +139,7 @@ export const createAdverbList = (adverbs) => {
         const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
         let selectedLongWord = event.target.getAttribute("data-word");
       
-        const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedAdverb}?key=${API_KEY}`);
+        const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedLongWord}?key=${API_KEY}`);
         const data = await response.json();
         
         if (data.length > 0 && data[0].shortdef.length > 0) {

@@ -119,7 +119,7 @@ li[data-word] {
 }
 
 //These are the numbers 1-10
-li[data-word]:before { 
+#frequent-words li[data-word]:before { 
     content: counter(num-counter);
     z-index: -5;
     position: absolute;
@@ -129,19 +129,19 @@ li[data-word]:before {
     transform: translate(-50%, 0%);
 }
 
-li[data-word]::selection {
+#frequent-words li[data-word]::selection {
     color: hsl(0, 0%, 100%);
     background: hsl(22, 93%, 39%);
 }
 
-li[data-word]:nth-child(odd):before {
+#frequent-words li[data-word]:nth-child(odd):before {
     left: 0%;
 }
-li[data-word]:nth-child(even):before {
+#frequent-words li[data-word]:nth-child(even):before {
     left: 100%;
 }
 
-li[data-word]{
+#frequent-words li[data-word]{
     position: sticky;
 }
 

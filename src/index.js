@@ -33,8 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
   wordDefinitionBox.textContent = 'Curiouser and curiouser';
   document.body.appendChild(wordDefinitionBox);
 
-//   const wordDefinition = document.querySelector('.word-definition');
-// wordDefinition.textContent = 'Curiouser and curiouser...';
   
   const definitions = document.getElementById("definitions");
   new Word(definitions);
@@ -56,8 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
   numPairsElement.textContent = combinedData.numPairs;
 
   // const longestWordElement = document.getElementById("longest-word");
-  // const longestWordsList = createLongestWordsList(combinedData.longestWords);
+  const longestWordsList = createLongestWordsList(combinedData.longestWords);
   // longestWordElement.appendChild(longestWordsList.longestWordsList);
+  const longestWordElement = document.getElementById("longest-word");
+  if (longestWordElement) {
+    longestWordElement.appendChild(longestWordsList.longestWordsList);
+  }
+  
 
   // const adverbsElement = document.getElementById("adverbs");
   // const adverbsList = createAdverbList(combinedData.adverbs);
@@ -69,80 +72,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const adverbsListItems = document.querySelectorAll("#adverbs li");
-
-  adverbsListItems.forEach((adverb) => {
-    adverb.addEventListener("click", () => {
-      if (selectedAdverb) {
-        selectedAdverb.classList.remove("selected-adverb");
-      }
-      selectedAdverb = adverb;
-      selectedAdverb.classList.add("selected-adverb");
-      const adverbText = selectedAdverb.textContent;
-
-      fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${adverbText}`)
-      .then(response => response.json())
-      .then(data => {
-        const definition = data[0].meanings[0].definitions[0].definition;
-        wordDefinitionBox.textContent = `${adverbText}: ${definition}`;
-      })
-      .catch(error => {
-        wordDefinitionBox.textContent = `Error: ${error.message}`;
-      });
-    });
-  });
 
 
 
-//   const selectedWords = document.querySelectorAll(".word");
-//   selectedWords.forEach((word) => {
-//     word.addEventListener("click", () => {
-//       if (selectedWord) {
-//         selectedWord.classList.remove("selected-word");
-//       }
-//       selectedWord = word;
-//       selectedWord.classList.add("selected-word");
-//       const wordText = selectedWord.textContent;
-      
-//       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordText}`)
-//         .then(response => response.json())
-//         .then(data => {
-//           const definition = data[0].meanings[0].definitions[0].definition;
-//           wordDefinitionBox.textContent = `${wordText}: ${definition}`;
-//         })
-//         .catch(error => {
-//           wordDefinitionBox.textContent = `Error: ${error.message}`;
-//         });
-//     });
-//   });
-// });
+const longestWordsListItems = document.querySelectorAll("#longest-word li");
 
 
-// const longestWordsListItems = document.querySelectorAll("#longest-word li");
+longestWordsListItems.forEach((longestWords) => {
+  longestWords.addEventListener("click", async () => {
+    if (selectedLongWord) {
+      selectedLongWord.classList.remove("selected-longword");
+    }
+    selectedLongWord = longestWords;
+    selectedLongWord.classList.add("selected-longword");
+    const longWordText = selectedLongWord.textContent;
 
-
-// longestWordsListItems.forEach((longestWords) => {
-//   longestWords.addEventListener("click", async () => {
-//     if (selectedLongWord) {
-//       selectedLongWord.classList.remove("selected-longword");
-//     }
-//     selectedLongWord = longestWords;
-//     selectedLongWord.classList.add("selected-longword");
-//     const longWordText = selectedLongWord.textContent;
-
-//     try {
-//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${longWordText}?key=${API_KEY}`);
-//       const data = await response.json();
+    try {
+      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${longWordText}?key=${API_KEY}`);
+      const data = await response.json();
           
-//       if (data.length > 0 && data[0].shortdef.length > 0) {
-//         const definition = data[0].shortdef[0];
-//         wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
-//       }
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   });
-// });
+      if (data.length > 0 && data[0].shortdef.length > 0) {
+        const definition = data[0].shortdef[0];
+        wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  });
+});
  
 //WORKING
   const topWordsListItems = document.querySelectorAll("#frequent-words li");
@@ -170,3 +127,53 @@ const adverbsListItems = document.querySelectorAll("#adverbs li");
     });
   });
 });
+
+
+///
+// const adverbsListItems = document.querySelectorAll("#adverbs li");
+
+//   adverbsListItems.forEach((adverb) => {
+//     adverb.addEventListener("click", () => {
+//       if (selectedAdverb) {
+//         selectedAdverb.classList.remove("selected-adverb");
+//       }
+//       selectedAdverb = adverb;
+//       selectedAdverb.classList.add("selected-adverb");
+//       const adverbText = selectedAdverb.textContent;
+
+//       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${adverbText}`)
+//       .then(response => response.json())
+//       .then(data => {
+//         const definition = data[0].meanings[0].definitions[0].definition;
+//         wordDefinitionBox.textContent = `${adverbText}: ${definition}`;
+//       })
+//       .catch(error => {
+//         wordDefinitionBox.textContent = `Error: ${error.message}`;
+//       });
+//     });
+//   });
+
+
+
+//   const selectedWords = document.querySelectorAll(".word");
+//   selectedWords.forEach((word) => {
+//     word.addEventListener("click", () => {
+//       if (selectedWord) {
+//         selectedWord.classList.remove("selected-word");
+//       }
+//       selectedWord = word;
+//       selectedWord.classList.add("selected-word");
+//       const wordText = selectedWord.textContent;
+      
+//       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordText}`)
+//         .then(response => response.json())
+//         .then(data => {
+//           const definition = data[0].meanings[0].definitions[0].definition;
+//           wordDefinitionBox.textContent = `${wordText}: ${definition}`;
+//         })
+//         .catch(error => {
+//           wordDefinitionBox.textContent = `Error: ${error.message}`;
+//         });
+//     });
+//   });
+// });

@@ -115,7 +115,7 @@ li[data-word] {
   z-index: 5;
 }
 
-li[data-word]:before {
+#frequent-words li[data-word]:before {
   content: counter(num-counter);
   z-index: -5;
   position: absolute;
@@ -125,20 +125,20 @@ li[data-word]:before {
   transform: translate(-50%, 0%);
 }
 
-li[data-word]::selection {
+#frequent-words li[data-word]::selection {
   color: hsl(0, 0%, 100%);
   background: hsl(22, 93%, 39%);
 }
 
-li[data-word]:nth-child(odd):before {
+#frequent-words li[data-word]:nth-child(odd):before {
   left: 0%;
 }
 
-li[data-word]:nth-child(even):before {
+#frequent-words li[data-word]:nth-child(even):before {
   left: 100%;
 }
 
-li[data-word] {
+#frequent-words li[data-word] {
   position: sticky;
 }
 
@@ -440,8 +440,37 @@ header h5 {
   margin: 10px 200px 30px 200px;
 }
 
-#longest-word li {
-  color: purple;
+#long-ones li {
+  color: white;
+}
+
+#long-ones {
+  box-sizing: border-box;
+  min-height: 100vh;
+  color: hsl(0, 0%, 100%);
+  font-family: "Burton";
+  background-size: 120px, 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Updated */
+  align-items: center;
+  list-style: none;
+  font-size: 2rem;
+  position: relative;
+}
+
+#long-ones li[data-word] {
+  height: auto; /* Updated */
+  display: block; /* Updated */
+  text-align: center; /* Updated */
+  text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
+  font-size: 3rem; /* Updated */
+  margin: 2rem 0; /* Updated */
+}
+
+#long-ones li:hover {
+  color: orangered;
+  cursor: pointer;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
