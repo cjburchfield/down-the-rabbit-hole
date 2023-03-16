@@ -57,7 +57,7 @@
     background-size: 120px, 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Updated */
+    justify-content: center; 
     align-items: center;
     list-style: none;
     font-size: 2rem;
@@ -65,12 +65,12 @@
   }
   
   #long-ones li[data-word] {
-    height: auto; /* Updated */
-    display: block; /* Updated */
-    text-align: center; /* Updated */
+    height: auto; 
+    display: block; 
+    text-align: center; 
     text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
-    font-size: 3rem; /* Updated */
-    margin: 2rem 0; /* Updated */
+    font-size: 3rem; 
+    margin: 2rem 0; 
   }
 
   #long-ones li:hover {

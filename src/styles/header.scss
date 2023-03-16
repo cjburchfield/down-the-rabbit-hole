@@ -53,16 +53,6 @@ header h2 {
     height: 100vh;
 }
 
-//Guide: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
-//   @keyframes rabbit-hole {
-//     from {
-//         transform: translateY(0);
-//     }
-//     to {
-//         transform: translateY(40vh);
-//     }
-//   }
-
 //Guide: https://www.w3schools.com/cssref/tryit.php?filename=trycss_anim_transform
 @keyframes rabbit-hole {
     50% {transform: rotate(360deg);}

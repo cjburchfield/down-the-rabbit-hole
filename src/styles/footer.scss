@@ -5,10 +5,13 @@ footer h4 {
   text-shadow: 2px 4px 4px black;
   display: flex;
   width: auto;
-  justify-content: right;
+  justify-content: center;
   text-align: center;
   font-family: "Burton";
-  margin: 0px 80px 0px 0px;
+  // margin: 0px 80px 0px 0px;
  
 }
 
+footer h3 {
+  height: 20vh;
+}

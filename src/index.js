@@ -18,17 +18,13 @@ const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  let selectedWord = '';
-  let selectedAdverb = '';
+  // let selectedWord = '';
+  // let selectedAdverb = '';
   let selectedLongWord = '';
   let selectedFrequent = '';
 
-  // const wordDefinitionBox = document.getElementById("word-definition-box");
-  // wordDefinitionBox.setAttribute('id', 'word-definition-box');
-  // wordDefinitionBox.textContent = 'Curiouser and curiouser';
-  // document.body.appendChild(wordDefinitionBox);
   const wordDefinitionBox = document.getElementById("word-definition-box");
-  wordDefinitionBox.innerHTML = `<span class="long-word">Curiouser and curiouser</span><span class="definition"> - a phrase used to describe a situation that is becoming increasingly strange or difficult to understand.</span>`;
+  wordDefinitionBox.innerHTML = `<span class="long-word">Curiouser and curiouser</span><span class="definition">  </span>`;
   document.body.appendChild(wordDefinitionBox);
   
   const invdef = document.getElementById("invented-definition");
@@ -66,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const longestWordsListItems = document.querySelectorAll("#longest-word li");
 
+// Catch error info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
 
 longestWordsListItems.forEach((longestWords) => {
   longestWords.addEventListener("click", async () => {
@@ -109,7 +106,7 @@ longestWordsListItems.forEach((longestWords) => {
             
         if (data.length > 0 && data[0].shortdef.length > 0) {
           const definition = data[0].shortdef[0];
-          wordDefinitionBox.textContent = `${topWordText}: ${definition}`;
+          wordDefinitionBox.innerHTML = `<span class="long-word">${topWordText}:</span><span class="definition"> ${definition}</span>`;
         }
       } catch (error) {
         console.error(error);
@@ -118,13 +115,8 @@ longestWordsListItems.forEach((longestWords) => {
   });
 });
 
-//Catch error info: 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
 
-  // const wordDefinitionBox = document.createElement('div');
-  // wordDefinitionBox.classList.add('word-definition-box');
-  // wordDefinitionBox.textContent = 'Curiouser and curiouser...';
-  // document.body.appendChild(wordDefinitionBox);
+
 
   // const adverbsElement = document.getElementById("adverbs");
   // const adverbsList = createAdverbList(combinedData.adverbs);

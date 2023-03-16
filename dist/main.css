@@ -452,7 +452,7 @@ this is the definition side .invented-definition {
   background-size: 120px, 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Updated */
+  justify-content: center;
   align-items: center;
   list-style: none;
   font-size: 2rem;
@@ -460,12 +460,12 @@ this is the definition side .invented-definition {
 }
 
 #long-ones li[data-word] {
-  height: auto; /* Updated */
-  display: block; /* Updated */
-  text-align: center; /* Updated */
+  height: auto;
+  display: block;
+  text-align: center;
   text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
-  font-size: 3rem; /* Updated */
-  margin: 2rem 0; /* Updated */
+  font-size: 3rem;
+  margin: 2rem 0;
 }
 
 #long-ones li:hover {
@@ -661,67 +661,6 @@ table {
   color: orangered;
 }
 
-.numbers {
-  font-family: "Burton";
-  line-height: 1em;
-  text-align: center;
-  overflow: hidden;
-  color: orangered;
-  font-size: 45px;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-}
-
-.numbers__window {
-  display: inline-block;
-  overflow: hidden;
-  width: 0.5em;
-  height: 1em;
-}
-
-.numbers__window__digit {
-  font: inherit;
-  word-break: break-all;
-  display: block;
-  width: 0;
-  padding: 0 0.52em 0 0;
-  margin: 0 auto;
-  overflow: inherit;
-  animation: counting 0.4s steps(10) forwards infinite;
-}
-
-.numbers__window__digit::before {
-  content: attr(data-fake);
-  display: inline-block;
-  width: 100%;
-  height: auto;
-}
-
-@keyframes counting {
-  100% {
-    transform: translate3d(0, -10em, 0);
-  }
-}
-.numbers__window__digit--1 {
-  animation-iteration-count: 3;
-}
-
-.numbers__window__digit--2 {
-  animation-iteration-count: 6;
-}
-
-.numbers__window__digit--3 {
-  animation-iteration-count: 9;
-}
-
-.numbers__window__digit--4 {
-  animation-iteration-count: 12;
-}
-
-.numbers__window__digit--5 {
-  animation-iteration-count: 15;
-}
-
 footer h4 {
   color: orangered;
   font-size: 35px;
@@ -729,10 +668,13 @@ footer h4 {
   text-shadow: 2px 4px 4px black;
   display: flex;
   width: auto;
-  justify-content: right;
+  justify-content: center;
   text-align: center;
   font-family: "Burton";
-  margin: 0px 80px 0px 0px;
+}
+
+footer h3 {
+  height: 20vh;
 }
 
 #adverbs-section h1 {
@@ -760,7 +702,7 @@ footer h4 {
 }
 
 #adverbs-section h3 {
-  height: 50vh;
+  height: 35vh;
 }
 
 #ly-words {
@@ -826,7 +768,7 @@ body {
 #word-definition-box {
   display: inline-block;
   height: 100%;
-  width: 400px;
+  width: 450px;
   border: 1px solid black;
   padding: 10px;
   font-family: "Burton";
