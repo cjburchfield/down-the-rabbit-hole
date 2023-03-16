@@ -9,21 +9,21 @@
 
 @font-face {
     font-family: "Alice";
-    src: url("/assets/Aliciawonderland-ZoM8.ttf");
+    src: url("./assets/Aliciawonderland-ZoM8.ttf");
   }
 
 @font-face {
   font-family: "Burton";
-  src: url("/assets/BurtonsDreamsPro-R1rE.ttf");
+  src: url("./assets/BurtonsDreamsPro-R1rE.ttf");
 }
 
 @font-face {
   font-family: "Penny";
-  src: url("/assets/HennyPenny-Regular.ttf");
+  src: url("./assets/HennyPenny-Regular.ttf");
 }
 body {
     background-color: black;
-    background-image: url("/assets/tunnel.jpg");
+    background-image: url("./assets/tunnel.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -31,17 +31,17 @@ body {
 
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/Roboto-Regular.ttf");
+  src: url("./assets/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: "Pacifico";
-  src: url("/assets/Pacifico-Regular.ttf");
+  src: url("./assets/Pacifico-Regular.ttf");
 }
 
 @font-face {
   font-family: "Merry";
-  src: url("/assets/Merriweather-Regular.ttf")
+  src: url("./assets/Merriweather-Regular.ttf")
 }
 
 .boxes-container {
@@ -63,7 +63,7 @@ body {
   font-family: "Burton";
   font-size: 20px;
   color: blue;
-  background: url("/assets/bunny-scroll.png");
+  background: url("./assets/bunny-scroll.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
