@@ -88,22 +88,26 @@ body {
   z-index: 1;
   border-radius: 15px; /* 10px rounded corners */
   box-shadow: 3px 5px 5px black;
+  align-items: center; /* center text horizontally and vertically */
+  height: 100%; /* set height to 100% */
+
 }
 
 .word-definition {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* center text horizontally and vertically */
-  width: calc(100% - 150px);
-  box-sizing: border-box;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: pink;
-  overflow: auto;
-  background-color: rgba(255, 255, 255, 0.7); /* transparent white */
-  background-clip: content-box;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center; /* center text horizontally and vertically */
+  // // width: calc(100% - 150px);
+  // height: 100%; /* set height to 100% */
+  // box-sizing: border-box;
+  // padding: 10px;
+  // font-family: Arial, sans-serif;
+  // font-size: 14px;
+  // color: pink;
+  // overflow: auto;
+  // background-color: rgba(255, 255, 255, 0.7); /* transparent white */
+  // background-clip: content-box;
 }
 
 li {

@@ -36,7 +36,21 @@
 }
 
 #frequent-words h3{
-    height: 100vh
+    height: 100vh;
+}
+
+#frequent-words h5{
+    color: orangered;
+    font-size: 35px;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px black;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-family: "Burton";
+    margin: 30px 200px 10px 200px;
+    position: sticky;
 }
 
 li[title] {
