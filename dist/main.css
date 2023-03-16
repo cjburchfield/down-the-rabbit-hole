@@ -320,14 +320,14 @@ header h5 {
   margin: 10px 200px 30px 200px;
 }
 
-.word-box {
+.invented-bubble {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 200px 30px 200px;
 }
 
-.word {
+.invented {
   border: 4px solid orangered;
   border-radius: 25px;
   padding: 20px;
@@ -342,14 +342,14 @@ header h5 {
   transition: transform 0.3s ease;
 }
 
-.word:hover {
+.invented:hover {
   background-color: orangered;
   border: 4px solid white;
   color: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.word.active {
+.invented.active {
   transform: scale(1.1);
   z-index: 1;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
@@ -359,7 +359,7 @@ header h5 {
   height: 50vh;
 }
 
-.word:hover:after {
+.invented:hover:after {
   background-color: orangered;
   border: 4px solid white;
   color: white;
@@ -378,7 +378,7 @@ header h5 {
   font-family: "Alice";
 }
 
-.definition {
+this is the definition side .invented-definition {
   color: orangered;
 }
 
@@ -732,7 +732,7 @@ footer h4 {
   justify-content: right;
   text-align: center;
   font-family: "Burton";
-  margin: 0px 50px 50px 0px;
+  margin: 0px 80px 0px 0px;
 }
 
 #adverbs-section h1 {
@@ -820,31 +820,26 @@ body {
   background-position: left center;
   z-index: 1;
   border-radius: 15px;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #word-definition-box {
-  width: 350px;
-  height: 150px;
-  background-color: white;
+  display: inline-block;
+  height: 100%;
+  width: 400px;
   border: 1px solid black;
   padding: 10px;
   font-family: "Burton";
-  font-size: 25px;
+  font-size: 30px;
   color: orangered;
   background-color: rgba(255, 255, 255, 0.7);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center;
   z-index: 1;
   border-radius: 15px;
   box-shadow: 3px 5px 5px black;
   align-items: center;
-  height: 100%;
-}
-
-.word-definition {
-  display: flex;
+  position: sticky;
+  bottom: 30px;
+  margin-left: 170px;
 }
 
 li {
@@ -854,4 +849,18 @@ li {
 li:hover {
   color: orangered;
   cursor: pointer;
+}
+
+.long-word {
+  color: orangered;
+  font-size: 35px;
+  font-weight: 300;
+  text-shadow: 0.5px 1px 1px black;
+}
+
+.definition {
+  color: rgb(63, 63, 63);
+  font-size: 35px;
+  font-weight: 300;
+  text-shadow: 0.5px 1px 1px black;
 }

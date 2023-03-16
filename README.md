@@ -5,7 +5,7 @@
 
 By hooking into the Merriam-Webster Dictionary API, this project breaks down Carroll’s word selection and allows users to easily access the definition of select words.
 
-<img src="https://raw.githubusercontent.com/cjburchfield/down-the-rabbit-hole/main/assets/header_image.png" width = "350px">
+<!-- <img src="https://raw.githubusercontent.com/cjburchfield/down-the-rabbit-hole/main/assets/header_image.png" width = "350px"> -->
 
 
 ## Technical Details

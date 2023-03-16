@@ -40,33 +40,7 @@ export const combineChapters = (chapters) => {
   return { topWords, numPairs, longestWords, totalWords, tenWords, sixWords, lyWords, adverbs };
 }
 
-// //Creating the frequent favorite words & definitions - NOT in box yet
-// export const createTopWordsList = (topWords) => {
-//   const topWordsList = document.createElement("ul");
-
-//   for (const [word, count] of topWords) {
-//     const listItem = document.createElement("li");
-//     listItem.textContent = `${word}: ${count}`;
-//     listItem.setAttribute("data-word", word)
-//     topWordsList.appendChild(listItem);
-//   }
-
-//   topWordsList.addEventListener("click", async (event) => {
-//     const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-//     selectedWord = event.target.getAttribute("data-word");
-
-//     const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedWord}?key=${API_KEY}`);
-//     const data = await response.json();
-//     if (data.length > 0 && data[0].shortdef.length > 0) {
-//       const definition = data[0].shortdef[0];
-//       document.getElementById("word-definition").textContent = definition;
-//     }
-//     }
-//   );
-
-//   return { topWordsList };
-// };
-
+//Top Word List
 export const createTopWordsList = (topWords) => {
   const topWordsList = document.createElement("ul");
   
@@ -77,26 +51,24 @@ export const createTopWordsList = (topWords) => {
     topWordsList.appendChild(listItem);
   }
 
+  // topWordsList.addEventListener("click", async (event) => {
+  //   const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+  //   let selectedWord = event.target.getAttribute("data-word");
   
-
-  topWordsList.addEventListener("click", async (event) => {
-    const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-    let selectedWord = event.target.getAttribute("data-word");
-  
-    const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedWord}?key=${API_KEY}`);
-    const data = await response.json();
+  //   const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedWord}?key=${API_KEY}`);
+  //   const data = await response.json();
     
-    if (data.length > 0 && data[0].shortdef.length > 0) {
-      const definition = data[0].shortdef[0];
-      document.getElementById("word-definition").textContent = definition;
-    }
-  });
+  //   if (data.length > 0 && data[0].shortdef.length > 0) {
+  //     const definition = data[0].shortdef[0];
+  //     document.getElementById("word-definition-box").textContent = definition;
+  //   }
+  // });
   
-return { topWordsList };
+  return { topWordsList };
 };
 
 
-//Creating the adverb words & definitions
+//Creating the adverb list
 export const createAdverbList = (adverbs) => {
     const adverbsList = document.createElement("ul");
     const adverbWords = adverbs.map(([word, count]) => word);
@@ -107,47 +79,21 @@ export const createAdverbList = (adverbs) => {
       listItem.setAttribute("data-word", word);
       adverbsList.appendChild(listItem);
     }
-    
-    adverbsList.addEventListener("click", async (event) => {
-      const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-      let selectedAdverb = event.target.getAttribute("data-word");
-    
-      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedAdverb}?key=${API_KEY}`);
-      const data = await response.json();
-      
-      if (data.length > 0 && data[0].shortdef.length > 0) {
-        const definition = data[0].shortdef[0];
-        document.getElementById("word-definition").textContent = definition;
-      }
-    });
-    
+
   return { adverbsList };
 };
     
 
+//Creating the longest word list
+export const createLongestWordsList = (longestWords) => {
+  const longestWordsList = document.createElement("ul");
+      
+  for (const word of longestWords) {
+    const listItem = document.createElement("li");
+    listItem.textContent = word;
+    listItem.setAttribute("data-word", word);
+    longestWordsList.appendChild(listItem);
+  }
 
-    export const createLongestWordsList = (longestWords) => {
-      const longestWordsList = document.createElement("ul");
-      
-      for (const word of longestWords) {
-        const listItem = document.createElement("li");
-        listItem.textContent = word;
-        listItem.setAttribute("data-word", word);
-        longestWordsList.appendChild(listItem);
-      }
-      
-      longestWordsList.addEventListener("click", async (event) => {
-        const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-        let selectedLongWord = event.target.getAttribute("data-word");
-      
-        const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedLongWord}?key=${API_KEY}`);
-        const data = await response.json();
-        
-        if (data.length > 0 && data[0].shortdef.length > 0) {
-          const definition = data[0].shortdef[0];
-          document.getElementById("word-definition").textContent = definition;
-        }
-      });
-      
-    return { longestWordsList };
-  };
+  return { longestWordsList };
+};

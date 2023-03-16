@@ -49,47 +49,47 @@ body {
   background-size: contain;
   background-position: left center;
   z-index: 1;
-  border-radius: 15px; 
-  margin-left: 20px; 
+  border-radius: 15px;
+  margin-right: 20px;
+  // position: sticky;
+  // left: 10px;
 }
 
 #word-definition-box {
-  width: 350px;
-  height: 150px;
-  background-color: white;
+  display: inline-block;
+  height: 100%;
+  width: 400px;
   border: 1px solid black;
   padding: 10px;
   font-family: "Burton";
-  font-size: 25px;
+  font-size: 30px;
   color: orangered;
   background-color: rgba(255, 255, 255, 0.7); 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center;
   z-index: 1;
   border-radius: 15px; 
   box-shadow: 3px 5px 5px black;
   align-items: center; 
-  height: 100%; 
-
+  position: sticky; 
+  bottom: 30px;
+  margin-left: 170px;
 }
 
-.word-definition {
-  display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center; 
-  // // width: calc(100% - 150px);
-  // height: 100%; 
-  // box-sizing: border-box;
-  // padding: 10px;
-  // font-family: Arial, sans-serif;
-  // font-size: 14px;
-  // color: pink;
-  // overflow: auto;
-  // background-color: rgba(255, 255, 255, 0.7); 
-  // background-clip: content-box;
-}
+// .word-definition {
+//   display: flex;
+//   // flex-direction: column;
+//   // justify-content: center;
+//   // align-items: center; 
+//   // // width: calc(100% - 150px);
+//   // height: 100%; 
+//   // box-sizing: border-box;
+//   // padding: 10px;
+//   // font-family: Arial, sans-serif;
+//   // font-size: 14px;
+//   // color: pink;
+//   // overflow: auto;
+//   // background-color: rgba(255, 255, 255, 0.7); 
+//   // background-clip: content-box;
+// }
 
 li {
   cursor: pointer;
@@ -99,3 +99,19 @@ li:hover {
   color: orangered; 
   cursor: pointer;
 }
+
+.long-word {
+  color: orangered;
+  font-size: 35px;
+  font-weight: 300;
+  text-shadow: .5px 1px 1px black;
+}
+
+.definition {
+  // font-style: italic;
+color: rgb(63, 63, 63);
+font-size: 35px;
+font-weight: 300;
+text-shadow: .5px 1px 1px black;
+}
+

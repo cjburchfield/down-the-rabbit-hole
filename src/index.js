@@ -10,7 +10,7 @@ import { chapter9 } from "./chapter-objects/chapterNine";
 import { chapter10 } from "./chapter-objects/chapterTen";
 import { chapter11 } from "./chapter-objects/chapterEleven";
 import { chapter12 } from "./chapter-objects/chapterTwelve";
-import Word from "./scripts/example";
+import Invented from "./scripts/example";
 import { combineChapters, createTopWordsList, createLongestWordsList, createAdverbList } from "./scripts/combined-chapters";
 
 
@@ -18,19 +18,21 @@ const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // let selectedWord = '';
-  // let selectedAdverb = '';
+  let selectedWord = '';
+  let selectedAdverb = '';
   let selectedLongWord = '';
   let selectedFrequent = '';
 
-  const wordDefinitionBox = document.createElement('div');
-  wordDefinitionBox.setAttribute('id', 'word-definition-box');
-  wordDefinitionBox.textContent = 'Curiouser and curiouser';
+  // const wordDefinitionBox = document.getElementById("word-definition-box");
+  // wordDefinitionBox.setAttribute('id', 'word-definition-box');
+  // wordDefinitionBox.textContent = 'Curiouser and curiouser';
+  // document.body.appendChild(wordDefinitionBox);
+  const wordDefinitionBox = document.getElementById("word-definition-box");
+  wordDefinitionBox.innerHTML = `<span class="long-word">Curiouser and curiouser</span><span class="definition"> - a phrase used to describe a situation that is becoming increasingly strange or difficult to understand.</span>`;
   document.body.appendChild(wordDefinitionBox);
-
   
-  const definitions = document.getElementById("definitions");
-  new Word(definitions);
+  const invdef = document.getElementById("invented-definition");
+  new Invented(invdef);
 
 
   const chapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9, chapter10, chapter11, chapter12];
@@ -48,9 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   totalWordsElement.textContent = combinedData.totalWords;
   numPairsElement.textContent = combinedData.numPairs;
 
-  // const longestWordElement = document.getElementById("longest-word");
   const longestWordsList = createLongestWordsList(combinedData.longestWords);
-  // longestWordElement.appendChild(longestWordsList.longestWordsList);
   const longestWordElement = document.getElementById("longest-word");
   if (longestWordElement) {
     longestWordElement.appendChild(longestWordsList.longestWordsList);
@@ -82,7 +82,9 @@ longestWordsListItems.forEach((longestWords) => {
           
       if (data.length > 0 && data[0].shortdef.length > 0) {
         const definition = data[0].shortdef[0];
-        wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
+        // wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
+        wordDefinitionBox.innerHTML = `<span class="long-word">${longWordText}:</span><span class="definition"> ${definition}</span>`;
+
       }
     } catch (error) {
       console.error(error);
