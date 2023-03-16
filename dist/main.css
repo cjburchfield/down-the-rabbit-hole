@@ -141,7 +141,7 @@ header h1 {
   justify-content: center;
   font-size: 120px;
   font-family: "Alice";
-  font-weight: 600;
+  font-weight: 700;
   color: orangered;
   text-shadow: 2px 4px 4px black;
   margin: 30vh auto 0 auto;
@@ -159,11 +159,19 @@ header h3 {
   font-size: 35px;
   font-weight: 600;
   text-shadow: 2px 4px 4px black;
-  margin: 10px 150px 10px 150px;
+  margin: 10px 200px 30px 200px;
 }
 
 header h2 {
-  color: blue;
+  color: white;
+  font-family: "Burton";
+  font-size: 45px;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 2px 4px 4px black;
 }
 
 #rabbit-hole {
@@ -187,6 +195,7 @@ header h2 {
 }
 header h4 {
   color: orangered;
+  font-style: italic;
   font-family: "Burton";
   font-size: 45px;
   display: flex;
@@ -354,15 +363,15 @@ header h5 {
 }
 
 #long-ones h3 {
-  height: 100vh;
+  height: 50vh;
 }
 
 #ten-words {
   color: white;
 }
 
-#longest-word {
-  color: white;
+#longest-word li {
+  color: purple;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -513,8 +522,8 @@ table {
 }
 
 #metrics h2 {
-  color: orangered;
-  font-size: 40px;
+  color: white;
+  font-size: 45px;
   font-weight: 600;
   text-shadow: 2px 4px 4px black;
   display: flex;
@@ -524,20 +533,29 @@ table {
   font-family: "Burton";
 }
 
-#metrics h3 {
-  height: 100vh;
+#metrics h4 {
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  margin: 10px 200px 30px 200px;
 }
 
 #total-words {
-  color: white;
+  color: orangered;
 }
 
 #num-pairs {
-  color: white;
+  color: orangered;
 }
 
 #emphasis {
-  color: white;
+  color: orangered;
 }
 
 footer h1 {
