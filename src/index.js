@@ -1,4 +1,3 @@
-import Word from "./scripts/example";
 import { chapter1 } from "./chapter-objects/chapterOne";
 import { chapter2 } from "./chapter-objects/chapterTwo";
 import { chapter3 } from "./chapter-objects/chapterThree";
@@ -11,22 +10,18 @@ import { chapter9 } from "./chapter-objects/chapterNine";
 import { chapter10 } from "./chapter-objects/chapterTen";
 import { chapter11 } from "./chapter-objects/chapterEleven";
 import { chapter12 } from "./chapter-objects/chapterTwelve";
+import Word from "./scripts/example";
 import { combineChapters, createTopWordsList, createLongestWordsList, createAdverbList } from "./scripts/combined-chapters";
+
+
 const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  let selectedWord = '';
-  let selectedAdverb = '';
+  // let selectedWord = '';
+  // let selectedAdverb = '';
   let selectedLongWord = '';
   let selectedFrequent = '';
-
-
-
-  // const wordDefinitionBox = document.createElement('div');
-  // wordDefinitionBox.classList.add('word-definition-box');
-  // wordDefinitionBox.textContent = 'Curiouser and curiouser...';
-  // document.body.appendChild(wordDefinitionBox);
 
   const wordDefinitionBox = document.createElement('div');
   wordDefinitionBox.setAttribute('id', 'word-definition-box');
@@ -61,16 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
     longestWordElement.appendChild(longestWordsList.longestWordsList);
   }
   
-
-  // const adverbsElement = document.getElementById("adverbs");
-  // const adverbsList = createAdverbList(combinedData.adverbs);
-  // adverbsElement.appendChild(adverbsList.adverbsList);
-
+      
   const frequentWords = document.getElementById("frequent-words");
   const topWordsList = createTopWordsList(combinedData.topWords);
   frequentWords.appendChild(topWordsList.topWordsList);
-
-
 
 
 
@@ -101,7 +90,6 @@ longestWordsListItems.forEach((longestWords) => {
   });
 });
  
-//WORKING
   const topWordsListItems = document.querySelectorAll("#frequent-words li");
 
   topWordsListItems.forEach((topWords) => {  
@@ -127,6 +115,18 @@ longestWordsListItems.forEach((longestWords) => {
     });
   });
 });
+
+//Catch error info: 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+
+  // const wordDefinitionBox = document.createElement('div');
+  // wordDefinitionBox.classList.add('word-definition-box');
+  // wordDefinitionBox.textContent = 'Curiouser and curiouser...';
+  // document.body.appendChild(wordDefinitionBox);
+
+  // const adverbsElement = document.getElementById("adverbs");
+  // const adverbsList = createAdverbList(combinedData.adverbs);
+  // adverbsElement.appendChild(adverbsList.adverbsList);
 
 
 ///

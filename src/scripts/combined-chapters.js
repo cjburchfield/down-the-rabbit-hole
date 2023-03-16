@@ -25,6 +25,7 @@ export const combineChapters = (chapters) => {
   //Longest word data 
   let longestWord = ''
   let longestWords = [];
+  
   for (const [word, count] of sortedBook) {
     if (word.length > longestWord.length) {
       longestWord = word;
