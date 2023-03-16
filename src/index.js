@@ -47,46 +47,48 @@ document.addEventListener("DOMContentLoaded", () => {
   totalWordsElement.textContent = combinedData.totalWords;
   numPairsElement.textContent = combinedData.numPairs;
 
-  const longestWordElement = document.getElementById("longest-word");
-  const longestWordsList = createLongestWordsList(combinedData.longestWords);
-  longestWordElement.appendChild(longestWordsList.longestWordsList);
+  // const longestWordElement = document.getElementById("longest-word");
+  // const longestWordsList = createLongestWordsList(combinedData.longestWords);
+  // longestWordElement.appendChild(longestWordsList.longestWordsList);
 
-  const adverbsElement = document.getElementById("adverbs");
-  const adverbsList = createAdverbList(combinedData.adverbs);
-  adverbsElement.appendChild(adverbsList.adverbsList);
+  // const adverbsElement = document.getElementById("adverbs");
+  // const adverbsList = createAdverbList(combinedData.adverbs);
+  // adverbsElement.appendChild(adverbsList.adverbsList);
 
   const frequentWords = document.getElementById("frequent-words");
   const topWordsList = createTopWordsList(combinedData.topWords);
   frequentWords.appendChild(topWordsList.topWordsList);
 
 
-const longestWordsListItems = document.querySelectorAll("#longest-word li");
 
 
-longestWordsListItems.forEach((longestWords) => {
-  const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+//   const longestWordsListItems = document.querySelectorAll("#longest-word li");
 
-  longestWords.addEventListener("click", async () => {
-    if (selectedLongWord) {
-      selectedLongWord.classList.remove("selected-longword");
-    }
-    selectedLongWord = longestWords;
-    selectedLongWord.classList.add("selected-longword");
-    const longWordText = selectedLongWord.textContent;
 
-    try {
-      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${longWordText}?key=${API_KEY}`);
-      const data = await response.json();
+// longestWordsListItems.forEach((longestWords) => {
+//   const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
+
+//   longestWords.addEventListener("click", async () => {
+//     if (selectedLongWord) {
+//       selectedLongWord.classList.remove("selected-longword");
+//     }
+//     selectedLongWord = longestWords;
+//     selectedLongWord.classList.add("selected-longword");
+//     const longWordText = selectedLongWord.textContent;
+
+//     try {
+//       const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${longWordText}?key=${API_KEY}`);
+//       const data = await response.json();
           
-      if (data.length > 0 && data[0].shortdef.length > 0) {
-        const definition = data[0].shortdef[0];
-        wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  });
-});
+//       if (data.length > 0 && data[0].shortdef.length > 0) {
+//         const definition = data[0].shortdef[0];
+//         wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
+//       }
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   });
+// });
 
 
 //
@@ -113,6 +115,8 @@ const adverbsListItems = document.querySelectorAll("#adverbs li");
       });
     });
   });
+
+
 
   const selectedWords = document.querySelectorAll(".word");
   selectedWords.forEach((word) => {
@@ -165,5 +169,6 @@ const adverbsListItems = document.querySelectorAll("#adverbs li");
     });
   });
   
+
 
 

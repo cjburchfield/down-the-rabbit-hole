@@ -1,27 +1,26 @@
 #invented h1  {
-    color: orangered;
-    font-size: 75px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Alice";
-    // margin: 10px 150px 10px 150px;
+  color: orangered;
+  font-size: 75px;
+  font-weight: 600;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Alice";
 }
 
 #invented h2{
-    color: orangered;
-    font-size: 40px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Burton";
-    margin: 0px 100px 0px 100px;
+  color: rgb(206, 203, 203);
+  font-size: 35px;
+  font-weight: 700;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  margin: 10px 200px 30px 200px;
 
 }
 
@@ -30,9 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // height: 100vh;
-    // font-family: "Burton";
-    margin: 100px 100px 100px 100px;//need to fix
+    margin: 10px 200px 30px 200px
   }
     
   .word {
@@ -64,7 +61,7 @@
   }
   
   #invented h3 {
-    height: 100vh
+    height: 50vh
 }
 
 .word:hover:after {

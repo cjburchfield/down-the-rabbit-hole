@@ -63,7 +63,7 @@ body {
   padding: 10px;
   font-family: "Burton";
   font-size: 20px;
-  color: red;
+  color: orangered;
   background: url("/assets/bunny-scroll.png");
   // background-color: rgba(255, 255, 255, 0.7); /* transparent white */
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@ body {
   padding: 10px;
   font-family: "Burton";
   font-size: 25px;
-  color: red;
+  color: orangered;
   background-color: rgba(255, 255, 255, 0.7); /* transparent white */
   background-repeat: no-repeat;
   background-size: contain;
@@ -109,13 +109,11 @@ body {
   background-clip: content-box;
 }
 
-/* styles for clickable elements */
 li {
   cursor: pointer;
 }
 
-/* styles for clickable elements on hover */
 li:hover {
-  color: #ff0000; /* change to your desired color */
+  color: orangered; 
   cursor: pointer;
 }

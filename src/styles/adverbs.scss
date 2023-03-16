@@ -1,7 +1,7 @@
 #adverbs-section h1 {
     color: orangered;
     font-size: 75px;
-    font-weight: 500;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
@@ -11,9 +11,9 @@
 }
 
 #adverbs-section h2 {
-    color: orangered;
-    font-size: 40px;
-    font-weight: 500;
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
     text-shadow: 2px 4px 4px black;
     display: flex;
     width: auto;
@@ -23,18 +23,22 @@
 }
 
 #adverbs-section h3 {
-    height: 100vh
+    height: 50vh
 }
 
 #ly-words {
-    color: white;
+    color: orangered;
 }
 
-#adverbs {
-    color: white;
+#adverbs-section h4{
+    color: rgb(206, 203, 203);
+    font-size: 35px;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px black;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-family: "Burton";
+    margin: 10px 200px 30px 200px;
 }
-
-
-// #adverbs li {
-//     color: blue;
-// }

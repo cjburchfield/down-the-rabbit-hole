@@ -1,72 +1,17 @@
-footer h1 {
-    color: orangered;
-    font-size: 75px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Alice";
+footer h4 {
+  color: orangered;
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Burton";
+  margin: 10px 200px 30px 200px;
 }
 
 footer h3{
-    height: 10vh;
+    height: 40vh;
 }
-
-.numbers {
-    font-family: "Alice";
-    font-size: 75px;
-    line-height: 1em;
-    text-align: center;
-    margin: 40px auto;
-    overflow: hidden;
-  }
-
-  .numbers__window {
-    display: inline-block;
-    overflow: hidden;
-    width: 0.5em;
-    height: 1em;
-  }
-
-  .numbers__window__digit {
-    font: inherit;
-    word-break: break-all;
-    display: block;
-    width: 0;
-    padding: 0 0.52em 0 0;
-    margin: 0 auto;
-    overflow: inherit;
-    animation: counting 0.4s steps(10) forwards infinite;
-  }
-
-  .numbers__window__digit::before {
-    content: attr(data-fake);
-    display: inline-block;
-    width: 100%;
-    height: auto;
-  }
-
-  @keyframes counting {
-    100% {
-      transform: translate3d(0, -10em, 0);
-    }
-  }
-
-  .numbers__window__digit--1 {
-    animation-iteration-count: 7;
-  }
-  .numbers__window__digit--2 {
-    animation-iteration-count: 8;
-  }
-  .numbers__window__digit--3 {
-    animation-iteration-count: 9;
-  }
-  .numbers__window__digit--4 {
-    animation-iteration-count: 10;
-  }
-  .numbers__window__digit--5 {
-    animation-iteration-count: 11;
-  }
 
