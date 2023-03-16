@@ -194,6 +194,7 @@ li[data-word]:nth-child(10) {
 
 #frequent-words li:hover {
   color: white;
+  cursor: pointer;
 }
 
 header h1 {
@@ -382,7 +383,7 @@ header h5 {
   font-family: "Alice";
 }
 
-this is the definition side .invented-definition {
+.invented-definition {
   color: orangered;
 }
 

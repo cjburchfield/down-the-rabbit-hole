@@ -55,9 +55,9 @@
 
 li[title] {
     position: relative;
-  }
+}
   
-  li[title]:hover:after {
+li[title]:hover:after {
     content: attr(title);
     position: fixed;
     z-index: 1;
@@ -70,10 +70,9 @@ li[title] {
     font-weight: bold;
     font-size: 0.9em;
     color: green;
-  }
+}
 
   li[title].active:after {
-//   li.active:after {
     content: attr(data-definition);
     position: absolute;
     // z-index: 1;
@@ -81,7 +80,6 @@ li[title] {
     // left: 50%;
     top: 0;
     left: 100%;
-    // transform: translate(-50%, 0);
     transform: translate(10px, 0);
     white-space: nowrap;
     padding: 5px;
@@ -95,7 +93,6 @@ li[title] {
     box-sizing: border-box;
     min-height: 100vh;
     color: hsl(0, 0%, 100%);
-    // color: blue;
     font-family: "Burton";
     background-size: 120px, 100%;
     display: flex;
@@ -154,7 +151,7 @@ li[data-word] {
 
 #frequent-words li:hover {
     color: white; 
-    // cursor: pointer;
+    cursor: pointer;
   }
 
 

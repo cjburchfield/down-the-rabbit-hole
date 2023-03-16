@@ -92,30 +92,30 @@ longestWordsListItems.forEach((longestWords) => {
   });
 });
  
-  const topWordsListItems = document.querySelectorAll("#frequent-words li");
+//   const topWordsListItems = document.querySelectorAll("#frequent-words li");
 
-  topWordsListItems.forEach((topWords) => {  
-    topWords.addEventListener("click", async () => {
-      if (selectedFrequent) {
-        selectedFrequent.classList.remove("selected-topword");
-      }
-      selectedFrequent = topWords;
-      selectedFrequent.classList.add("selected-topword");
-      const topWordText = selectedFrequent.textContent;
+//   topWordsListItems.forEach((topWords) => {  
+//     topWords.addEventListener("click", async () => {
+//       if (selectedFrequent) {
+//         selectedFrequent.classList.remove("selected-topword");
+//       }
+//       selectedFrequent = topWords;
+//       selectedFrequent.classList.add("selected-topword");
+//       const topWordText = selectedFrequent.textContent;
   
-      try {
-        const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${topWordText}?key=${API_KEY}`);
-        const data = await response.json();
+//       try {
+//         const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${topWordText}?key=${API_KEY}`);
+//         const data = await response.json();
             
-        if (data.length > 0 && data[0].shortdef.length > 0) {
-          const definition = data[0].shortdef[0];
-          wordDefinitionBox.innerHTML = `<span class="long-word">${topWordText}:</span><span class="definition"> ${definition}</span>`;
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    });
-  });
+//         if (data.length > 0 && data[0].shortdef.length > 0) {
+//           const definition = data[0].shortdef[0];
+//           wordDefinitionBox.innerHTML = `<span class="long-word">${topWordText}:</span><span class="definition"> ${definition}</span>`;
+//         }
+//       } catch (error) {
+//         console.error(error);
+//       }
+//     });
+//   });
 });
 
 
