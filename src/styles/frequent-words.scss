@@ -152,7 +152,10 @@ li[data-word] {
     }
 }
 
-
+#frequent-words li:hover {
+    color: white; 
+    // cursor: pointer;
+  }
 
 
 

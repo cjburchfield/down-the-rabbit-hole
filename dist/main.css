@@ -192,6 +192,10 @@ li[data-word]:nth-child(10) {
   height: 32.5vh;
 }
 
+#frequent-words li:hover {
+  color: white;
+}
+
 header h1 {
   display: flex;
   justify-content: center;
@@ -710,6 +714,7 @@ footer h3 {
 }
 
 #adverbs-section h4 {
+  color: white;
   color: rgb(206, 203, 203);
   font-size: 35px;
   font-weight: 700;
@@ -720,6 +725,38 @@ footer h3 {
   text-align: center;
   font-family: "Burton";
   margin: 10px 200px 30px 200px;
+}
+
+#adverbs {
+  box-sizing: border-box;
+  min-height: 100vh;
+  color: hsl(0, 0%, 100%);
+  font-family: "Burton";
+  background-size: 120px, 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 2rem;
+  position: relative;
+  color: rgb(206, 203, 203);
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 2px 4px 4px black;
+}
+
+#adverbs li[data-word] {
+  height: auto;
+  display: block;
+  text-align: center;
+  text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+#adverbs li:hover {
+  color: white;
 }
 
 @font-face {

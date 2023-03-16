@@ -57,6 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const topWordsList = createTopWordsList(combinedData.topWords);
   frequentWords.appendChild(topWordsList.topWordsList);
 
+  // const adverbsElement = document.getElementById("adverbs");
+  // const adverbsList = createAdverbList(combinedData.adverbs);
+  // adverbsElement.appendChild(adverbsList.adverbsList);
+
 
 
 
@@ -79,7 +83,6 @@ longestWordsListItems.forEach((longestWords) => {
           
       if (data.length > 0 && data[0].shortdef.length > 0) {
         const definition = data[0].shortdef[0];
-        // wordDefinitionBox.textContent = `${longWordText}: ${definition}`;
         wordDefinitionBox.innerHTML = `<span class="long-word">${longWordText}:</span><span class="definition"> ${definition}</span>`;
 
       }
@@ -116,13 +119,6 @@ longestWordsListItems.forEach((longestWords) => {
 });
 
 
-
-
-  // const adverbsElement = document.getElementById("adverbs");
-  // const adverbsList = createAdverbList(combinedData.adverbs);
-  // adverbsElement.appendChild(adverbsList.adverbsList);
-
-
 ///
 // const adverbsListItems = document.querySelectorAll("#adverbs li");
 
@@ -139,7 +135,7 @@ longestWordsListItems.forEach((longestWords) => {
 //       .then(response => response.json())
 //       .then(data => {
 //         const definition = data[0].meanings[0].definitions[0].definition;
-//         wordDefinitionBox.textContent = `${adverbText}: ${definition}`;
+//         wordDefinitionBox.innerHTML = `<span class="long-word">${adverbText}:</span><span class="definition"> ${definition}</span>`;
 //       })
 //       .catch(error => {
 //         wordDefinitionBox.textContent = `Error: ${error.message}`;
