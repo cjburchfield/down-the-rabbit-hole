@@ -22,11 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  // const wordDefinitionBox = document.createElement('div');
+  // wordDefinitionBox.classList.add('word-definition-box');
+  // wordDefinitionBox.textContent = 'Curiouser and curiouser...';
+  // document.body.appendChild(wordDefinitionBox);
+
   const wordDefinitionBox = document.createElement('div');
-  wordDefinitionBox.classList.add('word-definition-box');
+  wordDefinitionBox.setAttribute('id', 'word-definition-box');
   wordDefinitionBox.textContent = 'Curiouser and curiouser...';
   document.body.appendChild(wordDefinitionBox);
 
+//   const wordDefinition = document.querySelector('.word-definition');
+// wordDefinition.textContent = 'Curiouser and curiouser...';
   
   const definitions = document.getElementById("definitions");
   new Word(definitions);

@@ -585,6 +585,10 @@ table {
   font-family: "Burton";
 }
 
+#metrics h3 {
+  height: 50vh;
+}
+
 #metrics h4 {
   color: rgb(206, 203, 203);
   font-size: 35px;
@@ -617,14 +621,10 @@ footer h4 {
   text-shadow: 2px 4px 4px black;
   display: flex;
   width: auto;
-  justify-content: center;
+  justify-content: right;
   text-align: center;
   font-family: "Burton";
-  margin: 10px 200px 30px 200px;
-}
-
-footer h3 {
-  height: 40vh;
+  margin: 0px 50px 0px 0px;
 }
 
 #adverbs-section h1 {
@@ -721,13 +721,13 @@ body {
   padding: 10px;
   font-family: "Burton";
   font-size: 20px;
-  color: orangered;
+  color: blue;
   background: url("/assets/bunny-scroll.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
   z-index: 1;
-  border-radius: 15px; /* 10px rounded corners */
+  border-radius: 15px;
   margin-left: 20px; /* add margin to separate from the first box */
 }
 
@@ -759,7 +759,7 @@ body {
   padding: 10px;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  color: black;
+  color: pink;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.7); /* transparent white */
   background-clip: content-box;

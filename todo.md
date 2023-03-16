@@ -1,6 +1,5 @@
 FINAL TO DO LIST
 Fix scrolling list - only have that in the the one place 
-Get rid of console logs everywhere
 Dry up code - notably around the words
 Pay attention to the comments I made to myself
 Be able to explain every line of code - notably around the classlist in index.js
@@ -16,6 +15,7 @@ Delete pre-box work file
 Fix error handling in index.js
 Add a hover over words that can be defined
 Move box code out of the index.js and into comvbined-chaptres
+Curiouser and curiouser
 
 IF TIME
 Add the rabbit to the definition box
@@ -25,14 +25,17 @@ Add the rabbit to the definition box
 
 
 THURSDAY
-Delete To Do List
+Delete To Do List and pre-box work
+Ensure no console errors
+Practice walk through
+Get rid of console logs everywhere
 
 
 
 
+ADD IN CREDITS:
 
 
-README	About (Links)	Favicon	No Console Errors	No Extraneous Content 	Successful Hosting
 
 
 

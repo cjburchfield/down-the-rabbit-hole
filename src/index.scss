@@ -3,7 +3,7 @@
 @import "./styles/invented.scss";
 @import "./styles/long-words.scss";
 @import "./styles/reset.scss";
-@import "./styles/stats.scss";
+@import "./styles/metrics.scss";
 @import "./styles/footer.scss";
 @import "./styles/adverbs.scss";
 
@@ -59,19 +59,16 @@ body {
   width: 150px;
   height: 150px;
   background-color: white;
-  // border: 1px solid black;
   padding: 10px;
   font-family: "Burton";
   font-size: 20px;
-  color: orangered;
+  color: blue;
   background: url("/assets/bunny-scroll.png");
-  // background-color: rgba(255, 255, 255, 0.7); /* transparent white */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
   z-index: 1;
-  border-radius: 15px; /* 10px rounded corners */
-  // box-shadow: 3px 5px 5px black;
+  border-radius: 15px; 
   margin-left: 20px; /* add margin to separate from the first box */
 }
 
@@ -103,7 +100,7 @@ body {
   padding: 10px;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  color: black;
+  color: pink;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.7); /* transparent white */
   background-clip: content-box;
