@@ -22,6 +22,11 @@ const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
 document.addEventListener("DOMContentLoaded", () => {
   setupMenuToggle();
 
+  const clickWordElement = document.getElementById("click-word");
+  clickWordElement.addEventListener("click", () => {
+    getDefinition(clickWordElement, "selected-word", API_KEY);
+  });
+
   const chapters = [
     chapter1,
     chapter2,

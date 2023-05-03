@@ -1,0 +1,45 @@
+.intro-h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 120px;
+    font-family: "Alice";
+    font-weight: 700;
+    color: orangered;
+    text-shadow: 2px 4px 4px black;
+    margin: 30vh auto 0 auto;
+    z-index: 999;
+    top: 0;
+}
+
+.intro-h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Burton";
+        font-family: 'Playfair Display', serif;
+        color: white;
+        font-size: 32px;
+        font-weight: 700;
+        text-shadow: 2px 4px 4px black;
+        width: 70%;
+        margin: 0 auto; 
+        margin-top: 10px;
+        margin-bottom: 20px;
+}
+
+.intro-h2 {
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+}
+
+#intro {
+    height: 100vh;
+}

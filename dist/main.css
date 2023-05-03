@@ -197,42 +197,12 @@ li[data-word]:nth-child(10) {
   cursor: pointer;
 }
 
-header h1 {
+header {
   display: flex;
-  justify-content: center;
-  font-size: 120px;
-  font-family: "Alice";
-  font-weight: 700;
-  color: orangered;
-  text-shadow: 2px 4px 4px black;
-  margin: 30vh auto 0 auto;
-  z-index: 999;
-  top: 0;
-}
-
-header h3 {
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Burton";
-  color: rgb(206, 203, 203);
-  font-size: 35px;
-  font-weight: 700;
-  text-shadow: 2px 4px 4px black;
-  margin: 10px 200px 30px 200px;
-}
-
-header h2 {
-  color: white;
-  font-family: "Burton";
-  font-size: 45px;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
 }
 
 #rabbit-hole {
@@ -279,19 +249,44 @@ header h5 {
   font-size: 40px;
 }
 
+#menu-toggle {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  padding: 10px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 2;
+  font-family: "Alice";
+  color: white;
+  background: none;
+  order: 1;
+  border: none;
+}
+
+#menu-toggle:hover {
+  color: orangered;
+}
+
 #links-container {
-  margin: 5px;
   justify-content: right;
   display: flex;
+  align-items: center;
   width: auto;
   top: 0;
   z-index: 999;
+  order: 3;
+  position: fixed;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
 }
 
 .social-link {
   height: 30px;
   width: auto;
-  margin: 10px;
   justify-content: right;
   display: flex;
   top: 0;
@@ -302,8 +297,7 @@ header h5 {
 .github-social-link {
   height: 30px;
   width: auto;
-  margin: 10px;
-  margin-right: 0px;
+  margin-right: 5px;
   justify-content: right;
   display: flex;
   top: 0;
@@ -317,29 +311,36 @@ header h5 {
 
 .sidebar-menu {
   position: fixed;
-  top: 0;
+  top: 75px;
   left: -250px;
   width: 250px;
   height: 100%;
-  background-color: #fff;
   z-index: 1;
   transition: left 0.3s ease-in-out;
+  font-family: "Playfair Display", serif;
 }
 
 .sidebar-menu.show {
   left: 0;
+  top: 75px;
+  margin-left: 25px;
 }
 
-#menu-toggle {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 10px;
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 2;
+.sidebar-menu li {
+  padding-bottom: 10px;
+}
+
+.sidebar-menu li a:hover {
+  color: orangered;
+  text-shadow: 0.5px 1px 1px black;
+}
+
+.sidebar-menu li a {
+  color: white;
+  padding-bottom: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0.5px 1px 1px black;
 }
 
 #invented h1 {
@@ -708,6 +709,7 @@ table {
 
 #emphasis {
   color: orangered;
+  font-family: "Burton";
 }
 
 footer h4 {
@@ -804,6 +806,52 @@ footer h3 {
   color: white;
 }
 
+.intro-h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 120px;
+  font-family: "Alice";
+  font-weight: 700;
+  color: orangered;
+  text-shadow: 2px 4px 4px black;
+  margin: 30vh auto 0 auto;
+  z-index: 999;
+  top: 0;
+}
+
+.intro-h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Burton";
+  font-family: "Playfair Display", serif;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  text-shadow: 2px 4px 4px black;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.intro-h2 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 2px 4px 4px black;
+}
+
+#intro {
+  height: 100vh;
+}
+
 @font-face {
   font-family: "Alice";
   src: url("../assets/Aliciawonderland-ZoM8.ttf");
@@ -812,12 +860,22 @@ footer h3 {
   font-family: "Burton";
   src: url("../assets/BurtonsDreamsPro-R1rE.ttf");
 }
-body {
-  background-color: black;
-  background-image: url("../assets/tunnel.jpg");
+html {
+  background-image: url("../assets/wallpaper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5); /* Set the opacity value to 0.5 (50%) */
 }
 
 .boxes-container {
@@ -825,7 +883,7 @@ body {
   justify-content: space-between;
   position: fixed;
   bottom: 10px;
-  left: 10px;
+  right: 10px;
 }
 
 .spare-box {
@@ -887,4 +945,8 @@ li:hover {
   font-size: 35px;
   font-weight: 300;
   text-shadow: 0.5px 1px 1px black;
+}
+
+#click-word {
+  cursor: pointer;
 }

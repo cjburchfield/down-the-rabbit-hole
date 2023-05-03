@@ -8,58 +8,57 @@
     <script src="./dist/main.js"></script>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>The Words of Wonderland</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
   </head>
 
   <body>
+
     <header>
-      <button id="menu-toggle">&#9776; Menu</button> 
+      <button id="menu-toggle">&#9776;</button> 
+      
+      <nav class="sidebar-menu">
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#metrics">Character Counts</a></li>
+          <li><a href="#frequent-words">Frequented Favorites</a></li>
+          <li><a href="#long-ones">Lengthy Linguistics</a></li>
+          <li><a href="#adverbs-section">Telling Terms</a></li>
+        </ul>
+      </nav>
+      
       <section id="links-container">
         <a href="https://github.com/cjburchfield/down-the-rabbit-hole" target="_blank"><img src="./assets/github.png" class="github-social-link"></a>
         <a href="https://www.linkedin.com/in/jamieburchfield" target="_blank"><img src="./assets/linkedin.png" class="social-link"></a>
       </section>
-      <h1>The Words of Wonderland</h1>
-      <br>
-      <h3>
-        Lewis Carroll, a mathematics professor at Oxford University, penned Alice's Adventures in Wonderland in 1865,
-        filling the pages with linguistic play, puns, and parodies. The Words of Wonderland scratches the surface of 
-        the riddles, patterns, and puzzles of Carroll's canonical text.
-      </h3>
-      <br>
-      <br>
-      <br>
-      <h2>
-        <span id="emphasis"> Scroll&nbsp;</span>to discover some fantastical findings
-      </h2>
-      <br>
-      <br>
-      <h2>
-        <span id="emphasis"> Click&nbsp;</span> on select words to see the definition
-      </h2>
-      <br>
-      
-      <br>
-      <!-- <h2 id="rabbit-hole"> Let's go down the rabbit hole... </h2> -->
     </header>
 
-    <!-- <section id="section05" class="demo">
-      <a href="#section06"><span></span>Scroll down the rabbit hole...</a>
-    </section> -->
-
-    <nav class="sidebar-menu">
-      <ul>
-        <li><a href="#metrics">Metrics</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-      </ul>
-    </nav>
 
     <div class="boxes-container">
       <div class="spare-box" style="display: none;"></div>
       <div id="word-definition-box" style="display: none;">Curiouser and curiouser</div>
     </div>
     
-
-    <section id="metrics">
+    <div id="intro">
+        <div class="intro-h1">The Words of Wonderland</div>
+        <div class="intro-h3">
+          Lewis Carroll, a mathematics professor at Oxford University, penned Alice's Adventures in Wonderland in 1865,
+          filling the pages with linguistic play, puns, and parodies. The Words of Wonderland scratches the surface of 
+          the riddles, patterns, and puzzles of Carroll's canonical text.
+        </div>
+        <div class="intro-h2">
+          <span id="emphasis"> Scroll&nbsp;</span>to discover some fantastical findings
+        </div>
+        <div class="intro-h2">
+          <span id="emphasis"><span id="click-word">Click</span>&nbsp;</span> on select words to see the definition
+      </div>
+        <!-- <h2 id="rabbit-hole"> Let's go down the rabbit hole... </h2> -->  
+      <!-- <section id="section05" class="demo">
+        <a href="#section06"><span></span>Scroll down the rabbit hole...</a>
+      </section> -->
+    </div>
+      
+      
+      <div id="metrics">
       <div>
         <h1>Character Counts</h1>
         <h4>Known for his fanciful phrases, Carroll reinvented the literary nonsense genre</h4>
@@ -75,7 +74,7 @@
         </h2>
         <h3></h3>
       </div>
-    </section>
+    </div>
 
     <section id="frequent-words">
       <div>

@@ -6,6 +6,7 @@
 @import "./styles/metrics.scss";
 @import "./styles/footer.scss";
 @import "./styles/adverbs.scss";
+@import "./styles/intro.scss";
 
 @font-face {
     font-family: "Alice";
@@ -17,20 +18,32 @@
   src: url("../assets/BurtonsDreamsPro-R1rE.ttf");
 }
 
-body {
-    background-color: black;
-    background-image: url("../assets/tunnel.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+html {
+  background-image: url("../assets/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5); /* Set the opacity value to 0.5 (50%) */
+}
+
+
 
 .boxes-container {
   display: flex;
   justify-content: space-between;
   position: fixed; 
   bottom: 10px; 
-  left: 10px; 
+  right: 10px; 
 }
 
 
@@ -74,23 +87,6 @@ body {
   margin-left: 170px;
 }
 
-// .word-definition {
-//   display: flex;
-//   // flex-direction: column;
-//   // justify-content: center;
-//   // align-items: center; 
-//   // // width: calc(100% - 150px);
-//   // height: 100%; 
-//   // box-sizing: border-box;
-//   // padding: 10px;
-//   // font-family: Arial, sans-serif;
-//   // font-size: 14px;
-//   // color: pink;
-//   // overflow: auto;
-//   // background-color: rgba(255, 255, 255, 0.7); 
-//   // background-clip: content-box;
-// }
-
 li {
   cursor: pointer;
 }
@@ -113,4 +109,8 @@ color: rgb(63, 63, 63);
 font-size: 35px;
 font-weight: 300;
 text-shadow: .5px 1px 1px black;
+}
+
+#click-word{
+  cursor: pointer;
 }
