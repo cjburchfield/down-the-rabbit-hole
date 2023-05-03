@@ -11,46 +11,32 @@
 }
 
 #frequent-words h2 {
-    color: white;
-    font-size: 45px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
     display: flex;
     width: auto;
     justify-content: center;
     text-align: center;
-    font-family: "Burton";
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+    padding-bottom: 15px;
 }
 
 #frequent-words h4{
-    color: rgb(206, 203, 203);
-    font-size: 35px;
-    font-weight: 700;
-    text-shadow: 2px 4px 4px black;
     display: flex;
-    width: auto;
     justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: "Burton";
-    margin: 10px 200px 30px 200px;
-}
-
-#frequent-words h3{
-    height: 100vh;
-}
-
-#frequent-words h5{
-    color: orangered;
-    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 28px;
     font-weight: 700;
     text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Burton";
-    margin: 30px 200px 10px 200px;
-    position: sticky;
+    margin: 0 auto; 
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
 li[title] {
@@ -140,6 +126,7 @@ li[data-word] {
 
 #frequent-words li[data-word]{
     position: sticky;
+    font-family: "Burton";
 }
 
 @for $counter from 1 through 10 {
@@ -150,11 +137,9 @@ li[data-word] {
 }
 
 #frequent-words li:hover {
-    color: white; 
+    color: orangered; 
     cursor: pointer;
+    transition-duration: 0.4s;
   }
-
-
-
 
 

@@ -46,12 +46,14 @@ export const createTopWordsList = (topWords) => {
   
   for (const [word, count] of topWords) {
     const listItem = document.createElement("li");
-    listItem.textContent = `${word}: ${count}`;
+    listItem.textContent = `${word}: ${count} apperances`;
     listItem.setAttribute("data-word", word)
     topWordsList.appendChild(listItem);
   }
   return { topWordsList };
 };
+
+
 
 
 //Creating the adverb list
@@ -83,3 +85,4 @@ export const createLongestWordsList = (longestWords) => {
 
   return { longestWordsList };
 };
+

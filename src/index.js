@@ -47,6 +47,62 @@ document.addEventListener("DOMContentLoaded", () => {
   createLongestWordsListUI(combinedData.longestWords);
   createFrequentWordsUI(combinedData.topWords);
   createAdverbsUI(combinedData.adverbs);
+
+  // const letters = "abcdefghijklmnopqrstuvwyz";
+  // const elements = [...document.querySelectorAll("#longest-word li[data-word]")];
+
+  // elements.map(element => {
+  //   element.onmouseover = event => {
+  //     let iterations = 0;
+  //     const interval = setInterval(() => {
+  //       let newText = '';
+  //       for (let i = 0; i < event.target.dataset.word.length; i++) {
+  //         if (i < iterations) {
+  //           newText += event.target.dataset.word[i];
+  //         } else {
+  //           newText += letters[Math.floor(Math.random() * 26)];
+  //         }
+  //       }
+  //       event.target.innerText = newText;
+
+  //       iterations += 1;
+
+  //       if (iterations > event.target.dataset.word.length) {
+  //         clearInterval(interval);
+  //       }
+  //     }, 30);
+  //   }
+  // });
+
+  const letters = "0123456789";
+const elements = [...document.querySelectorAll("#total-words, #num-pairs")];
+
+elements.map(element => {
+  const originalValue = element.innerText; 
+
+  element.onmouseover = event => {
+    let iterations = 0;
+    const interval = setInterval(() => {
+      let newText = '';
+      for (let i = 0; i < event.target.innerText.length; i++) {
+        if (i < iterations) {
+          newText += event.target.innerText[i];
+        } else {
+          newText += letters[Math.floor(Math.random() * 10)];
+        }
+      }
+      event.target.innerText = newText;
+
+      iterations += 1;
+
+      if (iterations > event.target.innerText.length) {
+        clearInterval(interval);
+        event.target.innerText = originalValue;
+      }
+    }, 30);
+  }
+});
+
 });
 
 function setupMenuToggle() {
@@ -107,7 +163,7 @@ const adverbsListItems = document.querySelectorAll("#adverbs li");
 
 adverbsListItems.forEach((adverb) => {
 adverb.addEventListener("click", () => {
-getDefinition(adverb, "selected-adverb", undefined, true);
+  getDefinition(adverb, "selected-adverb", API_KEY);
 });
 });
 }

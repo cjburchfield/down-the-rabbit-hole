@@ -11,38 +11,51 @@
 }
 
 #long-ones h2 {
-    color: white;
-    font-size: 45px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
     display: flex;
     width: auto;
     justify-content: center;
     text-align: center;
-    font-family: "Burton";
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+    padding-bottom: 15px;
 }
 
-#long-ones h3 {
-    height: 50vh
+.longest-header {
+    color:orangered;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+    padding-bottom: 15px;
 }
 
 #ten-words {
     color: orangered;
+    font-family: "Burton";
 }
 
 
 #long-ones h4{
-    color: white;
-    color: rgb(206, 203, 203);
-    font-size: 35px;
-    font-weight: 700;
-    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
     display: flex;
-    width: auto;
     justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: "Burton";
-    margin: 10px 200px 30px 200px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px black;
+    margin: 0 auto; 
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
 #long-ones li {
@@ -51,7 +64,7 @@
 
 #long-ones {
     box-sizing: border-box;
-    min-height: 100vh;
+    height: 100vh;
     color: hsl(0, 0%, 100%);
     font-family: "Burton";
     background-size: 120px, 100%;
@@ -73,17 +86,12 @@
     text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
     font-size: 32px; 
     margin: 2rem 0; 
-  }
+    transition-duration: 0.4s;
+    font-family: "Burton"  
+}
 
   #long-ones li:hover {
     color: orangered; 
     cursor: pointer;
   }
   
-
-
-
-
-
-
-

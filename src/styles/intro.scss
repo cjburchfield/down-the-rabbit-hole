@@ -1,4 +1,4 @@
-.intro-h1 {
+.intro-title {
     display: flex;
     justify-content: center;
     font-size: 120px;
@@ -19,13 +19,13 @@
         font-family: "Burton";
         font-family: 'Playfair Display', serif;
         color: white;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 700;
         text-shadow: 2px 4px 4px black;
-        width: 70%;
+        width: 60%;
         margin: 0 auto; 
-        margin-top: 10px;
-        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 50px;
 }
 
 .intro-h2 {
@@ -38,8 +38,10 @@
     text-align: center;
     font-weight: 600;
     text-shadow: 2px 4px 4px black;
+    padding-bottom: 15px;
 }
 
 #intro {
     height: 100vh;
 }
+

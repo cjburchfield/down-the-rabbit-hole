@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./dist/main.css" />
+    <script src="https://kit.fontawesome.com/bfca5a2762.js" crossorigin="anonymous"></script>    <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>The Words of Wonderland</title>
@@ -39,68 +39,52 @@
     </div>
     
     <div id="intro">
-        <div class="intro-h1">The Words of Wonderland</div>
+        <div class="intro-title">The Words of Wonderland</div>
         <div class="intro-h3">
           Lewis Carroll, a mathematics professor at Oxford University, penned Alice's Adventures in Wonderland in 1865,
           filling the pages with linguistic play, puns, and parodies. The Words of Wonderland scratches the surface of 
           the riddles, patterns, and puzzles of Carroll's canonical text.
         </div>
         <div class="intro-h2">
-          <span id="emphasis"> Scroll&nbsp;</span>to discover some fantastical findings
+          <span id="emphasis"><span id="click-word">Click</span>&nbsp;</span> on select words to see the definition
         </div>
         <div class="intro-h2">
-          <span id="emphasis"><span id="click-word">Click</span>&nbsp;</span> on select words to see the definition
+          <span id="emphasis"> Scroll&nbsp;</span>to discover some fantastical findings
+        </div>
+       </div>
+
+       <div id="metrics">
+        <div>
+          <h1>Character Counts</h1>
+          <h4>Known for his fanciful phrases, Carroll reinvented the literary nonsense genre</h4>
+          <h2>Number of &nbsp;<span id="emphasis">total words&nbsp;</span>
+              in Alice:&nbsp; <span id="total-words"></span></h2>
+          <h2>Number of 
+            &nbsp;<span id="emphasis"> unique words&nbsp;</span>
+              in Alice:&nbsp; 
+              <span id="num-pairs"></span>
+          </h2>
+        </div>
       </div>
-        <!-- <h2 id="rabbit-hole"> Let's go down the rabbit hole... </h2> -->  
-      <!-- <section id="section05" class="demo">
-        <a href="#section06"><span></span>Scroll down the rabbit hole...</a>
-      </section> -->
-    </div>
-      
-      
-      <div id="metrics">
-      <div>
-        <h1>Character Counts</h1>
-        <h4>Known for his fanciful phrases, Carroll reinvented the literary nonsense genre</h4>
-        <br>
-        <br>
-        <h2>Number of &nbsp;<span id="emphasis">total words&nbsp;</span>
-            in Alice:&nbsp; <span id="total-words"></span></h2>
-        <br>
-        <h2>Number of 
-          &nbsp;<span id="emphasis"> unique words&nbsp;</span>
-            in Alice:&nbsp; 
-            <span id="num-pairs"></span>
-        </h2>
-        <h3></h3>
-      </div>
-    </div>
+  
 
     <section id="frequent-words">
       <div>
         <h1>Frequented Favorites</h1>
         <h4>Despite his inventiveness, Carroll did have his preferred turns of phrase</h4>
-        <br>
-        <br>
         <h2>Carroll came back to these words more than any others</h2>
-        <h5>Word: Appearances</h5>
       </div>
     </section>
 
     <section id="long-ones">
       <div>
-        <h3></h3>
         <h1>Lengthy Linguistics</h1>
         <h4>Carroll's playful prose did not shy away from longer words</h4>
-        <br>
-        <br>
-        <h2>Number of unique words &nbsp;<span id="emphasis">over ten characters:&nbsp;</span>
-          &nbsp; <span id="ten-words"></span></h2>
-        <br>
-        <br>
-        <h2><span id="emphasis">Longest words</span></h2>
+        <h2>Number of unique words over ten characters:&nbsp;
+          <span id="ten-words"></span></h2>
+        <div class="longest-header">Longest word: contemptuously (14 characters)</div>
+        <div class="longest-header">Runners up (13 characters):</div>
         <span id="longest-word"></span>
-        <h3></h3>
       </div>
     </section>
 
@@ -119,6 +103,8 @@
         <h3></h3>
       </div>
     </section>
+
+
 
     <footer>
       <h4>"Begin at the beginning, and go on till you come to the end: then stop."</h4>

@@ -11,40 +11,49 @@
 }
 
 #metrics h2 {
-    color: white;
-    font-size: 45px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
     display: flex;
     width: auto;
     justify-content: center;
     text-align: center;
-    font-family: "Burton";
-}
-#metrics h3 {
-    height: 50vh
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+    padding-bottom: 15px;
 }
 
 #metrics h4{
-    color: rgb(206, 203, 203);
-    font-size: 35px;
-    font-weight: 700;
-    text-shadow: 2px 4px 4px black;
     display: flex;
-    width: auto;
     justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: "Burton";
-    margin: 10px 200px 30px 200px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px black;
+    margin: 0 auto; 
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
 #total-words {
     color: orangered;
+    font-family: "Burton";
+
 }
 
 #num-pairs {
     color: orangered;
+    font-family: "Burton";
 
+
+}
+
+#total-words:hover, #num-pairs:hover {
+    cursor: pointer;
 }
 
 #emphasis {
@@ -53,3 +62,6 @@
 }
 
 
+#metrics {
+    height: 50vh;
+}
