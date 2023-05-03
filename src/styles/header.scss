@@ -96,7 +96,7 @@ header h5 {
   }
   
   .social-link {
-    height: 50px;
+    height: 30px;
     width: auto;
     margin: 10px;
     justify-content: right;
@@ -105,5 +105,51 @@ header h5 {
     top: 0;
     z-index: 999;
     width: auto;
-        box-shadow: 2px 2px 2px 2px white;
+        // box-shadow: 2px 2px 2px 2px white;
   }
+
+  .github-social-link {
+    height: 30px;
+    width: auto;
+    margin: 10px;
+    margin-right: 0px;
+    justify-content: right;
+    display: flex;
+    // position: sticky;
+    top: 0;
+    z-index: 999;
+    width: auto;
+        // box-shadow: 2px 2px 2px 2px white;
+  }
+
+  .social-link:hover, .github-social-link:hover {
+    background-color: orangered;
+  }
+
+  .sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .sidebar-menu.show {
+    left: 0;
+  }
+  
+  #menu-toggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  

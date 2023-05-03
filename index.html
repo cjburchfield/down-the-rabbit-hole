@@ -13,9 +13,10 @@
 
   <body>
     <header>
+      <button id="menu-toggle">&#9776; Menu</button> 
       <section id="links-container">
-        <a href="https://github.com/cjburchfield/down-the-rabbit-hole"><img src="./assets/github.png" class="social-link"></a>
-        <a href="https://www.linkedin.com/in/jamieburchfield"><img src="./assets/linkedin.png" class="social-link"></a>
+        <a href="https://github.com/cjburchfield/down-the-rabbit-hole" target="_blank"><img src="./assets/github.png" class="github-social-link"></a>
+        <a href="https://www.linkedin.com/in/jamieburchfield" target="_blank"><img src="./assets/linkedin.png" class="social-link"></a>
       </section>
       <h1>The Words of Wonderland</h1>
       <br>
@@ -27,15 +28,25 @@
       <!-- <h4>"I shall eludicate..." </h4> -->
       <br>
       <h2>
-        <span id="emphasis"> Scroll&nbsp;</span>to discover some fantastical findings</h2>
+        <span id="emphasis"> Scroll&nbsp;</span>to discover some fantastical findings
+      </h2>
         <br>
         <br>
-        <h2><span id="emphasis"> Click&nbsp;</span> on any word that turns&nbsp; <span id="emphasis"> orange&nbsp;</span> and </h2>
-        <h2>the&nbsp; <span id="emphasis"> White Rabbit&nbsp;</span> will share the definition</h2>
+      <h2>
+          <span id="emphasis"> Click&nbsp;</span> on select words to see the definition
+      </h2>
         <br>
         <br>
         <h2 id="rabbit-hole"> Let's go down the rabbit hole... </h2>
     </header>
+
+    <nav class="sidebar-menu">
+      <ul>
+        <li><a href="#metrics">Metrics</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
 
     <div class="boxes-container">
       <div class="spare-box"></div>
@@ -106,10 +117,10 @@
       <br>
       <h2>Number of &nbsp;<span id="emphasis">unique adverbs&nbsp;</span>
           in Alice:&nbsp; <span id="ly-words"></span></h2>
-          <!-- <br>
+          <br>
           <br>
           <h2><span id="emphasis">Most frequently used adverbs:</span></h2>
-            <span id="adverbs"></span> -->
+            <span id="adverbs"></span>
           <h3></h3>
     </div>
   </section>

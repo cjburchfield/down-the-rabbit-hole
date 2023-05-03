@@ -11,31 +11,56 @@ import { chapter10 } from "./chapter-objects/chapterTen";
 import { chapter11 } from "./chapter-objects/chapterEleven";
 import { chapter12 } from "./chapter-objects/chapterTwelve";
 import Invented from "./scripts/example";
-import { combineChapters, createTopWordsList, createLongestWordsList, createAdverbList } from "./scripts/combined-chapters";
-
+import {
+  combineChapters,
+  createTopWordsList,
+  createLongestWordsList,
+  createAdverbList,
+} from "./scripts/combined-chapters";
 
 const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  // let selectedWord = '';
-  // let selectedAdverb = '';
-  let selectedLongWord = '';
-  let selectedFrequent = '';
+  setupMenuToggle();
+  createInventedDefinition();
 
-  const wordDefinitionBox = document.getElementById("word-definition-box");
-  wordDefinitionBox.innerHTML = `<span class="long-word">Curiouser and curiouser</span><span class="definition">  </span>`;
-  document.body.appendChild(wordDefinitionBox);
-  
+  const chapters = [
+    chapter1,
+    chapter2,
+    chapter3,
+    chapter4,
+    chapter5,
+    chapter6,
+    chapter7,
+    chapter8,
+    chapter9,
+    chapter10,
+    chapter11,
+    chapter12,
+  ];
+  const combinedData = combineChapters(chapters);
+  displayCombinedData(combinedData);
+
+  createLongestWordsListUI(combinedData.longestWords);
+  createFrequentWordsUI(combinedData.topWords);
+  createAdverbsUI(combinedData.adverbs);
+});
+
+function setupMenuToggle() {
+  const menuToggle = document.getElementById("menu-toggle");
+  const sidebarMenu = document.querySelector(".sidebar-menu");
+
+  menuToggle.addEventListener("click", () => {
+    sidebarMenu.classList.toggle("show");
+  });
+}
+
+function createInventedDefinition() {
   const invdef = document.getElementById("invented-definition");
   new Invented(invdef);
+}
 
-
-  const chapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9, chapter10, chapter11, chapter12];
-  const combinedData = combineChapters(chapters);
-
-
-
+function displayCombinedData(combinedData) {
   const numPairsElement = document.getElementById("num-pairs");
   const totalWordsElement = document.getElementById("total-words");
   const tenElement = document.getElementById("ten-words");
@@ -45,125 +70,88 @@ document.addEventListener("DOMContentLoaded", () => {
   tenElement.textContent = combinedData.tenWords;
   totalWordsElement.textContent = combinedData.totalWords;
   numPairsElement.textContent = combinedData.numPairs;
+}
 
-  const longestWordsList = createLongestWordsList(combinedData.longestWords);
+function createLongestWordsListUI(longestWords) {
+  const longestWordsList = createLongestWordsList(longestWords);
   const longestWordElement = document.getElementById("longest-word");
   if (longestWordElement) {
     longestWordElement.appendChild(longestWordsList.longestWordsList);
   }
-  
-      
+
+  const longestWordsListItems = document.querySelectorAll("#longest-word li");
+  longestWordsListItems.forEach((longestWord) => {
+    longestWord.addEventListener("click", () => {
+      getDefinition(longestWord, "selected-longword", API_KEY);
+    });
+  });
+}
+
+function createFrequentWordsUI(topWords) {
   const frequentWords = document.getElementById("frequent-words");
-  const topWordsList = createTopWordsList(combinedData.topWords);
+  const topWordsList = createTopWordsList(topWords);
   frequentWords.appendChild(topWordsList.topWordsList);
 
-  // const adverbsElement = document.getElementById("adverbs");
-  // const adverbsList = createAdverbList(combinedData.adverbs);
-  // adverbsElement.appendChild(adverbsList.adverbsList);
-
-
-
-
-const longestWordsListItems = document.querySelectorAll("#longest-word li");
-
-// Catch error info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
-
-longestWordsListItems.forEach((longestWords) => {
-  longestWords.addEventListener("click", async () => {
-    if (selectedLongWord) {
-      selectedLongWord.classList.remove("selected-longword");
-    }
-    selectedLongWord = longestWords;
-    selectedLongWord.classList.add("selected-longword");
-    const longWordText = selectedLongWord.textContent;
-
-    try {
-      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${longWordText}?key=${API_KEY}`);
-      const data = await response.json();
-          
-      if (data.length > 0 && data[0].shortdef.length > 0) {
-        const definition = data[0].shortdef[0];
-        wordDefinitionBox.innerHTML = `<span class="long-word">${longWordText}:</span><span class="definition"> ${definition}</span>`;
-
-      }
-    } catch (error) {
-      console.error(error);
-    }
+  const topWordsListItems = document.querySelectorAll("#frequent-words li");
+  topWordsListItems.forEach((topWord) => {
+    topWord.addEventListener("click", () => {
+      getDefinition(topWord, "selected-topword", API_KEY);
+    });
   });
+}
+
+function createAdverbsUI(adverbs) {
+const adverbsElement = document.getElementById("adverbs");
+const adverbsList = createAdverbList(adverbs);
+adverbsElement.appendChild(adverbsList.adverbsList);
+
+const adverbsListItems = document.querySelectorAll("#adverbs li");
+
+adverbsListItems.forEach((adverb) => {
+adverb.addEventListener("click", () => {
+getDefinition(adverb, "selected-adverb", undefined, true);
 });
- 
-//   const topWordsListItems = document.querySelectorAll("#frequent-words li");
-
-//   topWordsListItems.forEach((topWords) => {  
-//     topWords.addEventListener("click", async () => {
-//       if (selectedFrequent) {
-//         selectedFrequent.classList.remove("selected-topword");
-//       }
-//       selectedFrequent = topWords;
-//       selectedFrequent.classList.add("selected-topword");
-//       const topWordText = selectedFrequent.textContent;
-  
-//       try {
-//         const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${topWordText}?key=${API_KEY}`);
-//         const data = await response.json();
-            
-//         if (data.length > 0 && data[0].shortdef.length > 0) {
-//           const definition = data[0].shortdef[0];
-//           wordDefinitionBox.innerHTML = `<span class="long-word">${topWordText}:</span><span class="definition"> ${definition}</span>`;
-//         }
-//       } catch (error) {
-//         console.error(error);
-//       }
-//     });
-//   });
 });
+}
+
+let selectedElement = "";
+
+async function getDefinition(element, cssClass, apiKey, useApiDictionary = false) {
+  if (selectedElement) {
+    selectedElement.classList.remove(cssClass);
+  }
+  selectedElement = element;
+  selectedElement.classList.add(cssClass);
+
+  const wordText = selectedElement.getAttribute("data-word") || selectedElement.textContent;
+  const wordDefinitionBox = document.getElementById("word-definition-box");
 
 
-///
-// const adverbsListItems = document.querySelectorAll("#adverbs li");
+  try {
+    let definition = "";
 
-//   adverbsListItems.forEach((adverb) => {
-//     adverb.addEventListener("click", () => {
-//       if (selectedAdverb) {
-//         selectedAdverb.classList.remove("selected-adverb");
-//       }
-//       selectedAdverb = adverb;
-//       selectedAdverb.classList.add("selected-adverb");
-//       const adverbText = selectedAdverb.textContent;
+    if (useApiDictionary) {
+      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordText}`);
+      const data = await response.json();
 
-//       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${adverbText}`)
-//       .then(response => response.json())
-//       .then(data => {
-//         const definition = data[0].meanings[0].definitions[0].definition;
-//         wordDefinitionBox.innerHTML = `<span class="long-word">${adverbText}:</span><span class="definition"> ${definition}</span>`;
-//       })
-//       .catch(error => {
-//         wordDefinitionBox.textContent = `Error: ${error.message}`;
-//       });
-//     });
-//   });
+      if (data && data[0] && data[0].meanings && data[0].meanings[0] && data[0].meanings[0].definitions && data[0].meanings[0].definitions[0]) {
+        definition = data[0].meanings[0].definitions[0].definition;
+      } else {
+        definition = "Definition not found";
+      }
+    } else {
+      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${wordText}?key=${apiKey}`);
+      const data = await response.json();
 
+      if (data && data.length > 0 && data[0] && data[0].shortdef && data[0].shortdef.length > 0) {
+        definition = data[0].shortdef[0];
+      } else {
+        definition = "Definition not found";
+      }
+    }
 
-
-//   const selectedWords = document.querySelectorAll(".word");
-//   selectedWords.forEach((word) => {
-//     word.addEventListener("click", () => {
-//       if (selectedWord) {
-//         selectedWord.classList.remove("selected-word");
-//       }
-//       selectedWord = word;
-//       selectedWord.classList.add("selected-word");
-//       const wordText = selectedWord.textContent;
-      
-//       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordText}`)
-//         .then(response => response.json())
-//         .then(data => {
-//           const definition = data[0].meanings[0].definitions[0].definition;
-//           wordDefinitionBox.textContent = `${wordText}: ${definition}`;
-//         })
-//         .catch(error => {
-//           wordDefinitionBox.textContent = `Error: ${error.message}`;
-//         });
-//     });
-//   });
-// });
+    wordDefinitionBox.innerHTML = `<span class="long-word">${wordText}:</span><span class="definition"> ${definition}</span>`;
+  } catch (error) {
+    console.error(error);
+  }
+}

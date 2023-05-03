@@ -50,20 +50,6 @@ export const createTopWordsList = (topWords) => {
     listItem.setAttribute("data-word", word)
     topWordsList.appendChild(listItem);
   }
-
-  // topWordsList.addEventListener("click", async (event) => {
-  //   const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
-  //   let selectedWord = event.target.getAttribute("data-word");
-  
-  //   const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${selectedWord}?key=${API_KEY}`);
-  //   const data = await response.json();
-    
-  //   if (data.length > 0 && data[0].shortdef.length > 0) {
-  //     const definition = data[0].shortdef[0];
-  //     document.getElementById("word-definition-box").textContent = definition;
-  //   }
-  // });
-  
   return { topWordsList };
 };
 
