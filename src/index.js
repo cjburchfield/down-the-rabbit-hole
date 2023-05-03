@@ -10,7 +10,6 @@ import { chapter9 } from "./chapter-objects/chapterNine";
 import { chapter10 } from "./chapter-objects/chapterTen";
 import { chapter11 } from "./chapter-objects/chapterEleven";
 import { chapter12 } from "./chapter-objects/chapterTwelve";
-import Invented from "./scripts/example";
 import {
   combineChapters,
   createTopWordsList,
@@ -22,7 +21,6 @@ const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
 
 document.addEventListener("DOMContentLoaded", () => {
   setupMenuToggle();
-  createInventedDefinition();
 
   const chapters = [
     chapter1,
@@ -53,11 +51,6 @@ function setupMenuToggle() {
   menuToggle.addEventListener("click", () => {
     sidebarMenu.classList.toggle("show");
   });
-}
-
-function createInventedDefinition() {
-  const invdef = document.getElementById("invented-definition");
-  new Invented(invdef);
 }
 
 function displayCombinedData(combinedData) {
@@ -116,7 +109,7 @@ getDefinition(adverb, "selected-adverb", undefined, true);
 
 let selectedElement = "";
 
-async function getDefinition(element, cssClass, apiKey, useApiDictionary = false) {
+async function getDefinition(element, cssClass, apiKey) {
   if (selectedElement) {
     selectedElement.classList.remove(cssClass);
   }
@@ -125,29 +118,25 @@ async function getDefinition(element, cssClass, apiKey, useApiDictionary = false
 
   const wordText = selectedElement.getAttribute("data-word") || selectedElement.textContent;
   const wordDefinitionBox = document.getElementById("word-definition-box");
+  const spareBox = document.querySelector(".spare-box");
 
+  spareBox.style.display = "block";
+  wordDefinitionBox.style.display = "block";
+
+  setTimeout(() => {
+    spareBox.style.display = "none";
+    wordDefinitionBox.style.display = "none";
+  }, 5000);
 
   try {
     let definition = "";
+    const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${wordText}?key=${apiKey}`);
+    const data = await response.json();
 
-    if (useApiDictionary) {
-      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordText}`);
-      const data = await response.json();
-
-      if (data && data[0] && data[0].meanings && data[0].meanings[0] && data[0].meanings[0].definitions && data[0].meanings[0].definitions[0]) {
-        definition = data[0].meanings[0].definitions[0].definition;
-      } else {
-        definition = "Definition not found";
-      }
+    if (data && data.length > 0 && data[0] && data[0].shortdef && data[0].shortdef.length > 0) {
+      definition = data[0].shortdef[0];
     } else {
-      const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${wordText}?key=${apiKey}`);
-      const data = await response.json();
-
-      if (data && data.length > 0 && data[0] && data[0].shortdef && data[0].shortdef.length > 0) {
-        definition = data[0].shortdef[0];
-      } else {
-        definition = "Definition not found";
-      }
+      definition = "Definition not found";
     }
 
     wordDefinitionBox.innerHTML = `<span class="long-word">${wordText}:</span><span class="definition"> ${definition}</span>`;
@@ -155,3 +144,4 @@ async function getDefinition(element, cssClass, apiKey, useApiDictionary = false
     console.error(error);
   }
 }
+
