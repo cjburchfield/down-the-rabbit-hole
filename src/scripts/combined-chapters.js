@@ -57,26 +57,56 @@ export const createTopWordsList = (topWords) => {
 
 
 //Creating the adverb list
-export const createAdverbList = (adverbs) => {
-    const adverbsList = document.createElement("ul");
-    const adverbWords = adverbs.map(([word, count]) => word);
+// export const createAdverbList = (adverbs) => {
+//     const adverbsList = document.createElement("ul");
+//     const adverbWords = adverbs.map(([word, count]) => word);
+
     
-    for (const word of adverbWords) {
-      const listItem = document.createElement("li");
-      listItem.textContent = word;
-      listItem.setAttribute("data-word", word);
-      adverbsList.appendChild(listItem);
-    }
+//     for (const word of adverbWords) {
+//       const listItem = document.createElement("li");
+//       listItem.textContent = word;
+//       listItem.setAttribute("data-word", word);
+//       adverbsList.appendChild(listItem);
+//     }
+
+//   return { adverbsList };
+// };
+    
+export const createAdverbList = (adverbs) => {
+  const adverbsList = document.createElement("div");
+  const adverbWords = adverbs.map(([word, count]) => word);
+
+  const adverbsRow1 = document.createElement("ul");
+  for (let i = 0; i < 5; i++) {
+    const word = adverbWords[i];
+    const listItem = document.createElement("li");
+    listItem.textContent = word;
+    listItem.setAttribute("data-word", word);
+    adverbsRow1.appendChild(listItem);
+  }
+  adverbsList.appendChild(adverbsRow1);
+
+  const adverbsRow2 = document.createElement("ul");
+  for (let i = 5; i < 10; i++) {
+    const word = adverbWords[i];
+    const listItem = document.createElement("li");
+    listItem.textContent = word;
+    listItem.setAttribute("data-word", word);
+    adverbsRow2.appendChild(listItem);
+  }
+  adverbsList.appendChild(adverbsRow2);
 
   return { adverbsList };
 };
-    
+
 
 //Creating the longest word list
 export const createLongestWordsList = (longestWords) => {
   const longestWordsList = document.createElement("ul");
+
+
       
-  for (const word of longestWords) {
+  for (const word of longestWords.slice(-3)) {
     const listItem = document.createElement("li");
     listItem.textContent = word;
     listItem.setAttribute("data-word", word);

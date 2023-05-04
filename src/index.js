@@ -22,9 +22,12 @@ const API_KEY = "4d51c794-eeb0-40fb-bef2-8b0605824280";
 document.addEventListener("DOMContentLoaded", () => {
   setupMenuToggle();
 
-  const clickWordElement = document.getElementById("click-word");
-  clickWordElement.addEventListener("click", () => {
-    getDefinition(clickWordElement, "selected-word", API_KEY);
+  const clickableWords = document.querySelectorAll(".clickable-word");
+
+  clickableWords.forEach((clickableWord) => {
+    clickableWord.addEventListener("click", () => {
+      getDefinition(clickableWord, "selected-word", API_KEY);
+    });
   });
 
   const chapters = [
@@ -74,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   }
   // });
 
-  const letters = "0123456789";
+const letters = "0123456789";
 const elements = [...document.querySelectorAll("#total-words, #num-pairs")];
 
 elements.map(element => {
@@ -187,7 +190,7 @@ async function getDefinition(element, cssClass, apiKey) {
   setTimeout(() => {
     spareBox.style.display = "none";
     wordDefinitionBox.style.display = "none";
-  }, 5000);
+  }, 7000);
 
   try {
     let definition = "";
@@ -205,4 +208,12 @@ async function getDefinition(element, cssClass, apiKey) {
     console.error(error);
   }
 }
+
+// $(function() {
+//   $('a[href*=#]').on('click', function(e) {
+//     e.preventDefault();
+//     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+//   });
+// });
+
 

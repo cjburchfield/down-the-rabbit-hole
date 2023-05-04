@@ -1,3 +1,24 @@
+#adverbs-section {
+    box-sizing: border-box;
+    height: 100vh;
+    color: hsl(0, 0%, 100%);
+    font-family: "Burton";
+    background-size: 120px, 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    list-style: none;
+    font-size: 35px;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px black;    
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #adverbs-section h1 {
     color: orangered;
     font-size: 75px;
@@ -8,75 +29,91 @@
     justify-content: center;
     text-align: center;
     font-family: "Alice";
-}
-
-#adverbs-section h2 {
-    color: white;
-    font-size: 45px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Burton";
-}
-
-#adverbs-section h3 {
-    height: 35vh;
-}
-
-#ly-words {
-    color: orangered;
-}
-
-#adverbs-section h4{
-    color: white;
-    color: rgb(206, 203, 203);
-    font-size: 35px;
-    font-weight: 700;
-    text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Burton";
-    margin: 10px 200px 30px 200px;
-}
-
-#adverbs {
-    box-sizing: border-box;
-    min-height: 100vh;
-    color: hsl(0, 0%, 100%);
-    font-family: "Burton";
-    background-size: 120px, 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    list-style: none;
-    font-size: 2rem;
-    position: relative;
-    color: rgb(206, 203, 203);
-    font-size: 20px;
-    font-weight: 700;
-    text-shadow: 2px 4px 4px black;
   }
   
-  #adverbs li[data-word] {
-    height: auto; 
-    display: block; 
-    text-align: center; 
-    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
-    font-size: 3rem; 
-    margin: 2rem 0; 
+  #adverbs-section h2 {
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    // display: flex;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 4px 4px black;
+    padding-bottom: 15px;
   }
-
+  
+  
+  #ly-words {
+    color: orangered;
+  }
+  
+  #adverbs-section h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Burton";
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px black;
+    margin: 0 auto; 
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+  
+  #adverbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #adverbs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-basis: calc(50% - 20px); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; 
+  }
+  
+  #adverbs li {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px black;
+    margin: 10px;
+    padding: 10px;
+    animation: float 1.5s linear infinite;
+    width: calc(100% / 5 - 20px); 
+    height: 50px; 
+    line-height: 50px; 
+    box-sizing: border-box; 
+    font-family: "Burton";
+  }
+  
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
   #adverbs li:hover {
-    color: white; 
-    // cursor: pointer;
+    color: red;
+    cursor: pointer;
+    animation-play-state: paused;
   }
-
-  #adverbs-section {
-    height: 150vh;
-  }
+  
