@@ -258,28 +258,36 @@ header h5 {
 }
 
 .social-link {
-  height: 30px;
   width: auto;
   justify-content: right;
   display: flex;
   top: 0;
   z-index: 999;
   width: auto;
+  text-decoration: none;
 }
 
 .github-social-link {
-  height: 30px;
   width: auto;
-  margin-right: 5px;
+  margin-right: 15px;
   justify-content: right;
   display: flex;
   top: 0;
   z-index: 999;
   width: auto;
+  text-decoration: none;
 }
 
-.social-link:hover, .github-social-link:hover {
-  background-color: red;
+.github-social-link i,
+.social-link i {
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+}
+
+.github-social-link:hover i,
+.social-link:hover i {
+  color: red;
 }
 
 .sidebar-menu {
@@ -1055,6 +1063,7 @@ html::after {
   position: fixed;
   bottom: 20px;
   right: 10px;
+  z-index: 999;
 }
 
 .spare-box {

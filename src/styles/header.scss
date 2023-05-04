@@ -6,28 +6,6 @@ header {
     background-color: transparent;
   }
 
-
-// #rabbit-hole {
-//     color: orangered;
-//     font-size: 45px;
-//     font-weight: 600;
-//     text-shadow: 2px 4px 4px black;
-//     // animation: 4s linear 0s infinite rabbit-hole; //Add alternate if I want it to go back and forth
-//     animation: rabbit-hole 30s infinite;
-//     display: flex;
-//     width: auto;
-//     justify-content: center;
-//     text-align: center;
-//     font-family: "Burton";
-//     // overflow: hidden;
-//     height: 100vh;
-// }
-
-// //Guide: https://www.w3schools.com/cssref/tryit.php?filename=trycss_anim_transform
-// @keyframes rabbit-hole {
-//     50% {transform: rotate(360deg);}
-// }
-
 header h4 {
     color:orangered;
     font-style: italic;
@@ -91,7 +69,6 @@ header h5 {
   }
 
   .social-link {
-    height: 30px;
     width: auto;
     // margin: 10px;
     justify-content: right;
@@ -99,21 +76,32 @@ header h5 {
     top: 0;
     z-index: 999;
     width: auto;
+    text-decoration: none;
+
   }
 
   .github-social-link {
-    height: 30px;
     width: auto;
-    margin-right: 5px;
+    margin-right: 15px;
     justify-content: right;
     display: flex;
     top: 0;
     z-index: 999;
     width: auto;
+    text-decoration: none;
+
   }
 
-  .social-link:hover, .github-social-link:hover {
-    background-color: red;
+  .github-social-link i,
+  .social-link i {
+    font-size: 32px;
+    color: white; 
+    text-decoration: none;
+  }
+  
+  .github-social-link:hover i,
+  .social-link:hover i {
+    color: red; 
   }
 
   .sidebar-menu {

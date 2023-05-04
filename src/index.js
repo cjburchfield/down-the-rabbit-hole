@@ -51,60 +51,35 @@ document.addEventListener("DOMContentLoaded", () => {
   createFrequentWordsUI(combinedData.topWords);
   createAdverbsUI(combinedData.adverbs);
 
-  // const letters = "abcdefghijklmnopqrstuvwyz";
-  // const elements = [...document.querySelectorAll("#longest-word li[data-word]")];
-
-  // elements.map(element => {
-  //   element.onmouseover = event => {
-  //     let iterations = 0;
-  //     const interval = setInterval(() => {
-  //       let newText = '';
-  //       for (let i = 0; i < event.target.dataset.word.length; i++) {
-  //         if (i < iterations) {
-  //           newText += event.target.dataset.word[i];
-  //         } else {
-  //           newText += letters[Math.floor(Math.random() * 26)];
-  //         }
-  //       }
-  //       event.target.innerText = newText;
-
-  //       iterations += 1;
-
-  //       if (iterations > event.target.dataset.word.length) {
-  //         clearInterval(interval);
-  //       }
-  //     }, 30);
-  //   }
-  // });
-
-const letters = "0123456789";
 const elements = [...document.querySelectorAll("#total-words, #num-pairs")];
 
 elements.map(element => {
-  const originalValue = element.innerText; 
+  const originalValue = element.innerText;
 
   element.onmouseover = event => {
-    let iterations = 0;
-    const interval = setInterval(() => {
-      let newText = '';
-      for (let i = 0; i < event.target.innerText.length; i++) {
-        if (i < iterations) {
-          newText += event.target.innerText[i];
-        } else {
-          newText += letters[Math.floor(Math.random() * 10)];
+    let currentIndex = 0;
+
+    const updateNumber = (text, index, target) => {
+      let currentValue = parseInt(text[index], 10);
+      const interval = setInterval(() => {
+        currentValue = (currentValue + 1) % 10;
+        text = text.slice(0, index) + currentValue + text.slice(index + 1);
+        target.innerText = text;
+
+        if (currentValue === parseInt(originalValue[index], 10)) {
+          clearInterval(interval);
+          if (currentIndex < originalValue.length - 1) {
+            currentIndex += 1;
+            updateNumber(text, currentIndex, target);
+          }
         }
-      }
-      event.target.innerText = newText;
+      }, 60); 
+    };
 
-      iterations += 1;
-
-      if (iterations > event.target.innerText.length) {
-        clearInterval(interval);
-        event.target.innerText = originalValue;
-      }
-    }, 30);
+    updateNumber('0'.repeat(originalValue.length), currentIndex, event.target);
   }
 });
+
 
 });
 
@@ -172,6 +147,7 @@ adverb.addEventListener("click", () => {
 }
 
 let selectedElement = "";
+let activeTimeout; 
 
 async function getDefinition(element, cssClass, apiKey) {
   if (selectedElement) {
@@ -187,10 +163,15 @@ async function getDefinition(element, cssClass, apiKey) {
   spareBox.style.display = "block";
   wordDefinitionBox.style.display = "block";
 
-  setTimeout(() => {
+  if (activeTimeout) {
+    clearTimeout(activeTimeout);
+  }
+
+
+  activeTimeout = setTimeout(() => {
     spareBox.style.display = "none";
     wordDefinitionBox.style.display = "none";
-  }, 7000);
+  }, 5000);
 
   try {
     let definition = "";
@@ -200,7 +181,7 @@ async function getDefinition(element, cssClass, apiKey) {
     if (data && data.length > 0 && data[0] && data[0].shortdef && data[0].shortdef.length > 0) {
       definition = data[0].shortdef[0];
     } else {
-      definition = "Definition not found";
+      definition = "Definition not found, curiouser and curiouser...";
     }
 
     wordDefinitionBox.innerHTML = `<span class="long-word">${wordText}:</span><span class="definition"> ${definition}</span>`;
@@ -208,12 +189,4 @@ async function getDefinition(element, cssClass, apiKey) {
     console.error(error);
   }
 }
-
-// $(function() {
-//   $('a[href*=#]').on('click', function(e) {
-//     e.preventDefault();
-//     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-//   });
-// });
-
 
