@@ -24,6 +24,7 @@
     z-index: 5;
     position: sticky;
     font-family: "Burton";
+    font-size: 28px;
   }
   
   #frequent-words li[data-word]:before {
@@ -95,6 +96,11 @@
   .top-word-subscript {
     display: inline;
     color: orangered;
+    cursor: pointer;
+    font-family: "Burton";
+    text-decoration: none;
+    text-shadow: 2px 4px 4px black;
+    font-size: 32px;
   }
   
   .top-word-subscript:hover {

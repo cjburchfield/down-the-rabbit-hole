@@ -32,6 +32,7 @@ li[data-word] {
   z-index: 5;
   position: sticky;
   font-family: "Burton";
+  font-size: 28px;
 }
 
 #frequent-words li[data-word]:before {
@@ -146,6 +147,11 @@ li[title].active:after {
 .top-word-subscript {
   display: inline;
   color: orangered;
+  cursor: pointer;
+  font-family: "Burton";
+  text-decoration: none;
+  text-shadow: 2px 4px 4px black;
+  font-size: 32px;
 }
 
 .top-word-subscript:hover {
@@ -350,6 +356,10 @@ header h5 {
 
 #long-ones li[data-word]:hover {
   color: red;
+}
+
+#long-ones span.subscript {
+  font-size: 32px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

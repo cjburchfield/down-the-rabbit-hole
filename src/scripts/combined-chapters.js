@@ -51,7 +51,7 @@ export const createTopWordsList = (topWords) => {
     spanElement.textContent = word;
 
     wordContainer.appendChild(spanElement);
-    wordContainer.appendChild(document.createTextNode(` - ${count} appearances`));
+    wordContainer.appendChild(document.createTextNode(` ${count} appearances`));
 
     listItem.appendChild(wordContainer);
     topWordsList.appendChild(listItem);
