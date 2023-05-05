@@ -1,141 +1,62 @@
-#long-ones h1 {
-    color: orangered;
-    font-size: 75px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Alice";
-}
-
-#long-ones h2 {
-    color:white;
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    // display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    padding-bottom: 15px;
-}
-
 .longest-header {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    padding-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 2px 4px 4px black;
+  padding-bottom: 15px;
 }
-
-  
 
 #ten-words {
-    color: orangered;
-    font-family: "Burton";
-}
-
-
-#long-ones h4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "Burton";
-    font-family: 'Playfair Display', serif;
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
-    text-shadow: 2px 4px 4px black;
-    margin: 0 auto; 
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-
-#long-ones li {
-    color: white;
+  color: orangered;
+  font-family: "Burton";
 }
 
 #long-ones {
-    box-sizing: border-box;
-    height: 100vh;
-    color: hsl(0, 0%, 100%);
-    font-family: "Burton";
-    background-size: 120px, 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    list-style: none;
-    font-size: 35px;
-    font-weight: 700;
-    text-shadow: 2px 4px 4px black;    
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #long-ones li[data-word] {
-    height: auto; 
-    display: inline-block; 
-    text-align: center; 
-    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
-    font-size: 32px; 
-    margin: 2rem 0; 
-    transition-duration: 0.4s;
-    font-family: "Burton"  
+  box-sizing: border-box;
+  height: 100vh;
+  color: hsl(0, 0%, 100%);
+  font-family: "Burton";
+  background-size: 120px, 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  list-style: none;
+  font-size: 35px;
+  font-weight: 700;
+  text-shadow: 2px 4px 4px black;    
+  position: relative;
 }
 
-  #long-ones li:hover {
-    color: red; 
-    cursor: pointer;
-  }
 
-  #longest-word {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  #long-ones .longest-header {
-    display: flex;
-    justify-content: center;
-  }
-  
-  #long-ones ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #long-ones li[data-word] {
-    height: auto;
-    display: inline-block;
-    text-align: center;
-    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
-    font-size: 36px;
-    margin: 0 1rem;
-    transition-duration: 0.4s;
-    font-family: "Burton";
-  }
+#longest-word {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  #contemptuously-word {
-    color: orangered;
-  }
+#long-ones ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 
-  #contemptuously-word:hover {
-    color: red;
-    transition-duration: 0.4s;
+#long-ones li[data-word] {
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
+  font-size: 36px;
+  margin: 0 1rem;
+  transition-duration: 0.4s;
+  font-family: "Burton";
+  color: orangered;
+}
 
-  }
-
-
+#long-ones li[data-word]:hover {
+  // transform: scale(1.2);
+  color: red;
+}

@@ -11,10 +11,7 @@ header h4 {
     font-style: italic;
     font-family: "Burton";
     font-size: 45px;
-    display: flex;
     width: auto;
-    justify-content: center;
-    text-align: center;
     font-weight: 600;
     text-shadow: 2px 4px 4px black;
 }
@@ -50,7 +47,7 @@ header h5 {
   }
 
   #menu-toggle:hover {
-    color: red;
+    color: orangered;
   }
 
   
@@ -70,7 +67,6 @@ header h5 {
 
   .social-link {
     width: auto;
-    // margin: 10px;
     justify-content: right;
     display: flex;
     top: 0;
@@ -101,7 +97,7 @@ header h5 {
   
   .github-social-link:hover i,
   .social-link:hover i {
-    color: red; 
+    color: orangered; 
   }
 
   .sidebar-menu {
@@ -126,7 +122,7 @@ header h5 {
   }
 
   .sidebar-menu li a:hover {
-    color: red;
+    color: orangered;
     text-shadow: .5px 1px 1px black;
 
   }

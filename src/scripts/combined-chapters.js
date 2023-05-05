@@ -1,29 +1,26 @@
-//Merging all 12 chapters into one object
 export const combineChapters = (chapters) => {  
   const combinedBook = {};
   let totalWords = 0;
 
   for (const chapter of chapters) {
-    for (const [word, count] of Object.entries(chapter)) { // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+    for (const [word, count] of Object.entries(chapter)) { 
         totalWords += count;
-      if (combinedBook.hasOwnProperty(word)) { // https://stackoverflow.com/questions/9396569/what-is-property-in-hasownproperty-in-javascript
+      if (combinedBook.hasOwnProperty(word)) { 
         combinedBook[word] += count;
       } else {
         combinedBook[word] = count;
       }
     }
   }
-  
-  //Gathering data points
-  const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]); //https://forum.freecodecamp.org/t/arr-sort-a-b-a-b-explanation/167677
+    const sortedBook = Object.entries(combinedBook).sort((a, b) => b[1] - a[1]);
   const filteredBook = sortedBook.filter(([word, count]) => word.length > 5);
   const sixWords = sortedBook.filter(([word, count]) => word.length > 5).length;
   const tenWords = sortedBook.filter(([word, count]) => word.length > 9).length;
   const lyWords = sortedBook.filter(([word, count]) => word.endsWith("ly")).length;
   const adverbs = filteredBook.filter(([word, count]) => word.endsWith("ly")).slice(0,10);
 
-  //Longest word data 
-  let longestWord = ''
+  
+    let longestWord = ''
   let longestWords = [];
   
   for (const [word, count] of sortedBook) {
@@ -40,38 +37,28 @@ export const combineChapters = (chapters) => {
   return { topWords, numPairs, longestWords, totalWords, tenWords, sixWords, lyWords, adverbs };
 }
 
-//Top Word List
 export const createTopWordsList = (topWords) => {
   const topWordsList = document.createElement("ul");
   
   for (const [word, count] of topWords) {
     const listItem = document.createElement("li");
-    listItem.textContent = `${word}: ${count} apperances`;
-    listItem.setAttribute("data-word", word)
+    listItem.setAttribute("data-word", word);
+
+    const wordContainer = document.createElement("div");
+
+    const spanElement = document.createElement("span");
+    spanElement.classList.add("top-word-subscript");
+    spanElement.textContent = word;
+
+    wordContainer.appendChild(spanElement);
+    wordContainer.appendChild(document.createTextNode(` - ${count} appearances`));
+
+    listItem.appendChild(wordContainer);
     topWordsList.appendChild(listItem);
   }
   return { topWordsList };
 };
 
-
-
-
-//Creating the adverb list
-// export const createAdverbList = (adverbs) => {
-//     const adverbsList = document.createElement("ul");
-//     const adverbWords = adverbs.map(([word, count]) => word);
-
-    
-//     for (const word of adverbWords) {
-//       const listItem = document.createElement("li");
-//       listItem.textContent = word;
-//       listItem.setAttribute("data-word", word);
-//       adverbsList.appendChild(listItem);
-//     }
-
-//   return { adverbsList };
-// };
-    
 export const createAdverbList = (adverbs) => {
   const adverbsList = document.createElement("div");
   const adverbWords = adverbs.map(([word, count]) => word);
@@ -80,8 +67,14 @@ export const createAdverbList = (adverbs) => {
   for (let i = 0; i < 5; i++) {
     const word = adverbWords[i];
     const listItem = document.createElement("li");
-    listItem.textContent = word;
     listItem.setAttribute("data-word", word);
+
+    const spanElement = document.createElement("span");
+    spanElement.classList.add("clickable");
+    spanElement.classList.add("subscript");
+    spanElement.textContent = word;
+
+    listItem.appendChild(spanElement);
     adverbsRow1.appendChild(listItem);
   }
   adverbsList.appendChild(adverbsRow1);
@@ -90,8 +83,14 @@ export const createAdverbList = (adverbs) => {
   for (let i = 5; i < 10; i++) {
     const word = adverbWords[i];
     const listItem = document.createElement("li");
-    listItem.textContent = word;
     listItem.setAttribute("data-word", word);
+
+    const spanElement = document.createElement("span");
+    spanElement.classList.add("clickable");
+    spanElement.classList.add("subscript");
+    spanElement.textContent = word;
+
+    listItem.appendChild(spanElement);
     adverbsRow2.appendChild(listItem);
   }
   adverbsList.appendChild(adverbsRow2);
@@ -100,19 +99,21 @@ export const createAdverbList = (adverbs) => {
 };
 
 
-//Creating the longest word list
 export const createLongestWordsList = (longestWords) => {
   const longestWordsList = document.createElement("ul");
 
-
-      
   for (const word of longestWords.slice(-3)) {
     const listItem = document.createElement("li");
-    listItem.textContent = word;
     listItem.setAttribute("data-word", word);
+
+    const spanElement = document.createElement("span");
+    spanElement.classList.add("clickable");
+    spanElement.classList.add("subscript");
+    spanElement.textContent = word;
+
+    listItem.appendChild(spanElement);
     longestWordsList.appendChild(listItem);
   }
 
   return { longestWordsList };
 };
-

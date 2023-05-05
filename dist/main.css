@@ -5,80 +5,7 @@
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
   \*****************************************************************************************************************************************/
-#frequent-words h1 {
-  color: orangered;
-  font-size: 75px;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Alice";
-}
-
-#frequent-words h2 {
-  color: white;
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  padding-bottom: 15px;
-}
-
-#frequent-words h4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Burton";
-  font-family: "Playfair Display", serif;
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  text-shadow: 2px 4px 4px black;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 50px;
-}
-
-li[title] {
-  position: relative;
-}
-
-li[title]:hover:after {
-  content: attr(title);
-  position: fixed;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  white-space: nowrap;
-  padding: 5px;
-  background: white;
-  font-weight: bold;
-  font-size: 0.9em;
-  color: green;
-}
-
-li[title].active:after {
-  content: attr(data-definition);
-  position: absolute;
-  top: 0;
-  left: 100%;
-  transform: translate(10px, 0);
-  white-space: nowrap;
-  padding: 5px;
-  background: white;
-  font-weight: bold;
-  font-size: 0.9em;
-  color: blue;
-}
-
+@charset "UTF-8";
 #frequent-words {
   box-sizing: border-box;
   min-height: 100vh;
@@ -103,6 +30,8 @@ li[data-word] {
   align-items: center;
   text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
   z-index: 5;
+  position: sticky;
+  font-family: "Burton";
 }
 
 #frequent-words li[data-word]:before {
@@ -115,22 +44,12 @@ li[data-word] {
   transform: translate(-50%, 0%);
 }
 
-#frequent-words li[data-word]::selection {
-  color: hsl(0, 0%, 100%);
-  background: hsl(22, 93%, 39%);
-}
-
 #frequent-words li[data-word]:nth-child(odd):before {
   left: 0%;
 }
 
 #frequent-words li[data-word]:nth-child(even):before {
   left: 100%;
-}
-
-#frequent-words li[data-word] {
-  position: sticky;
-  font-family: "Burton";
 }
 
 li[data-word]:nth-child(1) {
@@ -183,10 +102,61 @@ li[data-word]:nth-child(10) {
   height: 32.5vh;
 }
 
+#frequent-words li[data-word]::selection {
+  color: hsl(0, 0%, 100%);
+  background: hsl(22, 93%, 39%);
+}
+
+li[title] {
+  position: relative;
+}
+
+li[title]:hover:after {
+  content: attr(title);
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  padding: 5px;
+  background: white;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+li[title].active:after {
+  content: attr(data-definition);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(10px, 0);
+  white-space: nowrap;
+  padding: 5px;
+  background: white;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
 #frequent-words li:hover {
-  color: red;
   cursor: pointer;
   transition-duration: 0.4s;
+}
+
+.top-word-subscript {
+  display: inline;
+  color: orangered;
+}
+
+.top-word-subscript:hover {
+  color: red;
+}
+
+.top-word-subscript::after {
+  content: "🫖";
+  font-size: 0.6em;
+  vertical-align: sub;
+  margin-left: 2px;
 }
 
 header {
@@ -202,10 +172,7 @@ header h4 {
   font-style: italic;
   font-family: "Burton";
   font-size: 45px;
-  display: flex;
   width: auto;
-  justify-content: center;
-  text-align: center;
   font-weight: 600;
   text-shadow: 2px 4px 4px black;
 }
@@ -240,7 +207,7 @@ header h5 {
 }
 
 #menu-toggle:hover {
-  color: red;
+  color: orangered;
 }
 
 #links-container {
@@ -287,7 +254,7 @@ header h5 {
 
 .github-social-link:hover i,
 .social-link:hover i {
-  color: red;
+  color: orangered;
 }
 
 .sidebar-menu {
@@ -312,7 +279,7 @@ header h5 {
 }
 
 .sidebar-menu li a:hover {
-  color: red;
+  color: orangered;
   text-shadow: 0.5px 1px 1px black;
 }
 
@@ -324,134 +291,10 @@ header h5 {
   text-shadow: 0.5px 1px 1px black;
 }
 
-#invented h1 {
-  color: orangered;
-  font-size: 75px;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Alice";
-}
-
-#invented h2 {
-  color: rgb(206, 203, 203);
-  font-size: 35px;
-  font-weight: 700;
-  text-shadow: 2px 4px 4px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Burton";
-  margin: 10px 200px 30px 200px;
-}
-
-.invented-bubble {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 200px 30px 200px;
-}
-
-.invented {
-  border: 4px solid orangered;
-  border-radius: 25px;
-  padding: 20px;
-  margin: 0 10px;
-  font-size: 25px;
-  background-color: white;
-  box-shadow: 5px 5px;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  position: relative;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.invented:hover {
-  background-color: orangered;
-  border: 4px solid white;
-  color: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.invented.active {
-  transform: scale(1.1);
-  z-index: 1;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-#invented h3 {
-  height: 50vh;
-}
-
-.invented:hover:after {
-  background-color: orangered;
-  border: 4px solid white;
-  color: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-#invented h4 {
-  color: orangered;
-  font-size: 40px;
-  font-weight: 500;
-  text-shadow: 0.5px 1px 1px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Alice";
-}
-
-.invented-definition {
-  color: orangered;
-}
-
-#invented h4:hover {
-  color: white;
-  font-size: 40px;
-  font-weight: 500;
-  text-shadow: 0.5px 1px 1px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Alice";
-}
-
-#long-ones h1 {
-  color: orangered;
-  font-size: 75px;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Alice";
-}
-
-#long-ones h2 {
-  color: white;
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  padding-bottom: 15px;
-}
-
 .longest-header {
   font-family: "Playfair Display", serif;
   font-size: 36px;
   display: flex;
-  width: auto;
   justify-content: center;
   text-align: center;
   font-weight: 600;
@@ -462,26 +305,6 @@ header h5 {
 #ten-words {
   color: orangered;
   font-family: "Burton";
-}
-
-#long-ones h4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Burton";
-  font-family: "Playfair Display", serif;
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  text-shadow: 2px 4px 4px black;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 50px;
-}
-
-#long-ones li {
-  color: white;
 }
 
 #long-ones {
@@ -499,36 +322,12 @@ header h5 {
   font-weight: 700;
   text-shadow: 2px 4px 4px black;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#long-ones li[data-word] {
-  height: auto;
-  display: inline-block;
-  text-align: center;
-  text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
-  font-size: 32px;
-  margin: 2rem 0;
-  transition-duration: 0.4s;
-  font-family: "Burton";
-}
-
-#long-ones li:hover {
-  color: red;
-  cursor: pointer;
 }
 
 #longest-word {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-#long-ones .longest-header {
-  display: flex;
-  justify-content: center;
 }
 
 #long-ones ul {
@@ -546,21 +345,71 @@ header h5 {
   margin: 0 1rem;
   transition-duration: 0.4s;
   font-family: "Burton";
-}
-
-#contemptuously-word {
   color: orangered;
 }
 
-#contemptuously-word:hover {
+#long-ones li[data-word]:hover {
   color: red;
-  transition-duration: 0.4s;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 75px;
+  font-weight: 600;
+  vertical-align: baseline;
+  color: orangered;
+  font-family: "Alice";
+  text-shadow: 2px 4px 4px black;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 2px 4px 4px black;
+  padding-bottom: 15px;
+}
+
+h4 {
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 2px 4px 4px black;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+li,
+ul,
 html,
 body,
 div,
@@ -568,10 +417,7 @@ span,
 applet,
 object,
 iframe,
-h1,
-h2,
 h3,
-h4,
 h5,
 h6,
 p,
@@ -608,8 +454,6 @@ dl,
 dt,
 dd,
 ol,
-ul,
-li,
 fieldset,
 form,
 label,
@@ -648,7 +492,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  color: white;
   font-family: "Playfair Display", serif;
 }
 
@@ -694,64 +537,13 @@ table {
   border-spacing: 0;
 }
 
-#metrics h1 {
-  color: orangered;
-  font-size: 75px;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Alice";
-}
-
-#metrics h2 {
-  color: white;
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  padding-bottom: 15px;
-}
-
-#metrics h4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Burton";
-  font-family: "Playfair Display", serif;
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  text-shadow: 2px 4px 4px black;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 50px;
-}
-
-#total-words {
-  color: orangered;
-  font-family: "Burton";
-}
-
-#num-pairs {
+#total-words, #num-pairs {
   color: orangered;
   font-family: "Burton";
 }
 
 #total-words:hover, #num-pairs:hover {
   cursor: pointer;
-}
-
-#emphasis {
-  color: orangered;
-  font-family: "Burton";
-  vertical-align: baseline;
 }
 
 #metrics {
@@ -769,9 +561,6 @@ table {
   font-weight: 700;
   text-shadow: 2px 4px 4px black;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 footer h4 {
@@ -805,53 +594,10 @@ footer h3 {
   font-weight: 700;
   text-shadow: 2px 4px 4px black;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#adverbs-section h1 {
-  color: orangered;
-  font-size: 75px;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  display: flex;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: "Alice";
-}
-
-#adverbs-section h2 {
-  color: white;
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  padding-bottom: 15px;
 }
 
 #ly-words {
   color: orangered;
-}
-
-#adverbs-section h4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Burton";
-  font-family: "Playfair Display", serif;
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  text-shadow: 2px 4px 4px black;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 50px;
 }
 
 #adverbs {
@@ -865,7 +611,7 @@ footer h3 {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-basis: calc(50% - 20px);
+  flex-basis: calc((50% - 20px) * 3);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -880,11 +626,12 @@ footer h3 {
   margin: 10px;
   padding: 10px;
   animation: float 1.5s linear infinite;
-  width: calc(20% - 20px);
+  width: calc((20% - 20px) * 1.5);
   height: 50px;
   line-height: 50px;
   box-sizing: border-box;
   font-family: "Burton";
+  color: orangered;
 }
 
 @keyframes float {
@@ -902,6 +649,17 @@ footer h3 {
   color: red;
   cursor: pointer;
   animation-play-state: paused;
+}
+
+#adverbs li::after {
+  content: "";
+}
+
+#adverbs li.clickable.subscript::after {
+  content: "🍵";
+  font-size: 0.6em;
+  vertical-align: sub;
+  margin-left: 2px;
 }
 
 .intro-title {
@@ -932,18 +690,6 @@ footer h3 {
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 50px;
-}
-
-.intro-h2 {
-  color: white;
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  width: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 2px 4px 4px black;
-  padding-bottom: 15px;
 }
 
 #intro {
@@ -1054,7 +800,13 @@ html::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.5); /* Set the opacity value to 0.5 (50%) */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#emphasis {
+  color: orangered;
+  font-family: "Burton";
+  vertical-align: baseline;
 }
 
 .boxes-container {
@@ -1102,15 +854,6 @@ html::after {
   bottom: 30px;
 }
 
-li {
-  cursor: pointer;
-}
-
-li:hover {
-  color: orangered;
-  cursor: pointer;
-}
-
 .long-word {
   color: orangered;
   font-size: 32px;
@@ -1134,4 +877,26 @@ li:hover {
 
 .clickable-word:hover {
   color: red;
+}
+
+.clickable {
+  cursor: pointer;
+  font-family: "Burton";
+  text-decoration: none;
+  text-shadow: 2px 4px 4px black;
+}
+
+.clickable:hover {
+  color: red;
+}
+
+.subscript {
+  position: relative;
+}
+
+.subscript::after {
+  content: "🫖";
+  font-size: 0.6em;
+  vertical-align: sub;
+  margin-left: 2px;
 }

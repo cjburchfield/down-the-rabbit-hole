@@ -1,80 +1,3 @@
-#frequent-words h1 {
-    color: orangered;
-    font-size: 75px;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-family: "Alice";
-}
-
-#frequent-words h2 {
-    color:white;
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    display: flex;
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 4px 4px black;
-    padding-bottom: 15px;
-}
-
-#frequent-words h4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "Burton";
-    font-family: 'Playfair Display', serif;
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
-    text-shadow: 2px 4px 4px black;
-    margin: 0 auto; 
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-
-li[title] {
-    position: relative;
-}
-  
-li[title]:hover:after {
-    content: attr(title);
-    position: fixed;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    white-space: nowrap;
-    padding: 5px;
-    background: white;
-    font-weight: bold;
-    font-size: 0.9em;
-    color: green;
-}
-
-  li[title].active:after {
-    content: attr(data-definition);
-    position: absolute;
-    // z-index: 1;
-    // top: -120%;
-    // left: 50%;
-    top: 0;
-    left: 100%;
-    transform: translate(10px, 0);
-    white-space: nowrap;
-    padding: 5px;
-    background: white;
-    font-weight: bold;
-    font-size: 0.9em;
-    color: blue;
-  }
-
 #frequent-words {
     box-sizing: border-box;
     min-height: 100vh;
@@ -88,9 +11,9 @@ li[title]:hover:after {
     counter-reset: num-counter;
     font-size: 2rem;
     position: relative;
-}
-
-li[data-word] {
+  }
+  
+  li[data-word] {
     counter-increment: num-counter;
     height: 100vh;
     display: flex;
@@ -99,10 +22,11 @@ li[data-word] {
     align-items: center;
     text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
     z-index: 5;
-}
-
-//These are the numbers 1-10
-#frequent-words li[data-word]:before { 
+    position: sticky;
+    font-family: "Burton";
+  }
+  
+  #frequent-words li[data-word]:before {
     content: counter(num-counter);
     z-index: -5;
     position: absolute;
@@ -110,36 +34,77 @@ li[data-word] {
     font-size: 15vh;
     font-family: "Burton";
     transform: translate(-50%, 0%);
-}
-
-#frequent-words li[data-word]::selection {
+  }
+  
+  #frequent-words li[data-word]:nth-child(odd):before {
+    left: 0%;
+  }
+  
+  #frequent-words li[data-word]:nth-child(even):before {
+    left: 100%;
+  }
+  
+  @for $counter from 1 through 10 {
+    li[data-word]:nth-child(#{$counter}) {
+      top: #{($counter - 1) * 7.5vh};
+      height: #{100vh - ($counter - 1) * 7.5vh};
+    }
+  }
+  
+  #frequent-words li[data-word]::selection {
     color: hsl(0, 0%, 100%);
     background: hsl(22, 93%, 39%);
-}
-
-#frequent-words li[data-word]:nth-child(odd):before {
-    left: 0%;
-}
-#frequent-words li[data-word]:nth-child(even):before {
+  }
+  
+  li[title] {
+    position: relative;
+  }
+  
+  li[title]:hover:after {
+    content: attr(title);
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+    padding: 5px;
+    background: white;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  li[title].active:after {
+    content: attr(data-definition);
+    position: absolute;
+    top: 0;
     left: 100%;
-}
-
-#frequent-words li[data-word]{
-    position: sticky;
-    font-family: "Burton";
-}
-
-@for $counter from 1 through 10 {
-    li[data-word]:nth-child(#{$counter}) {
-        top: #{($counter - 1) * 7.5vh};
-        height: #{100vh - ($counter - 1) * 7.5vh};
-    }
-}
-
-#frequent-words li:hover {
-    color: red; 
+    transform: translate(10px, 0);
+    white-space: nowrap;
+    padding: 5px;
+    background: white;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  #frequent-words li:hover {
     cursor: pointer;
     transition-duration: 0.4s;
   }
-
-
+  
+  .top-word-subscript {
+    display: inline;
+    color: orangered;
+  }
+  
+  .top-word-subscript:hover {
+    color: red;
+  }
+  
+  .top-word-subscript::after {
+    content: "🫖";
+    font-size: 0.6em;
+    vertical-align: sub;
+    margin-left: 2px;
+  }
+  
